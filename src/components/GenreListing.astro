@@ -1,11 +1,14 @@
 ---
 import { getCollection } from 'astro:content';
 import PropertyCard from './PropertyCard.astro';
-const { genre, eyebrow, title, lead } = Astro.props;
+const { genre, eyebrow, title, lead, lang = 'ja' } = Astro.props;
 const all = await getCollection('properties');
-const items = all
+let items = all
   .filter((p) => p.data.genres.includes(genre))
   .sort((a, b) => a.data.order - b.data.order);
+// 英語版は en データを持つ物件のみ表示
+if (lang === 'en') items = items.filter((p) => p.data.en);
+const emptyText = lang === 'en' ? 'Coming soon.' : '現在準備中です。';
 ---
 <section class="listing-hero">
   <div class="wrap">
@@ -17,9 +20,9 @@ const items = all
 <section class="listing">
   <div class="wrap">
     {items.length ? (
-      <div class="grid">{items.map((p) => <PropertyCard property={p} />)}</div>
+      <div class="grid">{items.map((p) => <PropertyCard property={p} lang={lang} />)}</div>
     ) : (
-      <p class="empty">現在準備中です。</p>
+      <p class="empty">{emptyText}</p>
     )}
   </div>
 </section>

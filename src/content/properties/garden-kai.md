@@ -72,4 +72,67 @@ booking:
   bookingUrl: https://tripto.jp/facilities/896
   bookingLabel: TRIPTOで予約する
   contact: /#contact
+en:
+  title: Glocal Garden Kai
+  summary: A single-story villa with a vaulted living room, set in a large natural-farming garden. From 5 nights.
+  hero:
+    eyebrow: Kofu / Shosenkyo area · Villa
+    title: A single-story villa<br>that lives with nature.
+    lead: The warmth of a log house, with a modern vaulted living room.<br>Wrapped in a natural-farming garden, stay like you live here.
+  conceptHeading: A house in a garden, in harmony with nature.
+  conceptBody:
+    - In Kai City, Yamanashi, near wineries and Shosenkyo gorge, sits Glocal Garden Kai. A 3LDK single-story home that keeps the warmth of a log house with a refined, modern design.
+    - The main bedroom, living area and bathrooms are on the first floor for easy single-level living. Two independent rooms upstairs work as a study or guest rooms.
+    - The vaulted living room opens through large windows onto the wood deck and the garden beyond. Spend unhurried time in light-filled space with family and friends.
+  panorama:
+    title: A house that lives with nature.
+    sub: A large garden grown by natural farming
+  features:
+    - { title: Large natural-farming garden, desc: 'A wide garden growing fruit and vegetables. Stroll, harvest, or hunt for insects.' }
+    - { title: Vaulted single-story home, desc: 'Main living on one floor, with an open, vaulted living room.' }
+    - { title: Projector theater, desc: 'Watch films on the big screen (Netflix, etc.). Great for retreats, too.' }
+    - { title: 'From 5 nights / workation', desc: 'For longer stays, with fast Wi-Fi and a separate study.' }
+  special:
+    eyebrow: The Garden
+    title: A large garden, living with nature.
+    body: 'Most of the grounds are garden, where fruit and vegetables are grown by natural farming. Wander freely, and harvest in season. Insect-hunting for children, walks with your dog. A stay in harmony with untouched nature.'
+  rooms:
+    - { floor: '1F | LIVING', title: Living (vaulted), desc: 'A vaulted ceiling brings openness, flowing out to the deck and garden.' }
+    - { floor: '1F | THEATER', title: Dining & theater, desc: 'Big-screen films by projector. Great for group retreats and training.' }
+    - { floor: '1F | BEDROOM', title: Main bedroom, desc: 'On the first floor with the main living spaces, for easy single-level living.' }
+    - { floor: '2F | BEDROOM', title: Room (2F), desc: 'An independent room, ideal as a guest room or private space.' }
+    - { floor: '2F | WORKSPACE', title: Study (2F), desc: 'A room with a desk, perfect as a remote-work study.' }
+    - { floor: EXTERIOR, title: Exterior, desc: 'A white single-story home that settles into the countryside.' }
+  gallery:
+    - { title: Exterior and garden, desc: A single-story home in nature }
+    - { title: Living and theater, desc: Vaulted ceiling and projector }
+    - { title: Living, desc: An open vaulted space }
+    - { title: Main bedroom, desc: A comfortable first-floor room }
+    - { title: Room (2F), desc: An independent private space }
+    - { title: Garden, desc: A large natural-farming garden }
+    - { title: Exterior, desc: At home in the countryside }
+    - { title: Workspace, desc: A room to work, too }
+  amenities:
+    - Natural-farming garden
+    - Projector (Netflix, etc.)
+    - Full kitchen
+    - Fast Wi-Fi
+    - Parking
+    - Bathtub
+    - Washer and dryer
+    - Wood deck and balcony
+    - Pets welcome
+    - Workspace (separate room)
+  info:
+    - { label: Check-in, value: from 3:00 PM }
+    - { label: Check-out, value: by 12:00 noon }
+    - { label: Capacity, value: 'Up to 6 (3LDK, 3 bedrooms, 6 beds, 6 futon sets)' }
+    - { label: Stays, value: 'From 5 nights (weekly and 28-night discounts; ask about shorter stays)' }
+    - { label: Access, value: 'About 7 min from Futaba Smart IC; about 5 min from JR Shiozaki Station' }
+    - { label: House rules, value: 'Pets welcome; no smoking indoors. A natural setting with insects.' }
+    - { label: Registration no., value: 'No. M190056702' }
+  booking:
+    heading: Live a while, in the garden.
+    lead: We also welcome inquiries about longer stays and resort rental (from 5 nights). Feel free to get in touch.
+    bookingLabel: Book on TRIPTO
 ---

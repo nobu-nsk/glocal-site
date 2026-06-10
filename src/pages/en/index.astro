@@ -1,0 +1,150 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PropertyCard from '../../components/PropertyCard.astro';
+
+const all = await getCollection('properties');
+const stays = all
+  .filter((p) => p.data.genres.includes('stay') && p.data.en)
+  .sort((a, b) => a.data.order - b.data.order);
+
+const businesses = [
+  { no: '01', title: 'Lodging', desc: 'Whole-house stays in Fujikawaguchiko and Kasugai—private villas where you stay like you live here.' },
+  { no: '02', title: 'Housing & Rental', desc: 'Apartment and house rentals, housing support, and revitalizing vacant homes to welcome new residents.' },
+  { no: '03', title: 'Multicultural Community', desc: 'Building a community where people of diverse backgrounds live together—through an English school and support for Ukraine.' },
+  { no: '04', title: 'Occupational Health', desc: 'Supporting healthy workplaces and the wellbeing of working people with specialist expertise.' },
+];
+---
+<BaseLayout lang="en" title="Glocal Commune LLC | Global vision, local roots." description="Glocal Commune LLC official site. Lodging, housing, multicultural community and occupational health in Yamanashi, Japan.">
+  <section class="hero">
+    <div class="hero-bg" style="background-image:url('/images/gfk/hero.jpg')"></div>
+    <div class="hero-inner">
+      <div class="eyebrow">Glocal Commune LLC</div>
+      <h1>Global vision,<br />local roots.</h1>
+      <p>"Global" + "Local" = "Glocal."<br />A worldwide outlook, rooted in our region—building the towns of tomorrow.</p>
+      <div class="hrow">
+        <a href="/en/stay/" class="btn">View our stays</a>
+        <a href="#business" class="btn ghost">Our business</a>
+      </div>
+    </div>
+    <div class="scroll-cue">SCROLL</div>
+  </section>
+
+  <section id="concept">
+    <div class="wrap concept">
+      <div class="reveal">
+        <div class="eyebrow">Concept</div>
+        <h2>A global outlook,<br />acting from the local.</h2>
+        <p>"Glocal" blends global (worldwide) and local (our region). "Commune" means community.</p>
+        <p>We see society on a global scale while staying rooted in our region—contributing to the towns of tomorrow.</p>
+        <a href="#company" class="more">About the company</a>
+      </div>
+      <div class="imgwrap reveal">
+        <img src="https://glocalcommune.sakura.ne.jp/wp/wp-content/uploads/2024/01/%E5%9C%B0%E7%90%83%E3%81%A8%E4%BA%BA%E3%80%85-1.png" alt="The earth and people" />
+      </div>
+    </div>
+  </section>
+
+  <section id="business" class="business">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="eyebrow">Our Business</div><h2>Four businesses</h2></div>
+      <div class="biz-grid">
+        {businesses.map((b) => (
+          <div class="biz reveal"><div class="no">{b.no}</div><h3>{b.title}</h3><p>{b.desc}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="stay" class="stay">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="eyebrow">Stay</div><h2>Our Stays</h2></div>
+      <div class="pgrid">{stays.map((p) => <PropertyCard property={p} lang="en" />)}</div>
+      <div class="center"><a href="/en/stay/" class="more">View all stays</a></div>
+    </div>
+  </section>
+
+  <section id="commit">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="eyebrow">Our Commitment</div><h2>What we work on</h2></div>
+      <div class="commit-grid">
+        <div class="commit reveal"><div class="en">ENGLISH WITH NICA</div><h3>English with Nica</h3><p>A community English school where children and adults learn while encountering diverse cultures.</p></div>
+        <div class="commit reveal"><div class="en">SUPPORT FOR UKRAINE</div><h3>Support for Ukraine</h3><p>Standing with people in difficult circumstances—continuing what support we can, from a multicultural perspective.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="company">
+    <div class="wrap">
+      <div class="company reveal">
+        <div class="eyebrow">Company</div>
+        <h2>Company</h2>
+        <table class="infotable">
+          <tr><th>Name</th><td>Glocal Commune LLC</td></tr>
+          <tr><th>Address</th><td>1-1-16 Yumura, Kofu, Yamanashi, Japan</td></tr>
+          <tr><th>Business</th><td>Lodging / Housing & Rental / Multicultural Community / Occupational Health</td></tr>
+          <tr><th>Vision</th><td>A hometown connected to the world<br />Global vision, local roots.</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="cta">
+    <div class="wrap reveal">
+      <div class="eyebrow">Contact</div>
+      <h2>Get in touch</h2>
+      <p>For business inquiries, reservations, or press and partnership, please feel free to contact us.</p>
+      <div class="hrow center"><a href="#" class="btn">Contact us</a><a href="/en/stay/" class="btn dark">Book a stay</a></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero{position:relative;height:100vh;min-height:600px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;padding:0}
+  .hero-bg{position:absolute;inset:-8% 0;background-size:cover;background-position:center;background-repeat:no-repeat;will-change:transform}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,30,35,.5),rgba(20,30,35,.2) 40%,rgba(20,30,35,.6))}
+  .hero-inner{position:relative;z-index:2;color:#fff;padding:0 24px}
+  .hero-inner .eyebrow{color:#fff;opacity:.92}
+  .hero h1{color:#fff;font-size:clamp(28px,4.6vw,52px);line-height:1.5;text-shadow:0 2px 22px rgba(0,0,0,.3)}
+  .hero p{margin-top:22px;font-size:clamp(14px,1.5vw,16px);letter-spacing:.06em;opacity:.95}
+  .hrow{margin-top:36px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .center{text-align:center;margin-top:30px;justify-content:center}
+  .scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;color:#fff;font-size:10px;letter-spacing:.3em;writing-mode:vertical-rl;opacity:.8}
+  .scroll-cue::after{content:"";display:block;width:1px;height:42px;background:#fff;margin:12px auto 0;animation:cue 2s ease-in-out infinite}
+  @keyframes cue{0%,100%{transform:scaleY(.3);opacity:.3;transform-origin:top}50%{transform:scaleY(1);opacity:1;transform-origin:top}}
+  .concept{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+  .concept h2{font-size:clamp(21px,2.5vw,30px);margin-bottom:24px}
+  .concept p{margin-bottom:16px;font-size:15px}
+  .concept .imgwrap{overflow:hidden;border-radius:2px}
+  .concept img{width:100%;height:420px;object-fit:cover;background:var(--paper2);transition:transform 1.2s ease}
+  .concept .imgwrap:hover img{transform:scale(1.05)}
+  .business{background:var(--paper2)}
+  .biz-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .biz{background:var(--white);border:1px solid var(--line);border-radius:2px;padding:30px 24px;transition:transform .4s,box-shadow .4s}
+  .biz:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(29,42,48,.09)}
+  .biz .no{font-family:var(--serif);font-size:13px;color:var(--sand);letter-spacing:.1em}
+  .biz h3{font-size:18px;margin:10px 0 12px}
+  .biz p{font-size:13px;line-height:1.85}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+  .commit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  .commit{border:1px solid var(--line);border-radius:2px;padding:28px 30px;background:var(--white)}
+  .commit .en{font-size:11px;letter-spacing:.24em;color:var(--sand-d)}
+  .commit h3{font-size:18px;margin:6px 0 10px}
+  .commit p{font-size:13.5px}
+  .company{max-width:760px;margin:0 auto}
+  .company h2{font-size:clamp(21px,2.5vw,29px);margin-bottom:22px}
+  .infotable{width:100%;border-collapse:collapse}
+  .infotable th,.infotable td{text-align:left;padding:13px 4px;border-bottom:1px solid var(--line);font-size:14px;font-weight:300;vertical-align:top}
+  .infotable th{width:34%;font-family:var(--serif);font-weight:600;color:var(--ink);letter-spacing:.04em}
+  .cta{text-align:center;background:var(--ink);color:#fff}
+  .cta .eyebrow{color:#e6c79a}
+  .cta h2{color:#fff;font-size:clamp(22px,2.8vw,34px);margin-bottom:18px}
+  .cta p{max-width:540px;margin:0 auto 0;opacity:.9;font-size:15px}
+  @media(max-width:860px){
+    .hero{height:72vh;min-height:440px}
+    .hero-bg{inset:-4% 0;background-position:center 32%}
+    .concept{grid-template-columns:1fr;gap:30px}.concept img{height:300px}
+    .biz-grid{grid-template-columns:repeat(2,1fr)}
+    .commit-grid{grid-template-columns:1fr}
+  }
+</style>

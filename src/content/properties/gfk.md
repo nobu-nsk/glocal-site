@@ -80,4 +80,72 @@ booking:
   lead: 空室状況の確認・ご予約は各予約サイトより承っております。お気軽にお問い合わせください。
   airbnb: https://www.airbnb.jp/rooms/1676862590144846430
   contact: /#contact
+en:
+  title: Glocal Fujikawaguchiko
+  summary: A private one-group villa with sweeping views of Mt. Fuji.
+  hero:
+    eyebrow: Private hideaway · One group per day
+    title: A lakeside private villa<br>with Mt. Fuji in full view.
+    lead: A grand panorama of Mt. Fuji from every room.<br>Stay, and live, in the quiet.
+  conceptHeading: Unwind at the foot of Mt. Fuji.
+  conceptBody:
+    - Set near the shore of Lake Kawaguchi, Glocal Fujikawaguchiko is a whole-house villa for one group per day. A little away from the tourist bustle, it hosts up to 10 guests for a relaxed stay with family or friends.
+    - From the 40-plus-square-meter living room and balcony on the second floor, Mt. Fuji spreads out to its foothills. Watch the mountain change hour by hour from the warmth of the room.
+    - For a summer retreat or a workation. A grown-up hideaway to savor the luxury of doing nothing.
+  panorama:
+    title: Mt. Fuji from every room
+    sub: A panorama that fills the living room
+  features:
+    - { title: Mt. Fuji panorama, desc: 'Views of Mt. Fuji from every room. The living-room window and balcony are the best seats.' }
+    - { title: Indoor sauna, desc: 'A low-temperature far-infrared sauna (65C) that warms you to the core.' }
+    - { title: 'Whole house, up to 10', desc: 'Private use of the house, garden and deck. Four bedrooms with room to spare.' }
+    - { title: Near Kawaguchiko Station, desc: 'Close to the station with free parking. Easy self check-in.' }
+  special:
+    eyebrow: Private Sauna
+    title: Surrender to the silence, and reset from within.
+    body: 'An indoor low-temperature far-infrared sauna (65C). Rather than fierce heat, it warms you gently and deeply, easing the body without strain. A deeper layer of rest for a calm stay beneath Mt. Fuji.'
+  rooms:
+    - { floor: '2F | LIVING', title: Living, desc: 'A 40+ square-meter open living room. Light pours in through large windows facing Mt. Fuji.' }
+    - { floor: '2F | BALCONY', title: Balcony, desc: 'A balcony facing Mt. Fuji. Sink into a chair and watch the mountain shift through the day.' }
+    - { floor: '2F | TATAMI', title: Tatami room, desc: 'A tatami room off the living area, another spot to stretch out and relax.' }
+    - { floor: '2F | KITCHEN', title: Full kitchen, desc: 'A fully equipped kitchen, comfortable for longer stays and home cooking.' }
+    - { floor: '1F | BEDROOM', title: Bedroom, desc: 'A bright bedroom with Mt. Fuji right outside the window each morning.' }
+    - { floor: '1F | BEDROOM', title: Bedroom, desc: 'Another restful bedroom. Every room enjoys Fuji views; sleeps up to 10.' }
+    - { floor: 'OUTDOOR | DECK', title: Wood deck, desc: 'A spacious deck with mountain views, the best seat for fresh air.' }
+    - { floor: 'OUTDOOR | GARDEN', title: Garden, desc: 'A 50 square-meter open garden ringed by lawn and seasonal greenery.' }
+    - { floor: 'FACILITY | SAUNA', title: Indoor sauna, desc: 'A low-temperature far-infrared sauna (65C) that warms you gently to the core.' }
+  gallery:
+    - { title: Mt. Fuji view, desc: An ever-changing face }
+    - { title: Fuji from the terrace, desc: The best seat on the balcony }
+    - { title: Living and dining, desc: A 40+ square-meter open space }
+    - { title: Full kitchen, desc: A kitchen with Fuji views }
+    - { title: Balcony, desc: The best seat for Mt. Fuji }
+    - { title: Deck and garden, desc: An outdoor place to enjoy Fuji }
+    - { title: Exterior, desc: A whole-house villa }
+    - { title: Lake Kawaguchi and Mt. Fuji, desc: The grand Fuji seen from the lake }
+    - { title: Lakeside cycling path, desc: A trail for every season }
+    - { title: Lake Kawaguchi, desc: Quiet time by the water }
+  amenities:
+    - Mountain view
+    - Lake Kawaguchi access
+    - Indoor sauna
+    - Full kitchen
+    - Free Wi-Fi
+    - Free parking
+    - Self check-in
+    - Washer and dryer
+    - Private patio and balcony
+    - Wood deck and garden
+    - Pets considered (please ask)
+    - Security camera (exterior)
+  info:
+    - { label: Check-in, value: '3:00 to 9:00 PM (self check-in)' }
+    - { label: Check-out, value: by 11:00 AM }
+    - { label: Capacity, value: 'Up to 10 (4 bedrooms, 9 beds, 2 futon sets)' }
+    - { label: House rules, value: 'No BBQ or parties, to keep the area quiet. Multi-night stays are prioritized.' }
+    - { label: Lodging license, value: Yamanashi Pref. No. To-fu 1027 }
+  booking:
+    heading: A holiday with Mt. Fuji, just for you.
+    lead: Check availability and book through our listing sites. Feel free to get in touch.
+    bookingLabel: Book on Airbnb
 ---

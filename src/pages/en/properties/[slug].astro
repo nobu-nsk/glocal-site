@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PropertyLP from '../../../components/PropertyLP.astro';
+
+export async function getStaticPaths() {
+  const props = await getCollection('properties');
+  return props.filter((p) => p.data.en).map((p) => ({ params: { slug: p.id }, props: { p } }));
+}
+
+const { p } = Astro.props;
+const d = p.data;
+const e = d.en;
+const isStay = d.genres.includes('stay');
+
+const t = {
+  title: e.title,
+  hero: e.hero,
+  heroCta: 'Reserve & Inquire',
+  conceptHeading: e.conceptHeading,
+  conceptBody: e.conceptBody,
+  panorama: d.panorama && e.panorama ? e.panorama : null,
+  featuresHeading: isStay ? 'Why stay here' : 'Features',
+  features: e.features,
+  special: d.special && e.special ? e.special : null,
+  roomsHeading: 'Rooms & Facilities',
+  rooms: e.rooms,
+  floorplanCaption: 'Floor plan — click to enlarge',
+  galleryHeading: 'Gallery',
+  gallery: e.gallery,
+  amenitiesHeading: 'Amenities & Services',
+  amenities: e.amenities,
+  specsHeading: 'Property Details',
+  specs: e.specs,
+  specsNote: e.specsNote,
+  accessHeading: 'Access & Information',
+  addressLabel: 'Address',
+  info: e.info,
+  operatorLabel: 'Operated by',
+  operatorValue: 'Glocal Commune LLC',
+  contactLabel: 'Contact',
+  bookingNote: '',
+  booking: {
+    heading: e.booking?.heading || 'Reservation & Inquiry',
+    lead: e.booking?.lead || 'Check availability and get in touch.',
+    bookingLabel: e.booking?.bookingLabel || 'Book now',
+  },
+};
+---
+<BaseLayout lang="en" title={`${e.title} | Glocal Commune`} description={e.summary}>
+  <PropertyLP data={d} t={t} />
+</BaseLayout>

@@ -71,4 +71,65 @@ booking:
   lead: 空室状況の確認・ご予約は各予約サイトより承っております。お気軽にお問い合わせください。
   airbnb: https://www.airbnb.jp/rooms/1040374827310530994
   contact: /#contact
+en:
+  title: Glocal Kasugai Onsen
+  summary: A whole-house villa with a private hot-spring bath, in the land of fruit and wine.
+  hero:
+    eyebrow: Land of fruit and wine · Whole house
+    title: A private hot spring,<br>and a stay like living here.
+    lead: A 4-bedroom villa in quiet Kasugai, Fuefuki.<br>The Isawa-Kasugai hot spring, all to yourself, anytime.
+  conceptHeading: Stay like a local, in the land of fruit and wine.
+  conceptBody:
+    - Fuefuki, Yamanashi, known for peaches, grapes and wine. In a quiet residential area stands Glocal Kasugai, a whole-house villa for your group.
+    - A spacious living room, a full kitchen, a tatami room and three bedrooms, plus a courtyard and balcony. Up to 7 guests can settle in and relax.
+    - A base for sightseeing or a workation. Enjoy a stay that feels like living here.
+  features:
+    - { title: Private hot-spring bath, desc: 'A private bath fed from the Isawa-Kasugai hot spring. Soak whenever you like.' }
+    - { title: '4 bedrooms, up to 7', desc: 'A large living room and four bedrooms for families and groups.' }
+    - { title: Full kitchen, desc: 'Cookware and tableware provided, easy for longer stays and home cooking.' }
+    - { title: Good access and self check-in, desc: 'Free parking for two and fast Wi-Fi. Great for a workation, too.' }
+  special:
+    eyebrow: Private Onsen
+    title: A private hot-spring bath, fed from the source.
+    body: 'A private bath drawing water directly from the Isawa-Kasugai hot spring. No crowds, no waiting, soak as often as you like. Let the day melt away as warmth reaches the core.'
+  rooms:
+    - { floor: LIVING, title: Living room, desc: 'An open living room where family and friends gather, lit by the courtyard.' }
+    - { floor: DINING, title: Dining, desc: 'A cozy dining space to gather and talk around the table.' }
+    - { floor: TATAMI, title: Tatami room, desc: 'A tatami room to relax, great for children or an afternoon nap.' }
+    - { floor: KITCHEN, title: Full kitchen, desc: 'A fully equipped kitchen that makes home cooking a pleasure.' }
+    - { floor: BEDROOM, title: Bedroom (Queen), desc: 'A restful bedroom with a queen bed.' }
+    - { floor: BEDROOM, title: Bedroom (Blue), desc: 'A calm semi-double bedroom.' }
+    - { floor: BEDROOM, title: Bedroom (Green), desc: 'A bright semi-double bedroom.' }
+    - { floor: COURTYARD, title: Courtyard, desc: 'A private courtyard with light and breeze, for quiet moments.' }
+    - { floor: BALCONY, title: Balcony, desc: 'A private balcony to relax with a coffee in hand.' }
+  gallery:
+    - { title: Exterior, desc: A whole-house villa }
+    - { title: Living and dining, desc: A spacious LDK }
+    - { title: Living to courtyard, desc: A home full of light }
+    - { title: Courtyard, desc: A quiet private courtyard }
+    - { title: Tatami room, desc: Relax on the tatami }
+    - { title: Full kitchen, desc: Easy home cooking }
+    - { title: Private hot-spring bath, desc: The source, on your schedule }
+    - { title: Balcony, desc: A relaxed outdoor space }
+  amenities:
+    - Private hot-spring bath (from the source)
+    - Full kitchen
+    - Fast Wi-Fi
+    - Workspace
+    - Free parking (2 cars)
+    - Self check-in
+    - Washer
+    - Private courtyard and balcony
+    - Tatami room
+    - Security camera (exterior)
+  info:
+    - { label: Check-in, value: 'from 3:00 PM (self check-in)' }
+    - { label: Check-out, value: by 11:00 AM }
+    - { label: Capacity, value: 'Up to 7 (4 bedrooms, 6 beds: 1 queen, 2 semi-double, 3 futon sets)' }
+    - { label: House rules, value: 'A quiet residential area, please mind nighttime noise.' }
+    - { label: Lodging license, value: Yamanashi Pref. No. Kyoto-fu 4664 }
+  booking:
+    heading: A restful holiday with the hot spring.
+    lead: Check availability and book through our listing sites. Feel free to get in touch.
+    bookingLabel: Book on Airbnb
 ---

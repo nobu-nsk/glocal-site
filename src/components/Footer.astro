@@ -1,28 +1,40 @@
 ---
+const { lang = 'ja' } = Astro.props;
+const isEn = lang === 'en';
+const tagline = isEn
+  ? 'Global vision, local roots.<br />Glocal Commune LLC'
+  : '世界のこと、地域のこと、一緒に取り組もう。<br />合同会社グローカルコミューン';
+const links = isEn
+  ? [
+      { href: '/en/stay/', label: 'Stay' },
+      { href: '/en/#company', label: 'Company' },
+      { href: '/', label: '日本語' },
+    ]
+  : [
+      { href: '/stay/', label: '宿泊' },
+      { href: '/resort-rental/', label: 'リゾート賃貸' },
+      { href: '/residence/', label: '居住用賃貸' },
+      { href: '/#company', label: '会社概要' },
+      { href: '/privacy/', label: 'プライバシー' },
+    ];
 ---
 <footer>
   <div class="wrap">
     <div class="grid">
       <div>
         <div class="logo">GLOCAL COMMUNE</div>
-        <p>世界のこと、地域のこと、一緒に取り組もう。<br />合同会社グローカルコミューン</p>
+        <p set:html={tagline}></p>
       </div>
-      <div class="fnav">
-        <a href="/stay/">宿泊</a>
-        <a href="/resort-rental/">リゾート賃貸</a>
-        <a href="/residence/">居住用賃貸</a>
-        <a href="/#company">会社概要</a>
-        <a href="/privacy/">プライバシー</a>
-      </div>
+      <div class="fnav">{links.map((l) => <a href={l.href}>{l.label}</a>)}</div>
     </div>
-    <div class="copy">© 2026 合同会社グローカルコミューン All Rights Reserved.</div>
+    <div class="copy">© 2026 GLOCAL COMMUNE LLC. All Rights Reserved.</div>
   </div>
 </footer>
 <style>
   footer{background:#16221f;color:rgba(255,255,255,.66);padding:54px 0 28px;font-size:13px}
   footer .grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;align-items:flex-start}
   footer .logo{color:#fff;font-size:18px;font-family:var(--serif)}
-  footer p{margin-top:12px;max-width:340px;font-weight:300}
+  footer p{margin-top:12px;max-width:360px;font-weight:300}
   footer a{transition:color .3s}
   footer a:hover{color:#e6c79a}
   footer .fnav{display:flex;gap:22px;flex-wrap:wrap}
