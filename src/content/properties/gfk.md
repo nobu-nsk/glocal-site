@@ -4,7 +4,7 @@ nameEn: Glocal Fujikawaguchiko
 genres: [stay]
 order: 1
 summary: 富士山を望む、一日一組の隠れ家。一棟貸しのプライベートヴィラ。
-cardImage: /images/gfk/hero.jpg
+cardImage: /images/gfk/panorama.png
 hero:
   image: /images/gfk/hero.jpg
   eyebrow: 私人の隠れ家 ｜ 一日一組限定

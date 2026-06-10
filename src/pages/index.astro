@@ -96,19 +96,16 @@ const businesses = [
   </section>
 
   <section id="company">
-    <div class="wrap company">
-      <div class="reveal">
+    <div class="wrap">
+      <div class="company reveal">
         <div class="eyebrow">Company</div>
         <h2>会社情報</h2>
         <table class="infotable">
           <tr><th>会社名</th><td>合同会社グローカルコミューン</td></tr>
-          <tr><th>所在地</th><td>山梨県<br />※詳細は会社概要ページに掲載</td></tr>
+          <tr><th>所在地</th><td>山梨県甲府市湯村1-1-16</td></tr>
           <tr><th>事業内容</th><td>宿泊事業／賃貸・住まい事業／多文化共生事業／産業衛生事業</td></tr>
-          <tr><th>理念</th><td>世界のこと、地域のこと、一緒に取り組もう。</td></tr>
+          <tr><th>ビジョン</th><td>世界とつながった地元<br />世界のこと、地域のこと、一緒に取り組もう</td></tr>
         </table>
-      </div>
-      <div class="reveal">
-        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%E5%B1%B1%E6%A2%A8%E7%9C%8C&output=embed" title="所在地エリア"></iframe>
       </div>
     </div>
   </section>
@@ -173,7 +170,7 @@ const businesses = [
   .news-item .cat{font-size:11px;border:1px solid var(--line);padding:2px 10px;border-radius:2px;color:var(--ink2);white-space:nowrap}
   .news-item .ttl{font-size:14.5px}
 
-  .company{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start}
+  .company{max-width:760px;margin:0 auto}
   .company h2{font-size:clamp(21px,2.5vw,29px);margin-bottom:22px}
   .infotable{width:100%;border-collapse:collapse}
   .infotable th,.infotable td{text-align:left;padding:13px 4px;border-bottom:1px solid var(--line);font-size:14px;font-weight:300;vertical-align:top}
@@ -186,6 +183,8 @@ const businesses = [
   .cta p{max-width:540px;margin:0 auto 0;opacity:.9;font-size:15px}
 
   @media(max-width:860px){
+    .hero{height:72vh;min-height:440px}
+    .hero-bg{inset:-4% 0;background-position:center 32%}
     .concept{grid-template-columns:1fr;gap:30px}.concept img{height:300px}
     .biz-grid{grid-template-columns:repeat(2,1fr)}
     .prop-grid,.commit-grid,.company{grid-template-columns:1fr}
