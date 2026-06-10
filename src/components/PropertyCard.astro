@@ -1,0 +1,32 @@
+---
+import { GENRE_LABELS } from '../content.config';
+const { property } = Astro.props;
+const d = property.data;
+const url = `/properties/${property.id}/`;
+---
+<a class="pcard reveal" href={url}>
+  <div class="pthumb"><img src={d.cardImage} alt={d.title} loading="lazy" /></div>
+  <div class="pbody">
+    <div class="pgenres">
+      {d.genres.map((g: string) => <span class={`gtag g-${g}`}>{GENRE_LABELS[g]}</span>)}
+    </div>
+    <h3>{d.title}</h3>
+    <p>{d.summary}</p>
+    <span class="more">詳しく見る</span>
+  </div>
+</a>
+<style>
+  .pcard{display:block;background:var(--white);border:1px solid var(--line);border-radius:2px;overflow:hidden;transition:transform .4s,box-shadow .4s}
+  .pcard:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(29,42,48,.1)}
+  .pthumb{height:230px;overflow:hidden}
+  .pthumb img{width:100%;height:100%;object-fit:cover;transition:transform .9s}
+  .pcard:hover .pthumb img{transform:scale(1.06)}
+  .pbody{padding:22px 24px 26px}
+  .pgenres{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+  .gtag{font-size:11px;padding:3px 10px;border-radius:2px;font-weight:500}
+  .g-stay{background:#E1F5EE;color:#0F6E56}
+  .g-resort-rental{background:#FAEEDA;color:#854F0B}
+  .g-residence{background:#E6F1FB;color:#0C447C}
+  .pbody h3{font-size:19px;margin-bottom:8px}
+  .pbody p{font-size:13.5px;line-height:1.8;margin-bottom:6px}
+</style>

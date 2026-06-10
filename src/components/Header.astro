@@ -1,0 +1,39 @@
+---
+const nav = [
+  { href: '/', label: 'ホーム' },
+  { href: '/#business', label: '事業内容' },
+  { href: '/stay/', label: '宿泊' },
+  { href: '/resort-rental/', label: 'リゾート賃貸' },
+  { href: '/residence/', label: '居住用賃貸' },
+];
+---
+<header id="hdr">
+  <div class="wrap">
+    <a href="/" class="logo">GLOCAL COMMUNE<small>合同会社グローカルコミューン</small></a>
+    <nav>
+      {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+      <a href="/#contact" class="cta">お問い合わせ</a>
+    </nav>
+    <button class="menu-btn" aria-label="メニュー">☰</button>
+  </div>
+</header>
+<style>
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,box-shadow .4s,padding .4s;padding:22px 0}
+  header.scrolled{background:rgba(246,242,234,.93);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--line);padding:13px 0}
+  header .wrap{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:var(--serif);font-size:19px;font-weight:700;color:#fff;letter-spacing:.1em;transition:color .4s}
+  .logo small{display:block;font-size:9px;letter-spacing:.3em;font-weight:500;opacity:.85;font-family:var(--sans)}
+  header.scrolled .logo{color:var(--ink)}
+  nav{display:flex;gap:24px;align-items:center}
+  nav a{font-size:13px;letter-spacing:.1em;color:#fff;transition:color .4s;font-weight:400}
+  header.scrolled nav a{color:var(--ink2)}
+  nav a.cta{border:1px solid rgba(255,255,255,.7);padding:8px 18px;border-radius:2px;font-size:12px}
+  header.scrolled nav a.cta{border-color:var(--sand);color:var(--sand-d)}
+  nav a:not(.cta):hover{color:var(--sand)}
+  .menu-btn{display:none}
+  @media(max-width:860px){
+    nav{display:none}
+    .menu-btn{display:block;color:#fff;font-size:26px;background:none;border:0;cursor:pointer}
+    header.scrolled .menu-btn{color:var(--ink)}
+  }
+</style>
