@@ -126,6 +126,21 @@ const d = p.data;
     </section>
   )}
 
+  <!-- PROPERTY DETAILS (賃貸物件の物件概要) -->
+  {d.specs.length > 0 && (
+    <section id="specs" class="specs">
+      <div class="wrap">
+        <div class="gal-head reveal"><div class="eyebrow">Property Details</div><h2>物件概要</h2></div>
+        <div class="spec-grid reveal">
+          {d.specs.map((s: any) => (
+            <div class="spec-row"><span class="sl">{s.label}</span><span class="sv">{s.value}</span></div>
+          ))}
+        </div>
+        {d.specsNote && <p class="spec-note reveal">{d.specsNote}</p>}
+      </div>
+    </section>
+  )}
+
   <!-- ACCESS & INFORMATION -->
   <section id="access">
     <div class="wrap access">
@@ -148,10 +163,10 @@ const d = p.data;
   <section id="booking" class="booking">
     <div class="wrap reveal">
       <div class="eyebrow">Reservation</div>
-      <h2>富士山と過ごす休日を、あなたに。</h2>
-      <p>空室状況の確認・ご予約は各予約サイトより承っております。お気軽にお問い合わせください。</p>
+      <h2>{d.booking.heading || 'ご予約・お問い合わせ'}</h2>
+      <p>{d.booking.lead || '空室状況の確認・ご予約・お問い合わせは、お気軽にご連絡ください。'}</p>
       <div class="btns">
-        {d.booking.airbnb && <a href={d.booking.airbnb} target="_blank" rel="noopener" class="btn">Airbnbで予約する</a>}
+        {(d.booking.bookingUrl || d.booking.airbnb) && <a href={d.booking.bookingUrl || d.booking.airbnb} target="_blank" rel="noopener" class="btn">{d.booking.bookingLabel || 'Airbnbで予約する'}</a>}
         <a href={d.booking.contact || '/#contact'} class="btn dark">お問い合わせ</a>
       </div>
       <p class="note">※ 予約カレンダー・お問い合わせは、Beds24予約エンジン等へ差し替え可能です。</p>
@@ -234,6 +249,11 @@ const d = p.data;
   .c-btn:hover{background:#fff}
   .c-prev{left:6px}.c-next{right:6px}
 
+  .specs .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;max-width:980px;margin:0 auto;border-top:1px solid var(--line)}
+  .spec-row{display:flex;gap:14px;align-items:baseline;padding:13px 4px;border-bottom:1px solid var(--line)}
+  .spec-row .sl{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:13.5px;flex:0 0 38%;letter-spacing:.04em}
+  .spec-row .sv{font-size:13.5px;font-weight:300}
+  .spec-note{max-width:980px;margin:22px auto 0;font-size:11.5px;line-height:1.8;color:var(--ink2);opacity:.8}
   .amenities{background:var(--paper2)}
   .am-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px 30px;margin-top:44px}
   .am{display:flex;align-items:center;gap:12px;font-size:14px;padding:14px 0;border-bottom:1px solid var(--line)}
@@ -270,6 +290,7 @@ const d = p.data;
     .feat-grid{grid-template-columns:repeat(2,1fr);gap:36px 26px}
     .room-grid{grid-template-columns:repeat(2,1fr);gap:16px}
     .am-grid{grid-template-columns:repeat(2,1fr)}
+    .specs .spec-grid{grid-template-columns:1fr}
     .access{grid-template-columns:1fr;gap:40px}
     .special{background-attachment:scroll !important}
   }

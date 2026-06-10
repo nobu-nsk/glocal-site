@@ -76,6 +76,8 @@ info:
   - { label: 'ハウスルール', value: '静かな環境維持のためBBQ・パーティーはご遠慮ください。連泊を優先して承ります。' }
   - { label: '旅館業許可番号', value: '山梨県指令富東福第1027号' }
 booking:
+  heading: 富士山と過ごす休日を、あなたに。
+  lead: 空室状況の確認・ご予約は各予約サイトより承っております。お気軽にお問い合わせください。
   airbnb: https://www.airbnb.jp/rooms/1676862590144846430
   contact: /#contact
 ---

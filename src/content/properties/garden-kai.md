@@ -1,0 +1,75 @@
+---
+title: グローカルガーデン甲斐
+nameEn: Glocal Garden Kai
+genres: [stay, resort-rental]
+order: 3
+summary: 大きな自然農法のガーデンに佇む、吹き抜けLDKの半平屋別荘。5連泊から。
+cardImage: /images/garden-kai/hero.jpg
+hero:
+  image: /images/garden-kai/hero.jpg
+  eyebrow: 甲府・昇仙峡エリア ｜ 半平屋別荘
+  title: 大きなガーデンに佇む、<br>自然と暮らす半平屋の別荘。
+  lead: ログハウスの温かみと、モダンな吹き抜けのリビング。<br>自然農法のガーデンに包まれて、暮らすように過ごす。
+concept:
+  heading: ガーデンにポツンと一軒家。自然と調和する半平屋。
+  image: /images/garden-kai/concept.jpg
+  body:
+    - 山梨県甲斐市――ワイナリーと昇仙峡に近い里山に建つ「グローカルガーデン甲斐」。ログハウスならではの温かみを残しつつ、モダンに洗練された3LDKの半平屋住宅です。
+    - 主寝室・広々としたLDK・水回りは1階に集約し、平屋として快適に。2階には独立した洋室を2室備え、仕事部屋やゲストルームとして多用途に使えます。
+    - 吹き抜け天井のリビングは大きな掃き出し窓からウッドデッキ、そして庭へと一体に広がります。自然光あふれる空間で、ご家族やご友人とゆったりとした時間を。
+features:
+  - { icon: '❀', title: '大きな自然農法ガーデン', desc: '果樹や野菜を育てる広い庭。散策・収穫・昆虫採集も楽しめます。' }
+  - { icon: '⌂', title: '吹き抜けLDKの半平屋', desc: '主要スペースは1階に集約。開放的な吹き抜けのリビング。' }
+  - { icon: '▣', title: 'プロジェクターシアター', desc: '大画面で映画も（Netflix等）。研修・リトリートにも。' }
+  - { icon: '◷', title: '5連泊〜・ワーケーション', desc: '長期滞在向け。高速Wi-Fi・独立した仕事部屋を完備。' }
+special:
+  eyebrow: The Garden
+  title: 自然と暮らす、大きなガーデン。
+  body: 敷地の大半を占めるガーデンでは、自然農法で果樹や野菜を育てています。ご自由に散策いただき、季節によっては収穫体験も。お子様には昆虫採集、ペットとのお散歩にも。手つかずの自然と調和する、ここだけの滞在を。
+  image: /images/garden-kai/garden.jpg
+rooms:
+  - { floor: '1F ｜ LIVING', title: 'リビング（吹き抜け）', desc: '吹き抜け天井が生む開放感。ウッドデッキ・庭へと一体に広がります。', image: /images/garden-kai/living.jpg }
+  - { floor: '1F ｜ THEATER', title: 'ダイニング・シアター', desc: 'プロジェクターで大画面の映画を。グループの研修・リトリートにも。', image: /images/garden-kai/hero.jpg }
+  - { floor: '1F ｜ BEDROOM', title: '主寝室', desc: '生活の主要スペースとともに1階に。平屋として快適に過ごせます。', image: /images/garden-kai/bed-main.jpg }
+  - { floor: '2F ｜ BEDROOM', title: '洋室（2F）', desc: '独立した洋室。ゲストルームやプライベートな空間として。', image: /images/garden-kai/bed-2f-a.jpg }
+  - { floor: '2F ｜ WORKSPACE', title: '洋室（2F・ワークスペース）', desc: 'デスクを備えた洋室。リモートワークの仕事部屋にも最適。', image: /images/garden-kai/bed-2f-b.jpg }
+  - { floor: 'EXTERIOR', title: '外観', desc: '里山の風景に溶け込む、白を基調とした半平屋の佇まい。', image: /images/garden-kai/exterior.jpg }
+floorplan: /images/garden-kai/floorplan.png
+gallery:
+  - { image: /images/garden-kai/concept.jpg, title: '外観とガーデン', desc: '自然に佇む半平屋' }
+  - { image: /images/garden-kai/hero.jpg, title: 'リビング・シアター', desc: '吹き抜けとプロジェクター' }
+  - { image: /images/garden-kai/living.jpg, title: 'リビング', desc: '開放感あふれる吹き抜け' }
+  - { image: /images/garden-kai/bed-main.jpg, title: '主寝室', desc: '1階の快適な寝室' }
+  - { image: /images/garden-kai/bed-2f-a.jpg, title: '洋室（2F）', desc: '独立したプライベート空間' }
+  - { image: /images/garden-kai/garden.jpg, title: 'ガーデン', desc: '自然農法の大きな庭' }
+  - { image: /images/garden-kai/exterior.jpg, title: '外観', desc: '里山に溶け込む佇まい' }
+  - { image: /images/garden-kai/bed-2f-b.jpg, title: 'ワークスペース', desc: '仕事部屋にも' }
+amenities:
+  - { icon: '❀', label: '自然農法のガーデン' }
+  - { icon: '▣', label: 'プロジェクター（Netflix等）' }
+  - { icon: '⌥', label: 'フルキッチン' }
+  - { icon: '✦', label: '高速Wi-Fi' }
+  - { icon: '⊞', label: '駐車場' }
+  - { icon: '♨', label: 'バスタブ' }
+  - { icon: '⊙', label: '洗濯機・乾燥機' }
+  - { icon: '☖', label: 'ウッドデッキ・バルコニー' }
+  - { icon: '♘', label: 'ペット同伴可' }
+  - { icon: '✎', label: 'ワークスペース（独立洋室）' }
+location:
+  address: 〒400-0102 山梨県甲斐市團子新居1428
+  mapEmbed: https://www.google.com/maps?q=%E5%B1%B1%E6%A2%A8%E7%9C%8C%E7%94%B2%E6%96%90%E5%B8%82%E5%9C%98%E5%AD%90%E6%96%B0%E5%B1%851428&output=embed
+info:
+  - { label: 'チェックイン', value: '15:00 〜' }
+  - { label: 'チェックアウト', value: '12:00 まで' }
+  - { label: '定員', value: '最大6名（3LDK・寝室3・ベッド6・布団6）' }
+  - { label: 'ご利用', value: '原則5連泊から（7泊・28泊以上の長期割引あり。短期はお問い合わせ）' }
+  - { label: 'アクセス', value: '中央道 双葉スマートICより約7分／JR塩崎駅より約5分' }
+  - { label: 'ハウスルール', value: 'ペット同伴可・館内全面禁煙。自然が多く虫が出やすい環境です。' }
+  - { label: '届出番号', value: '第 M190056702 号' }
+booking:
+  heading: 大きなガーデンで、暮らすように。
+  lead: 5連泊からの長期滞在・リゾート賃貸のご相談も承ります。お気軽にお問い合わせください。
+  bookingUrl: https://tripto.jp/facilities/896
+  bookingLabel: TRIPTOで予約する
+  contact: /#contact
+---
