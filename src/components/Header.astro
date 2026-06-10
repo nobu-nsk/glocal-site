@@ -1,32 +1,48 @@
 ---
 const { lang = 'ja' } = Astro.props;
-const isEn = lang === 'en';
-const nav = isEn
-  ? [
-      { href: '/en/', label: 'Home' },
-      { href: '/en/#business', label: 'Business' },
-      { href: '/en/stay/', label: 'Stay' },
-    ]
-  : [
-      { href: '/', label: 'ホーム' },
-      { href: '/#business', label: '事業内容' },
-      { href: '/stay/', label: '宿泊' },
-      { href: '/resort-rental/', label: 'リゾート賃貸' },
-      { href: '/residence/', label: '居住用賃貸' },
-    ];
-const ctaHref = isEn ? '/en/#contact' : '/#contact';
-const ctaLabel = isEn ? 'Contact' : 'お問い合わせ';
-const toggleHref = isEn ? '/' : '/en/';
-const toggleLabel = isEn ? '日本語' : 'EN';
-const sub = isEn ? 'GLOCAL COMMUNE LLC' : '合同会社グローカルコミューン';
+const base = lang === 'ja' ? '' : `/${lang}`;
+const NAV: Record<string, { href: string; label: string }[]> = {
+  ja: [
+    { href: '/', label: 'ホーム' },
+    { href: '/#business', label: '事業内容' },
+    { href: '/stay/', label: '宿泊' },
+    { href: '/resort-rental/', label: 'リゾート賃貸' },
+    { href: '/residence/', label: '居住用賃貸' },
+  ],
+  en: [
+    { href: '/en/', label: 'Home' },
+    { href: '/en/#business', label: 'Business' },
+    { href: '/en/stay/', label: 'Stay' },
+  ],
+  zh: [
+    { href: '/zh/', label: '首頁' },
+    { href: '/zh/#business', label: '事業' },
+    { href: '/zh/stay/', label: '住宿' },
+  ],
+};
+const CTA: Record<string, string> = { ja: 'お問い合わせ', en: 'Contact', zh: '聯絡我們' };
+const SUB: Record<string, string> = {
+  ja: '合同会社グローカルコミューン',
+  en: 'GLOCAL COMMUNE LLC',
+  zh: '合同会社 Glocal Commune',
+};
+const langLinks = [
+  { code: 'ja', href: '/', label: '日本語' },
+  { code: 'en', href: '/en/', label: 'EN' },
+  { code: 'zh', href: '/zh/', label: '繁中' },
+];
+const nav = NAV[lang];
+const homeHref = lang === 'ja' ? '/' : `${base}/`;
 ---
 <header id="hdr">
   <div class="wrap">
-    <a href={isEn ? '/en/' : '/'} class="logo">GLOCAL COMMUNE<small>{sub}</small></a>
+    <a href={homeHref} class="logo">GLOCAL COMMUNE<small>{SUB[lang]}</small></a>
     <nav>
       {nav.map((n) => <a href={n.href}>{n.label}</a>)}
-      <a href={toggleHref} class="lang">{toggleLabel}</a>
-      <a href={ctaHref} class="cta">{ctaLabel}</a>
+      <span class="langs">
+        {langLinks.map((l) => <a href={l.href} class={l.code === lang ? 'active' : ''}>{l.label}</a>)}
+      </span>
+      <a href={`${base}/#contact`} class="cta">{CTA[lang]}</a>
     </nav>
     <button class="menu-btn" aria-label="menu">☰</button>
   </div>
@@ -41,10 +57,12 @@ const sub = isEn ? 'GLOCAL COMMUNE LLC' : '合同会社グローカルコミュ�
   nav{display:flex;gap:22px;align-items:center}
   nav a{font-size:13px;letter-spacing:.1em;color:#fff;transition:color .4s;font-weight:400}
   header.scrolled nav a{color:var(--ink2)}
-  nav a.lang{opacity:.85;font-size:12px}
+  .langs{display:flex;gap:8px;align-items:center;font-size:11px;opacity:.85}
+  .langs a{font-size:11px}
+  .langs a.active{color:var(--sand);opacity:1}
   nav a.cta{border:1px solid rgba(255,255,255,.7);padding:8px 18px;border-radius:2px;font-size:12px}
   header.scrolled nav a.cta{border-color:var(--sand);color:var(--sand-d)}
-  nav a:not(.cta):hover{color:var(--sand)}
+  nav a:not(.cta):not(.active):hover{color:var(--sand)}
   .menu-btn{display:none}
   @media(max-width:860px){
     nav{display:none}

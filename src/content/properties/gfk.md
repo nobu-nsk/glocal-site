@@ -148,4 +148,72 @@ en:
     heading: A holiday with Mt. Fuji, just for you.
     lead: Check availability and book through our listing sites. Feel free to get in touch.
     bookingLabel: Book on Airbnb
+zh:
+  title: Glocal 富士河口湖
+  summary: 每個房間都能望見富士山，一日一組的整棟包租別墅。
+  hero:
+    eyebrow: 私人秘境・一日一組
+    title: 眺望富士山的<br>湖畔私人別墅。
+    lead: 每個房間都能望見壯麗的富士山全景。<br>在寧靜之中，如生活般入住。
+  conceptHeading: 在富士山麓，享受放鬆身心的時光。
+  conceptBody:
+    - 座落於河口湖湖畔附近，「Glocal 富士河口湖」是一日僅接待一組客人的整棟包租別墅。遠離觀光地的喧囂，最多可容納10位賓客，與家人或朋友悠閒共度。
+    - 二樓超過40平方公尺的開放式客廳與陽台，可將富士山一覽無遺。富士山隨天候時刻變換面貌，請在溫暖的室內盡情欣賞。
+    - 適合避暑或工作度假。這是一處讓您享受「無所事事」之奢侈的成人秘境。
+  panorama:
+    title: 從每個房間眺望富士山
+    sub: 客廳中滿溢的全景視野
+  features:
+    - { title: 富士山全景, desc: '每個房間都能望見富士山，客廳的大窗與陽台是最佳席位。' }
+    - { title: 室內三溫暖, desc: '備有讓身體由內暖起的低溫遠紅外線三溫暖（65度）。' }
+    - { title: 整棟包租・最多10人, desc: '獨享整棟房屋、庭園與木棧平台。四間臥室，空間寬敞。' }
+    - { title: 鄰近河口湖站, desc: '鄰近車站，附免費停車位，可自助辦理入住。' }
+  special:
+    eyebrow: Private Sauna
+    title: 在寧靜中，由內而外煥然一新。
+    body: '室內設有低溫遠紅外線三溫暖（65度）。不以高溫一口氣加熱，而是緩緩溫暖身體核心，毫無負擔地調理身心。在眺望富士山的靜謐住宿中，增添一段更深層的休息。'
+  rooms:
+    - { floor: '2F | LIVING', title: 客廳, desc: '超過40平方公尺的開放式客廳。光線自面向富士山的大窗灑落。' }
+    - { floor: '2F | BALCONY', title: 陽台, desc: '正面眺望富士山的陽台。坐在椅上，欣賞富士山的萬千變化。' }
+    - { floor: '2F | TATAMI', title: 和室, desc: '與客廳相連的榻榻米和室，是另一處可隨意躺臥的休憩空間。' }
+    - { floor: '2F | KITCHEN', title: 全功能廚房, desc: '配備齊全的廚房，連泊與自炊也十分舒適。' }
+    - { floor: '1F | BEDROOM', title: 臥室, desc: '明亮的臥室，清晨拉開窗簾，富士山就在眼前。' }
+    - { floor: '1F | BEDROOM', title: 臥室, desc: '另一間舒適的臥室。所有房間皆可望見富士山，最多可住10人。' }
+    - { floor: 'OUTDOOR | DECK', title: 木棧平台, desc: '寬敞的木棧平台，眺望山巒，是享受戶外空氣的最佳席位。' }
+    - { floor: 'OUTDOOR | GARDEN', title: 庭園, desc: '50平方公尺的開放式庭園，被草坪與四季花草環繞。' }
+    - { floor: 'FACILITY | SAUNA', title: 室內三溫暖, desc: '室內設有低溫遠紅外線三溫暖（65度），溫和地由內暖身。' }
+  gallery:
+    - { title: 富士山景緻, desc: 時刻變換的面貌 }
+    - { title: 從露台眺望富士, desc: 陽台的最佳席位 }
+    - { title: 客廳與餐廳, desc: 超過40平方公尺的開放空間 }
+    - { title: 全功能廚房, desc: 能望見富士山的廚房 }
+    - { title: 陽台, desc: 眺望富士山的特等席 }
+    - { title: 木棧平台與庭園, desc: 能望見富士的戶外空間 }
+    - { title: 外觀, desc: 整棟包租別墅 }
+    - { title: 河口湖與富士山, desc: 從湖畔眺望壯麗富士 }
+    - { title: 湖畔自行車道, desc: 感受四季的散步道 }
+    - { title: 河口湖畔, desc: 水邊的寧靜時光 }
+  amenities:
+    - 山景
+    - 河口湖周邊
+    - 室內三溫暖
+    - 全功能廚房
+    - 免費 Wi-Fi
+    - 免費停車
+    - 自助入住
+    - 洗衣機・烘乾機
+    - 專用露台與陽台
+    - 木棧平台與庭園
+    - 可攜帶寵物（須事先洽詢）
+    - 室外監視攝影機
+  info:
+    - { label: 入住時間, value: '15:00〜21:00（自助入住）' }
+    - { label: 退房時間, value: 11:00 前 }
+    - { label: 可住人數, value: '最多10人（4間臥室・9張床・2組被褥）' }
+    - { label: 住宿規則, value: '為維持寧靜環境，恕不提供BBQ與派對。優先接受連泊預約。' }
+    - { label: 旅館業許可, value: 山梨縣指令富東福第1027號 }
+  booking:
+    heading: 與富士山共度的假期，獻給您。
+    lead: 空房確認與預約請透過各預約網站。歡迎隨時與我們聯繫。
+    bookingLabel: 在 Airbnb 預約
 ---

@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PropertyLP from '../../../components/PropertyLP.astro';
+
+export async function getStaticPaths() {
+  const props = await getCollection('properties');
+  return props.filter((p) => p.data.zh).map((p) => ({ params: { slug: p.id }, props: { p } }));
+}
+
+const { p } = Astro.props;
+const d = p.data;
+const z = d.zh;
+const isStay = d.genres.includes('stay');
+
+const t = {
+  title: z.title,
+  hero: z.hero,
+  heroCta: '預約・諮詢',
+  conceptHeading: z.conceptHeading,
+  conceptBody: z.conceptBody,
+  panorama: d.panorama && z.panorama ? z.panorama : null,
+  featuresHeading: isStay ? '住宿亮點' : '特色',
+  features: z.features,
+  special: d.special && z.special ? z.special : null,
+  roomsHeading: '客房・設備',
+  rooms: z.rooms,
+  floorplanCaption: '平面圖 — 點擊放大',
+  galleryHeading: '相片集',
+  gallery: z.gallery,
+  amenitiesHeading: '設備・服務',
+  amenities: z.amenities,
+  specsHeading: '物件概要',
+  specs: z.specs,
+  specsNote: z.specsNote,
+  accessHeading: '交通・資訊',
+  addressLabel: '地址',
+  info: z.info,
+  operatorLabel: '營運',
+  operatorValue: 'Glocal Commune',
+  contactLabel: '聯絡我們',
+  bookingNote: '',
+  booking: {
+    heading: z.booking?.heading || '預約・諮詢',
+    lead: z.booking?.lead || '歡迎洽詢空房與預約。',
+    bookingLabel: z.booking?.bookingLabel || '前往預約',
+  },
+};
+---
+<BaseLayout lang="zh" title={`${z.title}｜Glocal Commune`} description={z.summary}>
+  <PropertyLP data={d} t={t} />
+</BaseLayout>

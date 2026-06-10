@@ -132,4 +132,65 @@ en:
     heading: A restful holiday with the hot spring.
     lead: Check availability and book through our listing sites. Feel free to get in touch.
     bookingLabel: Book on Airbnb
+zh:
+  title: Glocal 春日居溫泉
+  summary: 引入溫泉源泉的私人湯屋，位於水果與葡萄酒之鄉的整棟包租別墅。
+  hero:
+    eyebrow: 水果與葡萄酒之鄉・整棟包租
+    title: 引泉入屋的私人溫泉，<br>如生活般的整棟住宿。
+    lead: 座落於笛吹市春日居寧靜住宅區的4臥室別墅。<br>石和・春日居的溫泉，隨時為您獨享。
+  conceptHeading: 在水果與葡萄酒之鄉，如當地人般入住。
+  conceptBody:
+    - 山梨縣笛吹市——以桃子、葡萄與葡萄酒聞名的「水果與葡萄酒之鄉」。在其寧靜的住宅區中，座落著整棟包租別墅「Glocal 春日居溫泉」。
+    - 寬敞的客廳、全功能廚房、和室與三間臥室，並設有中庭與陽台。最多可容納7位賓客，與家人朋友悠閒共度。
+    - 作為觀光據點或工作度假皆宜。請享受「如生活般入住」的時光。
+  features:
+    - { title: 私人溫泉湯屋, desc: '引入石和・春日居溫泉源泉的私人浴池，隨時都能入浴。' }
+    - { title: 4臥室・最多7人, desc: '寬敞的客廳與四間臥室，適合家庭與團體。' }
+    - { title: 全功能廚房, desc: '備有炊具與餐具，連泊與自炊都很舒適。' }
+    - { title: 交通便利・自助入住, desc: '附2台免費停車位與高速 Wi-Fi，也很適合工作度假。' }
+  special:
+    eyebrow: Private Onsen
+    title: 引自源泉的私人溫泉湯屋。
+    body: '直接引入石和・春日居溫泉源泉的私人浴池。無需在意大浴場的擁擠，隨時想泡就泡，盡情享受。在一天的尾聲，讓溫暖滲入身體核心。'
+  rooms:
+    - { floor: LIVING, title: 客廳, desc: '家人與好友齊聚的開放式客廳，中庭的光線灑落其中。' }
+    - { floor: DINING, title: 餐廳, desc: '圍著餐桌談天的舒適用餐空間。' }
+    - { floor: TATAMI, title: 和室, desc: '可在榻榻米上放鬆的和室，適合親子或午睡。' }
+    - { floor: KITCHEN, title: 全功能廚房, desc: '配備齊全的廚房，讓自炊成為樂事。' }
+    - { floor: BEDROOM, title: 臥室（Queen）, desc: '備有 Queen 大床的舒適臥室。' }
+    - { floor: BEDROOM, title: 臥室（藍）, desc: '色調沉穩的小型雙人房。' }
+    - { floor: BEDROOM, title: 臥室（綠）, desc: '氣氛明亮的小型雙人房。' }
+    - { floor: COURTYARD, title: 中庭, desc: '光與風穿行的專用中庭，享受寧靜片刻。' }
+    - { floor: BALCONY, title: 陽台, desc: '可手持咖啡放鬆的專用陽台。' }
+  gallery:
+    - { title: 外觀, desc: 整棟包租別墅 }
+    - { title: 客廳與餐廳, desc: 寬敞的開放空間 }
+    - { title: 從客廳望向中庭, desc: 充滿光線的居所 }
+    - { title: 中庭, desc: 寧靜的專用中庭 }
+    - { title: 和室, desc: 在榻榻米上放鬆 }
+    - { title: 全功能廚房, desc: 自炊也輕鬆 }
+    - { title: 私人溫泉湯屋, desc: 隨時享用源泉 }
+    - { title: 陽台, desc: 放鬆的戶外空間 }
+  amenities:
+    - 私人溫泉湯屋（引泉）
+    - 全功能廚房
+    - 高速 Wi-Fi
+    - 工作空間
+    - 免費停車（2台）
+    - 自助入住
+    - 洗衣機
+    - 專用中庭與陽台
+    - 和室
+    - 室外監視攝影機
+  info:
+    - { label: 入住時間, value: '15:00 起（自助入住）' }
+    - { label: 退房時間, value: 11:00 前 }
+    - { label: 可住人數, value: '最多7人（4間臥室・6張床：Queen 1・小型雙人 2・被褥 3組）' }
+    - { label: 住宿規則, value: '位於寧靜住宅區，夜間請留意音量（音樂與大聲交談）。' }
+    - { label: 旅館業許可, value: 山梨縣指令峽東福第4664號 }
+  booking:
+    heading: 與溫泉共度的放鬆假期。
+    lead: 空房確認與預約請透過各預約網站。歡迎隨時與我們聯繫。
+    bookingLabel: 在 Airbnb 預約
 ---

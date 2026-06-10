@@ -6,9 +6,10 @@ const all = await getCollection('properties');
 let items = all
   .filter((p) => p.data.genres.includes(genre))
   .sort((a, b) => a.data.order - b.data.order);
-// 英語版は en データを持つ物件のみ表示
+// 多言語版は該当言語データを持つ物件のみ表示
 if (lang === 'en') items = items.filter((p) => p.data.en);
-const emptyText = lang === 'en' ? 'Coming soon.' : '現在準備中です。';
+if (lang === 'zh') items = items.filter((p) => p.data.zh);
+const emptyText = lang === 'en' ? 'Coming soon.' : lang === 'zh' ? '準備中。' : '現在準備中です。';
 ---
 <section class="listing-hero">
   <div class="wrap">

@@ -135,4 +135,67 @@ en:
     heading: Live a while, in the garden.
     lead: We also welcome inquiries about longer stays and resort rental (from 5 nights). Feel free to get in touch.
     bookingLabel: Book on TRIPTO
+zh:
+  title: Glocal Garden 甲斐
+  summary: 座落於大型自然農法庭園中的挑高客廳平房別墅。5晚起。
+  hero:
+    eyebrow: 甲府・昇仙峽周邊・別墅
+    title: 佇立於大庭園中，<br>與自然共生的平房別墅。
+    lead: 兼具小木屋的溫暖與現代挑高客廳。<br>被自然農法的庭園環抱，如生活般入住。
+  conceptHeading: 庭園中的一棟房子，與自然和諧共處。
+  conceptBody:
+    - 位於山梨縣甲斐市，鄰近酒莊與昇仙峽。「Glocal Garden 甲斐」是一棟保留小木屋溫度、設計現代洗鍊的 3LDK 平房。
+    - 主臥室、客廳與衛浴等主要空間集中於一樓，享受平房般的舒適；二樓另設兩間獨立洋室，可作為書房或客房。
+    - 挑高的客廳透過大片落地窗與木棧平台相連，延伸至庭園，融為一體。在灑滿自然光的空間中，與家人朋友共度悠閒時光。
+  panorama:
+    title: 與自然共生的房子。
+    sub: 以自然農法培育的大庭園
+  features:
+    - { title: 大型自然農法庭園, desc: '種植果樹與蔬菜的廣闊庭園。可散步、採收，亦可捉蟲。' }
+    - { title: 挑高平房, desc: '主要生活空間集中一樓，挑高開放的客廳。' }
+    - { title: 投影劇院, desc: '可用投影機觀賞大螢幕電影（Netflix 等），也適合舉辦研修。' }
+    - { title: 5晚起・工作度假, desc: '適合長期停留，備有高速 Wi-Fi 與獨立書房。' }
+  special:
+    eyebrow: The Garden
+    title: 與自然共生的大庭園。
+    body: '基地大半為庭園，以自然農法栽種果樹與蔬菜。歡迎自由散步，依季節還能體驗採收。孩童可捉蟲，也能帶著愛犬散步。與未經雕琢的自然和諧共處，這是專屬此處的住宿。'
+  rooms:
+    - { floor: '1F | LIVING', title: 客廳（挑高）, desc: '挑高天花板帶來開放感，延伸至木棧平台與庭園。' }
+    - { floor: '1F | THEATER', title: 餐廳・劇院, desc: '以投影機觀賞大螢幕電影，也適合團體研修。' }
+    - { floor: '1F | BEDROOM', title: 主臥室, desc: '與主要生活空間同在一樓，享受平房般的舒適。' }
+    - { floor: '2F | BEDROOM', title: 洋室（2樓）, desc: '獨立的房間，適合作為客房或私人空間。' }
+    - { floor: '2F | WORKSPACE', title: 書房（2樓）, desc: '備有書桌的房間，最適合遠距工作。' }
+    - { floor: EXTERIOR, title: 外觀, desc: '融入鄉間風景、以白色為基調的平房。' }
+  gallery:
+    - { title: 外觀與庭園, desc: 佇立自然中的平房 }
+    - { title: 客廳與劇院, desc: 挑高天花板與投影機 }
+    - { title: 客廳, desc: 開放的挑高空間 }
+    - { title: 主臥室, desc: 一樓的舒適臥室 }
+    - { title: 洋室（2樓）, desc: 獨立的私人空間 }
+    - { title: 庭園, desc: 大型自然農法庭園 }
+    - { title: 外觀, desc: 融入鄉間的居所 }
+    - { title: 工作空間, desc: 也能在此工作 }
+  amenities:
+    - 自然農法庭園
+    - 投影機（Netflix 等）
+    - 全功能廚房
+    - 高速 Wi-Fi
+    - 停車場
+    - 浴缸
+    - 洗衣機・烘乾機
+    - 木棧平台與陽台
+    - 歡迎攜帶寵物
+    - 工作空間（獨立洋室）
+  info:
+    - { label: 入住時間, value: 15:00 起 }
+    - { label: 退房時間, value: 12:00 前 }
+    - { label: 可住人數, value: '最多6人（3LDK・3間臥室・6張床・6組被褥）' }
+    - { label: 住宿天數, value: '5晚起（另有7晚、28晚以上長期優惠；短期請洽詢）' }
+    - { label: 交通, value: '中央道 雙葉Smart IC 約7分鐘車程；JR鹽崎站 約5分鐘車程' }
+    - { label: 住宿規則, value: '歡迎攜帶寵物；室內全面禁菸。自然環境蟲類較多。' }
+    - { label: 申報號碼, value: 第 M190056702 號 }
+  booking:
+    heading: 在庭園中，如生活般住一段時間。
+    lead: 亦歡迎洽詢長期停留與度假租賃（5晚起）。歡迎隨時與我們聯繫。
+    bookingLabel: 在 TRIPTO 預約
 ---

@@ -2,14 +2,19 @@
 import { GENRE_LABELS } from '../content.config';
 const { property, lang = 'ja' } = Astro.props;
 const d = property.data;
-const isEn = lang === 'en';
-const url = isEn ? `/en/properties/${property.id}/` : `/properties/${property.id}/`;
-const title = isEn ? d.en?.title || d.nameEn || d.title : d.title;
-const summary = isEn ? d.en?.summary || d.summary : d.summary;
-const moreLabel = isEn ? 'View details' : '詳しく見る';
-const GEN: Record<string, string> = isEn
-  ? { stay: 'Stay', 'resort-rental': 'Resort rental', residence: 'Residence' }
-  : GENRE_LABELS;
+const loc = lang === 'en' ? d.en : lang === 'zh' ? d.zh : null;
+const base = lang === 'ja' ? '' : `/${lang}`;
+const url = `${base}/properties/${property.id}/`;
+const title = loc?.title || d.title;
+const summary = loc?.summary || d.summary;
+const MORE: Record<string, string> = { ja: '詳しく見る', en: 'View details', zh: '查看詳情' };
+const moreLabel = MORE[lang] || MORE.ja;
+const GEN_MAP: Record<string, Record<string, string>> = {
+  ja: GENRE_LABELS,
+  en: { stay: 'Stay', 'resort-rental': 'Resort rental', residence: 'Residence' },
+  zh: { stay: '住宿', 'resort-rental': '度假租賃', residence: '居住租賃' },
+};
+const GEN = GEN_MAP[lang] || GENRE_LABELS;
 ---
 <a class="pcard reveal" href={url}>
   <div class="pthumb"><img src={d.cardImage} alt={title} loading="lazy" /></div>
