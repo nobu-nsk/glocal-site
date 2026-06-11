@@ -147,7 +147,7 @@ const { data, t } = Astro.props;
       <div class="beds24-embed"><iframe src={data.booking.beds24Iframe} title="Beds24 booking" loading="lazy"></iframe></div>
     )}
     <div class="btns">
-      {(data.booking.beds24Url || data.booking.bookingUrl || data.booking.airbnb) && <a href={data.booking.beds24Url || data.booking.bookingUrl || data.booking.airbnb} target="_blank" rel="noopener" class="btn">{t.booking.bookingLabel}</a>}
+      {(data.booking.beds24Url || data.booking.bookingUrl || data.booking.airbnb) && <a href={data.booking.beds24Url || data.booking.bookingUrl || data.booking.airbnb} target="_blank" rel="noopener" class="btn" data-conv="book">{t.booking.bookingLabel}</a>}
       {data.booking.beds24Url && data.booking.airbnb && <a href={data.booking.airbnb} target="_blank" rel="noopener" class="btn dark">{t.airbnbLabel || 'Airbnb'}</a>}
       <a href={t.contactHref || data.booking.contact || '/#contact'} class="btn dark">{t.contactLabel}</a>
     </div>
@@ -270,6 +270,17 @@ const { data, t } = Astro.props;
 </style>
 
 <script>
+  import { GA_EVENTS } from '../consts';
+  // 予約サイト（Airbnb等）への遷移クリックをGA4イベントとして送信
+  document.querySelector('[data-conv="book"]')?.addEventListener('click', () => {
+    if (window.gtag) {
+      window.gtag('event', GA_EVENTS.bookingClick, {
+        property: document.title,
+        page_path: location.pathname,
+      });
+    }
+  });
+
   const track = document.getElementById('gtrack');
   const slides = track ? Array.from(track.children) : [];
   let active = 0;

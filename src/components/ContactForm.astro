@@ -92,6 +92,7 @@ const c = L[lang] || L.ja;
   @media(max-width:600px){ .c-head{padding:130px 0 32px} }
 </style>
 <script>
+  import { GA_EVENTS } from '../consts';
   const form = document.getElementById('contactForm');
   const status = document.getElementById('cStatus');
   if (form) {
@@ -106,7 +107,10 @@ const c = L[lang] || L.ja;
       try {
         const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(f) });
         const data = await res.json();
-        if (data.success) { f.reset(); show(f.dataset.success, true); } else { throw new Error('failed'); }
+        if (data.success) {
+          f.reset(); show(f.dataset.success, true);
+          if (window.gtag) window.gtag('event', GA_EVENTS.contactSubmit);
+        } else { throw new Error('failed'); }
       } catch (_) { show(f.dataset.error, false); }
       btn.disabled = false; btn.textContent = orig;
     });
