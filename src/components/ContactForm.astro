@@ -1,0 +1,114 @@
+---
+const { lang = 'ja' } = Astro.props;
+// Web3Forms のアクセスキー（公開キー。HTMLに埋め込む前提で安全）。
+// 環境変数 PUBLIC_WEB3FORMS_KEY があれば優先、無ければ既定キーを使用。
+const ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY || 'd073dc0a-76c7-43a8-ba33-607031d04a90';
+
+const L: Record<string, any> = {
+  ja: {
+    title: 'お問い合わせ',
+    lead: '宿泊・賃貸・取材や協業のご相談など、お気軽にお問い合わせください。',
+    name: 'お名前', email: 'メールアドレス', phone: '電話番号（任意）', type: 'ご用件', message: 'メッセージ',
+    submit: '送信する', sending: '送信中…',
+    success: '送信しました。お問い合わせありがとうございます。担当より追ってご連絡いたします。',
+    error: '送信に失敗しました。お手数ですが時間をおいて再度お試しください。',
+    noKey: 'フォームは現在設定準備中です。お手数ですが、お電話またはメールにてご連絡ください。',
+    subject: 'ウェブサイトからのお問い合わせ',
+    types: ['宿泊について', '賃貸・物件について', '取材・協業', 'その他'],
+  },
+  en: {
+    title: 'Contact', lead: 'For stays, rentals, press or partnership—feel free to reach out.',
+    name: 'Name', email: 'Email', phone: 'Phone (optional)', type: 'Subject', message: 'Message',
+    submit: 'Send', sending: 'Sending…',
+    success: 'Thank you. Your message has been sent; we will get back to you soon.',
+    error: 'Sending failed. Please try again later.',
+    noKey: 'The form is being set up. Please contact us by phone or email for now.',
+    subject: 'Website inquiry',
+    types: ['About a stay', 'About a rental', 'Press / partnership', 'Other'],
+  },
+  zh: {
+    title: '聯絡我們', lead: '住宿、租賃、採訪或合作洽詢，歡迎隨時與我們聯繫。',
+    name: '姓名', email: '電子郵件', phone: '電話（選填）', type: '諮詢類別', message: '訊息',
+    submit: '送出', sending: '傳送中…',
+    success: '已送出，感謝您的來信，我們將盡快與您聯繫。',
+    error: '傳送失敗，請稍後再試。',
+    noKey: '表單設定準備中，請暫時以電話或電子郵件與我們聯繫。',
+    subject: '網站諮詢',
+    types: ['住宿相關', '租賃・物件相關', '採訪・合作', '其他'],
+  },
+};
+const c = L[lang] || L.ja;
+---
+<section class="contact">
+  <div class="c-head reveal">
+    <div class="wrap">
+      <div class="eyebrow">Contact</div>
+      <h1>{c.title}</h1>
+      <p>{c.lead}</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <form
+      id="contactForm"
+      class="c-form reveal"
+      data-key={ACCESS_KEY}
+      data-sending={c.sending}
+      data-success={c.success}
+      data-error={c.error}
+      data-nokey={c.noKey}
+    >
+      <input type="hidden" name="access_key" value={ACCESS_KEY} />
+      <input type="hidden" name="subject" value={c.subject} />
+      <input type="hidden" name="from_site" value="glocal-commune.com" />
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" />
+      <label>{c.name} <span class="req">*</span><input type="text" name="name" required /></label>
+      <label>{c.email} <span class="req">*</span><input type="email" name="email" required /></label>
+      <label>{c.phone}<input type="tel" name="phone" /></label>
+      <label>{c.type}
+        <select name="inquiry_type">{c.types.map((x: string) => <option>{x}</option>)}</select>
+      </label>
+      <label>{c.message} <span class="req">*</span><textarea name="message" rows="6" required></textarea></label>
+      <button type="submit" class="btn">{c.submit}</button>
+      <p class="c-status" id="cStatus" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+<style>
+  .contact{padding-bottom:96px}
+  .c-head{padding:150px 0 40px;background:var(--paper2);text-align:center;margin-bottom:48px}
+  .c-head h1{font-size:clamp(26px,3.4vw,40px);margin:6px 0 14px}
+  .c-head p{font-size:15px;color:var(--ink2);max-width:620px;margin:0 auto}
+  .c-form{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+  .c-form label{display:flex;flex-direction:column;gap:7px;font-size:13.5px;font-weight:500;color:var(--ink)}
+  .c-form .req{color:var(--sand-d)}
+  .c-form input,.c-form select,.c-form textarea{font-family:inherit;font-size:15px;font-weight:300;color:var(--ink2);background:var(--white);border:1px solid var(--line);border-radius:2px;padding:12px 14px;width:100%}
+  .c-form input:focus,.c-form select:focus,.c-form textarea:focus{outline:none;border-color:var(--sand)}
+  .c-form textarea{resize:vertical}
+  .c-form .btn{align-self:flex-start;border:0;cursor:pointer;margin-top:6px}
+  .c-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  .c-status{font-size:14px;padding:14px 16px;border-radius:2px;margin-top:4px}
+  .c-status.ok{background:var(--paper2);color:var(--ink);border:1px solid var(--sand)}
+  .c-status.err{background:#fbeaea;color:#8a2a2a;border:1px solid #e0b4b4}
+  @media(max-width:600px){ .c-head{padding:130px 0 32px} }
+</style>
+<script>
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('cStatus');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const f = form;
+      const show = (msg, ok) => { status.hidden = false; status.textContent = msg; status.className = 'c-status ' + (ok ? 'ok' : 'err'); };
+      if (!f.dataset.key) { show(f.dataset.nokey, false); return; }
+      const btn = f.querySelector('button[type=submit]');
+      const orig = btn.textContent;
+      btn.disabled = true; btn.textContent = f.dataset.sending;
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(f) });
+        const data = await res.json();
+        if (data.success) { f.reset(); show(f.dataset.success, true); } else { throw new Error('failed'); }
+      } catch (_) { show(f.dataset.error, false); }
+      btn.disabled = false; btn.textContent = orig;
+    });
+  }
+</script>

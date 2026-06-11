@@ -70,6 +70,10 @@ const properties = defineCollection({
         lead: z.string().optional(),
         bookingUrl: z.string().optional(),
         bookingLabel: z.string().optional(),
+        // Beds24: 予約ページのURL（新規タブで開く推奨）。設定すると予約ボタンが Beds24 を優先。
+        beds24Url: z.string().optional(),
+        // Beds24: 任意のインライン埋め込み iframe の src（カレンダー/予約ページ）。
+        beds24Iframe: z.string().optional(),
         airbnb: z.string().optional(),
         contact: z.string().optional(),
       })

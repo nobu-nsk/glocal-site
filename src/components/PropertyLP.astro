@@ -143,9 +143,13 @@ const { data, t } = Astro.props;
     <div class="eyebrow">Reservation</div>
     <h2>{t.booking.heading}</h2>
     <p>{t.booking.lead}</p>
+    {data.booking.beds24Iframe && (
+      <div class="beds24-embed"><iframe src={data.booking.beds24Iframe} title="Beds24 booking" loading="lazy"></iframe></div>
+    )}
     <div class="btns">
-      {(data.booking.bookingUrl || data.booking.airbnb) && <a href={data.booking.bookingUrl || data.booking.airbnb} target="_blank" rel="noopener" class="btn">{t.booking.bookingLabel}</a>}
-      <a href={data.booking.contact || '/#contact'} class="btn dark">{t.contactLabel}</a>
+      {(data.booking.beds24Url || data.booking.bookingUrl || data.booking.airbnb) && <a href={data.booking.beds24Url || data.booking.bookingUrl || data.booking.airbnb} target="_blank" rel="noopener" class="btn">{t.booking.bookingLabel}</a>}
+      {data.booking.beds24Url && data.booking.airbnb && <a href={data.booking.airbnb} target="_blank" rel="noopener" class="btn dark">{t.airbnbLabel || 'Airbnb'}</a>}
+      <a href={t.contactHref || data.booking.contact || '/#contact'} class="btn dark">{t.contactLabel}</a>
     </div>
     {t.bookingNote && <p class="note">{t.bookingNote}</p>}
   </div>
@@ -239,6 +243,9 @@ const { data, t } = Astro.props;
   .booking p{max-width:560px;margin:0 auto 38px;opacity:.9;font-size:15px}
   .booking .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
   .booking .note{margin-top:30px;font-size:11.5px;opacity:.55;letter-spacing:.04em}
+  .beds24-embed{max-width:780px;margin:0 auto 32px}
+  .beds24-embed iframe{width:100%;height:560px;border:0;border-radius:2px;background:#fff}
+  @media(max-width:600px){ .beds24-embed iframe{height:620px} }
   .lb{position:fixed;inset:0;background:rgba(15,20,22,.93);display:none;align-items:center;justify-content:center;z-index:100}
   .lb.open{display:flex}
   .lb-img{max-width:92vw;max-height:84vh;object-fit:contain;border-radius:2px}

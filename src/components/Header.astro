@@ -42,7 +42,7 @@ const homeHref = lang === 'ja' ? '/' : `${base}/`;
       <span class="langs">
         {langLinks.map((l) => <a href={l.href} class={l.code === lang ? 'active' : ''}>{l.label}</a>)}
       </span>
-      <a href={`${base}/#contact`} class="cta">{CTA[lang]}</a>
+      <a href={`${base}/contact/`} class="cta">{CTA[lang]}</a>
     </nav>
     <button class="menu-btn" aria-label="menu">☰</button>
   </div>
