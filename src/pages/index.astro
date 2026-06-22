@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PropertyCard from '../components/PropertyCard.astro';
+import InstagramFeed from '../components/InstagramFeed.astro';
 
 const all = await getCollection('properties');
 const stays = all
@@ -94,6 +95,8 @@ const businesses = [
       </div>
     </div>
   </section>
+
+  <InstagramFeed lang="ja" />
 
   <section id="company">
     <div class="wrap">

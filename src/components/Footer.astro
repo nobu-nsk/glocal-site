@@ -1,9 +1,15 @@
 ---
+import { SOCIAL } from '../consts';
 const { lang = 'ja' } = Astro.props;
 const TAG: Record<string, string> = {
   ja: '世界のこと、地域のこと、一緒に取り組もう。<br />合同会社グローカルコミューン',
   en: 'Global vision, local roots.<br />Glocal Commune LLC',
   zh: '放眼世界，扎根在地。<br />合同会社 Glocal Commune',
+};
+const FOLLOW: Record<string, string> = {
+  ja: 'フォローする',
+  en: 'Follow us',
+  zh: '追蹤我們',
 };
 const LINKS: Record<string, { href: string; label: string }[]> = {
   ja: [
@@ -33,11 +39,42 @@ const links = LINKS[lang];
         <div class="logo">GLOCAL COMMUNE</div>
         <p set:html={TAG[lang]}></p>
       </div>
-      <div class="fnav">{links.map((l) => <a href={l.href}>{l.label}</a>)}</div>
+      <div class="fcol">
+        <div class="fnav">{links.map((l) => <a href={l.href}>{l.label}</a>)}</div>
+        <div class="social">
+          <span class="follow">{FOLLOW[lang]}</span>
+          <a
+            class="ig"
+            href={SOCIAL.instagram.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-conv="instagram"
+            aria-label={`Instagram ${SOCIAL.instagram.handle}`}
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5.2" />
+              <circle cx="12" cy="12" r="4.2" />
+              <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none" />
+            </svg>
+            <span class="handle">{SOCIAL.instagram.handle}</span>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="copy">© 2026 GLOCAL COMMUNE LLC. All Rights Reserved.</div>
   </div>
 </footer>
+<script>
+  import { GA_EVENTS } from '../consts';
+  // Instagramプロフィールへの遷移クリックをGA4イベントとして送信
+  document.querySelectorAll('[data-conv="instagram"]').forEach((el) => {
+    el.addEventListener('click', () => {
+      if (window.gtag) {
+        window.gtag('event', GA_EVENTS.instagramClick, { page_path: location.pathname });
+      }
+    });
+  });
+</script>
 <style>
   footer{background:#16221f;color:rgba(255,255,255,.66);padding:54px 0 28px;font-size:13px}
   footer .grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;align-items:flex-start}
@@ -45,6 +82,13 @@ const links = LINKS[lang];
   footer p{margin-top:12px;max-width:360px;font-weight:300}
   footer a{transition:color .3s}
   footer a:hover{color:#e6c79a}
+  footer .fcol{display:flex;flex-direction:column;gap:20px;align-items:flex-end}
   footer .fnav{display:flex;gap:22px;flex-wrap:wrap}
+  footer .social{display:flex;align-items:center;gap:12px}
+  footer .social .follow{font-size:11px;letter-spacing:.08em;opacity:.6;text-transform:uppercase}
+  footer .social .ig{display:inline-flex;align-items:center;gap:8px}
+  footer .social .ig .handle{font-size:13px}
+  footer .social .ig svg{display:block}
+  @media(max-width:600px){ footer .fcol{align-items:flex-start} }
   footer .copy{margin-top:38px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:11px;opacity:.6;text-align:center;letter-spacing:.05em}
 </style>

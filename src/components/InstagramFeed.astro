@@ -1,0 +1,79 @@
+---
+import { SOCIAL } from '../consts';
+const { lang = 'ja' } = Astro.props;
+const ig = SOCIAL.instagram;
+const hasWidget = !!ig.widgetId;
+
+const T: Record<string, { eyebrow: string; heading: string; lead: string; cta: string; note: string }> = {
+  ja: {
+    eyebrow: 'Instagram',
+    heading: '最新の様子',
+    lead: '日々移ろう富士山の景色や、宿のひとときをお届けしています。',
+    cta: 'Instagramでフォロー',
+    note: '最新の投稿はInstagramでご覧いただけます。',
+  },
+  en: {
+    eyebrow: 'Instagram',
+    heading: 'Latest from Instagram',
+    lead: 'The ever-changing views of Mt. Fuji and quiet moments at our stay.',
+    cta: 'Follow on Instagram',
+    note: 'See our latest posts on Instagram.',
+  },
+  zh: {
+    eyebrow: 'Instagram',
+    heading: '最新動態',
+    lead: '為您分享每日變化的富士山景緻，以及住宿的點滴時光。',
+    cta: '在 Instagram 追蹤',
+    note: '歡迎在 Instagram 觀看最新貼文。',
+  },
+};
+const t = T[lang] ?? T.ja;
+---
+<section id="instagram" class="igfeed">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">{t.eyebrow}</div>
+      <h2>{t.heading}</h2>
+      <p class="lead">{t.lead}</p>
+    </div>
+
+    {hasWidget && (
+      <div class="igwidget reveal">
+        <behold-widget feed-id={ig.widgetId}></behold-widget>
+      </div>
+    )}
+
+    {!hasWidget && (
+      <div class="igfallback reveal">
+        <p>{t.note}</p>
+      </div>
+    )}
+
+    <div class="center">
+      <a
+        class="more ighandle"
+        href={ig.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-conv="instagram"
+        aria-label={`Instagram ${ig.handle}`}
+      >
+        {t.cta}（{ig.handle}）
+      </a>
+    </div>
+  </div>
+</section>
+
+{hasWidget && (
+  <script type="module" src="https://w.behold.so/widget.js" is:inline></script>
+)}
+
+<style>
+  .igfeed{background:var(--paper2)}
+  .igfeed .sec-head{text-align:center;margin-bottom:34px}
+  .igfeed .lead{max-width:560px;margin:14px auto 0;font-size:14.5px;color:var(--ink2)}
+  .igwidget{max-width:980px;margin:0 auto}
+  .igfallback{max-width:560px;margin:0 auto;text-align:center;border:1px solid var(--line);border-radius:2px;background:var(--white);padding:34px 24px}
+  .igfallback p{font-size:14px;color:var(--ink2)}
+  .igfeed .center{text-align:center;margin-top:30px}
+</style>
