@@ -66,6 +66,7 @@ amenities:
   - { icon: '☖', label: 'ウッドデッキ・庭' }
   - { icon: '♘', label: 'ペット同伴可（要相談）' }
   - { icon: '◎', label: '防犯カメラ（屋外）' }
+instagramWidgetId: 2Ol3DyHXpWyOWvWS1nQB
 location:
   address: 〒401-0305 山梨県南都留郡富士河口湖町大石887-1
   mapEmbed: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.551574439245!2d138.73590347616326!3d35.52753943840089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60195f76fca2d2a1%3A0x1000b3ab3cbb5fd4!2zR2xvY2FsIEZVSkkgS2F3YWd1Y2hpa28g44Kw44Ot44O844Kr44Or5a-M5aOr5rKz5Y-j5rmW!5e0!3m2!1sja!2sjp!4v1781081673885!5m2!1sja!2sjp

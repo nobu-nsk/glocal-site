@@ -13,11 +13,10 @@ export const SOCIAL = {
   instagram: {
     handle: '@glocal.fuji.kawaguchiko',
     url: 'https://www.instagram.com/glocal.fuji.kawaguchiko/',
-    // トップページのInstagramフィード（外部ウィジェット Behold.so）設定。
-    // 連携手順:
-    //   1) https://behold.so で無料登録し、Instagramアカウント(@glocal.fuji.kawaguchiko)を接続
-    //   2) フィードを作成すると発行される Feed ID を下記 widgetId に貼り付け
-    //   3) git push すると本番に反映（IDが空の間はフォロー導線のみ表示）
-    widgetId: '2Ol3DyHXpWyOWvWS1nQB', // 例: 'abcd1234EXAMPLE'
+    // サイト共通のInstagramフィード用 Behold.so Feed ID（任意）。
+    // ※ 現在は物件ごとに設定する方式を採用。GFKのフィードは
+    //    src/content/properties/gfk.md の instagramWidgetId に設定している。
+    //    全社共通アカウントができたらここにIDを入れると共通フィードとして使える。
+    widgetId: '',
   },
 };

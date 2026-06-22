@@ -61,6 +61,8 @@ const properties = defineCollection({
     amenities: z.array(z.object({ icon: z.string(), label: z.string() })).default([]),
     location: z.object({ address: z.string(), mapEmbed: z.string() }),
     info: z.array(z.object({ label: z.string(), value: z.string() })).default([]),
+    // この物件専用のInstagramフィード（Behold.so の Feed ID）。設定すると物件ページにフィードを表示。
+    instagramWidgetId: z.string().optional(),
     // 賃貸物件の物件概要（不動産表示規約に対応するコンパクトな仕様表）
     specs: z.array(z.object({ label: z.string(), value: z.string() })).default([]),
     specsNote: z.string().optional(),

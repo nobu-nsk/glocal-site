@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PropertyLP from '../../components/PropertyLP.astro';
+import InstagramFeed from '../../components/InstagramFeed.astro';
 
 export async function getStaticPaths() {
   const props = await getCollection('properties');
@@ -49,4 +50,5 @@ const t = {
 ---
 <BaseLayout title={`${d.title} ｜ 合同会社グローカルコミューン`} description={d.summary}>
   <PropertyLP data={d} t={t} />
+  {d.instagramWidgetId && <InstagramFeed lang="ja" widgetId={d.instagramWidgetId} />}
 </BaseLayout>

@@ -1,8 +1,9 @@
 ---
 import { SOCIAL } from '../consts';
-const { lang = 'ja' } = Astro.props;
+const { lang = 'ja', widgetId } = Astro.props;
 const ig = SOCIAL.instagram;
-const hasWidget = !!ig.widgetId;
+const feedId = widgetId ?? ig.widgetId;
+const hasWidget = !!feedId;
 
 const T: Record<string, { eyebrow: string; heading: string; lead: string; cta: string; note: string }> = {
   ja: {
@@ -39,7 +40,7 @@ const t = T[lang] ?? T.ja;
 
     {hasWidget && (
       <div class="igwidget reveal">
-        <behold-widget feed-id={ig.widgetId}></behold-widget>
+        <behold-widget feed-id={feedId}></behold-widget>
       </div>
     )}
 
