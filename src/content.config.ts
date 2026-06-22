@@ -86,11 +86,53 @@ const properties = defineCollection({
   }),
 });
 
-export const collections = { properties };
+// お知らせ／ジャーナルの多言語版（任意）。body があれば記事ページを生成。
+const newsLocalized = z.object({
+  title: z.string(),
+  summary: z.string().optional(),
+  body: z.array(z.string()).optional(),
+});
+
+// お知らせ／ジャーナル コレクション。1記事＝1つの .md（src/content/news/）。
+// body（段落の配列）があれば記事ページ（/news/<slug>/）を生成、無ければ一覧に出る告知行のみ。
+const news = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
+  schema: z.object({
+    title: z.string(),
+    date: z.coerce.date(),
+    category: z.string().default('お知らせ'),
+    summary: z.string().optional(),
+    image: z.string().optional(),
+    body: z.array(z.string()).optional(),
+    // 本文ページの代わりに外部（Instagram等）へ飛ばす告知の場合に指定。
+    link: z.string().optional(),
+    draft: z.boolean().default(false),
+    en: newsLocalized.optional(),
+    zh: newsLocalized.optional(),
+  }),
+});
+
+export const collections = { properties, news };
 
 // ジャンルの表示ラベル（日本語）
 export const GENRE_LABELS: Record<string, string> = {
   stay: '宿泊',
   'resort-rental': 'リゾート賃貸',
   residence: '居住用賃貸',
+};
+
+// お知らせのカテゴリー表示ラベル（多言語）。未定義カテゴリは元の文字列をそのまま表示。
+export const NEWS_CATEGORY_LABELS: Record<string, { en: string; zh: string }> = {
+  'お知らせ': { en: 'News', zh: '公告' },
+  '宿泊': { en: 'Stays', zh: '住宿' },
+  '取り組み': { en: 'Community', zh: '社區' },
+  '富士山': { en: 'Mt. Fuji', zh: '富士山' },
+  '周辺': { en: 'Area Guide', zh: '周邊資訊' },
+};
+
+// 一覧・記事ページのUIラベル（多言語）
+export const NEWS_UI: Record<string, { eyebrow: string; title: string; lead: string; all: string; readMore: string; back: string; empty: string }> = {
+  ja: { eyebrow: 'News', title: 'お知らせ・ジャーナル', lead: '宿やまちの最新情報、季節の便りをお届けします。', all: 'お知らせ一覧へ', readMore: '続きを読む', back: 'お知らせ一覧へ戻る', empty: '現在準備中です。' },
+  en: { eyebrow: 'News', title: 'News & Journal', lead: 'Updates from our stays and town, and notes from the seasons.', all: 'View all news', readMore: 'Read more', back: 'Back to all news', empty: 'Coming soon.' },
+  zh: { eyebrow: 'News', title: '最新消息・日誌', lead: '為您送上住宿與在地的最新資訊，以及季節的來信。', all: '查看所有消息', readMore: '閱讀更多', back: '返回消息一覽', empty: '準備中。' },
 };

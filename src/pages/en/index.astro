@@ -2,11 +2,26 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PropertyCard from '../../components/PropertyCard.astro';
+import NewsList from '../../components/NewsList.astro';
+import { NEWS_UI } from '../../content.config';
 
 const all = await getCollection('properties');
 const stays = all
   .filter((p) => p.data.genres.includes('stay') && p.data.en)
   .sort((a, b) => a.data.order - b.data.order);
+
+const newsUi = NEWS_UI.en;
+const newsItems = (await getCollection('news'))
+  .filter((n) => !n.data.draft && n.data.en)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4)
+  .map((n) => ({
+    date: n.data.date,
+    category: n.data.category,
+    title: n.data.en.title,
+    summary: n.data.en.summary,
+    href: n.data.en.body ? `/en/news/${n.id}/` : n.data.link || null,
+  }));
 
 const businesses = [
   { no: '01', title: 'Lodging', desc: 'Whole-house stays in Fujikawaguchiko and Kasugai—private villas where you stay like you live here.' },
@@ -74,6 +89,16 @@ const businesses = [
     </div>
   </section>
 
+  {newsItems.length > 0 && (
+    <section id="news" class="news">
+      <div class="wrap">
+        <div class="sec-head reveal"><div class="eyebrow">{newsUi.eyebrow}</div><h2>{newsUi.title}</h2></div>
+        <NewsList items={newsItems} lang="en" />
+        <div class="center"><a href="/en/news/" class="more">{newsUi.all}</a></div>
+      </div>
+    </section>
+  )}
+
   <section id="company">
     <div class="wrap">
       <div class="company reveal">
@@ -119,6 +144,7 @@ const businesses = [
   .concept img{width:100%;height:420px;object-fit:cover;background:var(--paper2);transition:transform 1.2s ease}
   .concept .imgwrap:hover img{transform:scale(1.05)}
   .business{background:var(--paper2)}
+  .news{background:var(--paper2)}
   .biz-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
   .biz{background:var(--white);border:1px solid var(--line);border-radius:2px;padding:30px 24px;transition:transform .4s,box-shadow .4s}
   .biz:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(29,42,48,.09)}

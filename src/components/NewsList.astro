@@ -1,0 +1,62 @@
+---
+import { NEWS_CATEGORY_LABELS } from '../content.config';
+
+const { items = [], lang = 'ja', showSummary = false } = Astro.props;
+
+function fmtDate(d) {
+  const dt = d instanceof Date ? d : new Date(d);
+  const y = dt.getFullYear();
+  const m = String(dt.getMonth() + 1).padStart(2, '0');
+  const day = String(dt.getDate()).padStart(2, '0');
+  return `${y}.${m}.${day}`;
+}
+function catLabel(cat) {
+  if (lang === 'ja') return cat;
+  return NEWS_CATEGORY_LABELS[cat]?.[lang] ?? cat;
+}
+function isExternal(href) {
+  return typeof href === 'string' && /^https?:\/\//.test(href);
+}
+---
+<div class={`news-list reveal${showSummary ? ' detailed' : ''}`}>
+  {items.map((n) => {
+    const ext = isExternal(n.href);
+    const Tag = n.href ? 'a' : 'div';
+    return (
+      <Tag
+        class={`news-item${n.href ? ' linked' : ''}`}
+        href={n.href || undefined}
+        target={ext ? '_blank' : undefined}
+        rel={ext ? 'noopener noreferrer' : undefined}
+        data-conv={ext ? 'instagram' : undefined}
+      >
+        <span class="date">{fmtDate(n.date)}</span>
+        <span class="cat">{catLabel(n.category)}</span>
+        <span class="body">
+          <span class="ttl">{n.title}</span>
+          {showSummary && n.summary && <span class="sum">{n.summary}</span>}
+        </span>
+        {n.href && <span class="arrow" aria-hidden="true">→</span>}
+      </Tag>
+    );
+  })}
+</div>
+
+<style>
+  .news-list{max-width:840px;margin:0 auto}
+  .news-item{display:flex;gap:24px;align-items:baseline;padding:18px 4px;border-bottom:1px solid var(--line)}
+  .news-item .date{font-family:var(--serif);font-size:13px;color:var(--sand-d);min-width:110px;letter-spacing:.05em}
+  .news-item .cat{font-size:11px;border:1px solid var(--line);padding:2px 10px;border-radius:2px;color:var(--ink2);white-space:nowrap}
+  .news-item .body{flex:1;display:flex;flex-direction:column;gap:5px}
+  .news-item .ttl{font-size:14.5px;transition:color .3s}
+  .news-item .sum{font-size:13px;color:var(--ink2);line-height:1.7}
+  .news-item .arrow{color:var(--sand-d);opacity:0;transition:opacity .3s,transform .3s;align-self:center}
+  a.news-item{text-decoration:none;color:inherit}
+  a.news-item.linked:hover .ttl{color:var(--sand-d)}
+  a.news-item.linked:hover .arrow{opacity:1;transform:translateX(3px)}
+  @media(max-width:700px){
+    .news-item{flex-wrap:wrap;gap:8px}
+    .news-item .date{min-width:auto}
+    .news-item .arrow{display:none}
+  }
+</style>

@@ -2,11 +2,26 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PropertyCard from '../components/PropertyCard.astro';
+import NewsList from '../components/NewsList.astro';
+import { NEWS_UI } from '../content.config';
 
 const all = await getCollection('properties');
 const stays = all
   .filter((p) => p.data.genres.includes('stay'))
   .sort((a, b) => a.data.order - b.data.order);
+
+const newsUi = NEWS_UI.ja;
+const newsItems = (await getCollection('news'))
+  .filter((n) => !n.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4)
+  .map((n) => ({
+    date: n.data.date,
+    category: n.data.category,
+    title: n.data.title,
+    summary: n.data.summary,
+    href: n.data.body ? `/news/${n.id}/` : n.data.link || null,
+  }));
 
 const businesses = [
   { no: '01', title: '宿泊事業', desc: '暮らすように泊まる宿。富士河口湖・春日居温泉で、一棟貸しのプライベートな滞在を提供します。' },
@@ -84,16 +99,15 @@ const businesses = [
     </div>
   </section>
 
-  <section id="news" class="news">
-    <div class="wrap">
-      <div class="sec-head reveal"><div class="eyebrow">News</div><h2>お知らせ</h2></div>
-      <div class="news-list reveal">
-        <div class="news-item"><span class="date">2026.05.20</span><span class="cat">宿泊</span><span class="ttl">グローカル富士河口湖、夏季のご予約を受付開始しました。</span></div>
-        <div class="news-item"><span class="date">2026.04.10</span><span class="cat">お知らせ</span><span class="ttl">ウェブサイトをリニューアルしました。</span></div>
-        <div class="news-item"><span class="date">2026.03.01</span><span class="cat">取り組み</span><span class="ttl">ニカの英語教室、新年度クラスのご案内。</span></div>
+  {newsItems.length > 0 && (
+    <section id="news" class="news">
+      <div class="wrap">
+        <div class="sec-head reveal"><div class="eyebrow">News</div><h2>お知らせ</h2></div>
+        <NewsList items={newsItems} lang="ja" />
+        <div class="center"><a href="/news/" class="more">{newsUi.all}</a></div>
       </div>
-    </div>
-  </section>
+    </section>
+  )}
 
   <section id="company">
     <div class="wrap">

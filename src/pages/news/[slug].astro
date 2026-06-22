@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { NEWS_UI } from '../../content.config';
+
+export async function getStaticPaths() {
+  const all = await getCollection('news');
+  return all
+    .filter((n) => !n.data.draft && n.data.body && n.data.body.length)
+    .map((n) => ({ params: { slug: n.id }, props: { n } }));
+}
+
+const { n } = Astro.props;
+const d = n.data;
+const ui = NEWS_UI.ja;
+const dt = d.date;
+const dateStr = `${dt.getFullYear()}.${String(dt.getMonth() + 1).padStart(2, '0')}.${String(dt.getDate()).padStart(2, '0')}`;
+---
+<BaseLayout title={`${d.title} ｜ 合同会社グローカルコミューン`} description={d.summary || d.title}>
+  <article class="post">
+    <div class="wrap narrow">
+      <div class="post-head reveal">
+        <div class="meta"><span class="date">{dateStr}</span><span class="cat">{d.category}</span></div>
+        <h1>{d.title}</h1>
+      </div>
+      {d.image && <div class="post-img reveal"><img src={d.image} alt={d.title} /></div>}
+      <div class="post-body reveal">
+        {d.body.map((p) => <p>{p}</p>)}
+      </div>
+      <div class="post-foot"><a href="/news/" class="more">← {ui.back}</a></div>
+    </div>
+  </article>
+</BaseLayout>
+<style>
+  .post{padding:140px 0 96px}
+  .wrap.narrow{max-width:760px}
+  .post-head{text-align:center;margin-bottom:34px}
+  .post-head .meta{display:flex;gap:14px;align-items:center;justify-content:center;margin-bottom:16px}
+  .post-head .date{font-family:var(--serif);font-size:13px;color:var(--sand-d);letter-spacing:.05em}
+  .post-head .cat{font-size:11px;border:1px solid var(--line);padding:2px 10px;border-radius:2px;color:var(--ink2)}
+  .post-head h1{font-size:clamp(23px,3vw,34px);line-height:1.5}
+  .post-img{margin:0 0 36px;overflow:hidden;border-radius:2px}
+  .post-img img{width:100%;height:auto;display:block}
+  .post-body p{font-size:15.5px;line-height:2;margin-bottom:22px}
+  .post-foot{margin-top:48px;text-align:center}
+</style>

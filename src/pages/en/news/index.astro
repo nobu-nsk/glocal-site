@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NewsList from '../../../components/NewsList.astro';
+import { NEWS_UI } from '../../../content.config';
+
+const ui = NEWS_UI.en;
+const all = await getCollection('news');
+const items = all
+  .filter((n) => !n.data.draft && n.data.en)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .map((n) => ({
+    date: n.data.date,
+    category: n.data.category,
+    title: n.data.en.title,
+    summary: n.data.en.summary,
+    href: n.data.en.body ? `/en/news/${n.id}/` : n.data.link || null,
+  }));
+---
+<BaseLayout lang="en" title={`${ui.title} | Glocal Commune`} description={ui.lead}>
+  <section class="listing-hero">
+    <div class="wrap">
+      <div class="eyebrow">{ui.eyebrow}</div>
+      <h1>{ui.title}</h1>
+      <p>{ui.lead}</p>
+    </div>
+  </section>
+  <section class="listing">
+    <div class="wrap">
+      {items.length ? <NewsList items={items} lang="en" showSummary={true} /> : <p class="empty">{ui.empty}</p>}
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .listing-hero{padding:150px 0 50px;background:var(--paper2);text-align:center}
+  .listing-hero h1{font-size:clamp(26px,3.4vw,40px);margin:6px 0 14px}
+  .listing-hero p{font-size:15px;color:var(--ink2)}
+  .listing{padding:64px 0 96px}
+  .empty{text-align:center;color:var(--ink2);padding:40px 0}
+</style>

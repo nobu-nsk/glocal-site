@@ -2,11 +2,26 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PropertyCard from '../../components/PropertyCard.astro';
+import NewsList from '../../components/NewsList.astro';
+import { NEWS_UI } from '../../content.config';
 
 const all = await getCollection('properties');
 const stays = all
   .filter((p) => p.data.genres.includes('stay') && p.data.zh)
   .sort((a, b) => a.data.order - b.data.order);
+
+const newsUi = NEWS_UI.zh;
+const newsItems = (await getCollection('news'))
+  .filter((n) => !n.data.draft && n.data.zh)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4)
+  .map((n) => ({
+    date: n.data.date,
+    category: n.data.category,
+    title: n.data.zh.title,
+    summary: n.data.zh.summary,
+    href: n.data.zh.body ? `/zh/news/${n.id}/` : n.data.link || null,
+  }));
 
 const businesses = [
   { no: '01', title: '住宿事業', desc: '在富士河口湖與春日居溫泉，提供整棟包租的私人別墅，享受「如同生活般」的住宿。' },
@@ -74,6 +89,16 @@ const businesses = [
     </div>
   </section>
 
+  {newsItems.length > 0 && (
+    <section id="news" class="news">
+      <div class="wrap">
+        <div class="sec-head reveal"><div class="eyebrow">{newsUi.eyebrow}</div><h2>{newsUi.title}</h2></div>
+        <NewsList items={newsItems} lang="zh" />
+        <div class="center"><a href="/zh/news/" class="more">{newsUi.all}</a></div>
+      </div>
+    </section>
+  )}
+
   <section id="company">
     <div class="wrap">
       <div class="company reveal">
@@ -108,6 +133,7 @@ const businesses = [
   .hero h1{color:#fff;font-size:clamp(28px,4.6vw,52px);line-height:1.5;text-shadow:0 2px 22px rgba(0,0,0,.3)}
   .hero p{margin-top:22px;font-size:clamp(14px,1.5vw,16px);letter-spacing:.06em;opacity:.95}
   .hrow{margin-top:36px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .news{background:var(--paper2)}
   .center{text-align:center;margin-top:30px;justify-content:center}
   .scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;color:#fff;font-size:10px;letter-spacing:.3em;writing-mode:vertical-rl;opacity:.8}
   .scroll-cue::after{content:"";display:block;width:1px;height:42px;background:#fff;margin:12px auto 0;animation:cue 2s ease-in-out infinite}
