@@ -103,6 +103,8 @@ const news = defineCollection({
     category: z.string().default('お知らせ'),
     summary: z.string().optional(),
     image: z.string().optional(),
+    // 記事冒頭に複数枚を並べる場合に指定（指定時は image より優先）。
+    images: z.array(z.string()).optional(),
     body: z.array(z.string()).optional(),
     // 本文ページの代わりに外部（Instagram等）へ飛ばす告知の場合に指定。
     link: z.string().optional(),

@@ -3,7 +3,11 @@ title: 梅雨のあいまに、夏へ向かう富士山
 date: 2026-06-22
 category: 富士山
 summary: 梅雨のさなかでも、裾野まで稜線がくっきり見える日があります。泊まってこそ出会える、移ろう富士の表情を。
-image: /images/gfk/g-fuji.jpg
+image: /images/news/tsuyu-fuji-1.jpg
+images:
+  - /images/news/tsuyu-fuji-1.jpg
+  - /images/news/tsuyu-fuji-2.jpg
+  - /images/gfk/g-fuji.jpg
 body:
   - 富士山は、不思議な山です。梅雨のどまんなか、曇りときどき雨のこんな空模様でも、裾野まで稜線がくっきり見える日があれば、抜けるような青空なのに富士山だけが雲に隠れてしまう日もあります。
   - 同じ景色は、二度とありません。朝の光に浮かぶ姿、雨上がりの澄んだ空気のなかの輪郭、夕暮れのシルエット、そして月夜に浮かぶ神秘的な姿——一日のなかでも、富士山は表情を変え続けます。

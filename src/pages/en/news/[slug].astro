@@ -24,7 +24,11 @@ const dateStr = `${dt.getFullYear()}.${String(dt.getMonth() + 1).padStart(2, '0'
         <div class="meta"><span class="date">{dateStr}</span><span class="cat">{d.category}</span></div>
         <h1>{e.title}</h1>
       </div>
-      {d.image && <div class="post-img reveal"><img src={d.image} alt={e.title} /></div>}
+      {d.images?.length ? (
+        <div class="post-gallery reveal">{d.images.map((src) => <img src={src} alt={e.title} />)}</div>
+      ) : d.image ? (
+        <div class="post-img reveal"><img src={d.image} alt={e.title} /></div>
+      ) : null}
       <div class="post-body reveal">
         {e.body.map((p) => <p>{p}</p>)}
       </div>
@@ -42,6 +46,8 @@ const dateStr = `${dt.getFullYear()}.${String(dt.getMonth() + 1).padStart(2, '0'
   .post-head h1{font-size:clamp(23px,3vw,34px);line-height:1.5}
   .post-img{margin:0 0 36px;overflow:hidden;border-radius:2px}
   .post-img img{width:100%;height:auto;display:block}
+  .post-gallery{display:flex;flex-direction:column;gap:14px;margin:0 0 36px}
+  .post-gallery img{width:100%;height:auto;display:block;border-radius:2px}
   .post-body p{font-size:15.5px;line-height:2;margin-bottom:22px}
   .post-foot{margin-top:48px;text-align:center}
 </style>
