@@ -127,14 +127,16 @@ const { data, t } = Astro.props;
       <div class="eyebrow">Access &amp; Information</div>
       <h2>{t.accessHeading}</h2>
       <table class="infotable">
-        <tr><th>{t.addressLabel}</th><td>{data.location.address}</td></tr>
+        {data.location.address && <tr><th>{t.addressLabel}</th><td>{data.location.address}</td></tr>}
         {t.info.map((row: any) => (<tr><th>{row.label}</th><td>{row.value}</td></tr>))}
         <tr><th>{t.operatorLabel}</th><td>{t.operatorValue}</td></tr>
       </table>
     </div>
-    <div class="reveal">
-      <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src={data.location.mapEmbed} title={`${t.title} map`}></iframe>
-    </div>
+    {data.location.mapEmbed && (
+      <div class="reveal">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src={data.location.mapEmbed} title={`${t.title} map`}></iframe>
+      </div>
+    )}
   </div>
 </section>
 
