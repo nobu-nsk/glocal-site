@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PropertyCard from '../components/PropertyCard.astro';
+import SaigaiBand from '../components/SaigaiBand.astro';
 import NewsList from '../components/NewsList.astro';
 import { NEWS_UI } from '../content.config';
 
@@ -45,11 +46,7 @@ const businesses = [
     <div class="scroll-cue">SCROLL</div>
   </section>
 
-  <a href="/saigai-shien/" class="ss-band" aria-label="災害で被災された方の受け入れについて">
-    <span class="ss-tag">お知らせ</span>
-    <span class="ss-txt">災害で被災された方を、宿泊施設・賃貸物件へ優先的にお迎えします。ご相談ください。</span>
-    <span class="ss-arrow" aria-hidden="true">→</span>
-  </a>
+  <SaigaiBand />
 
   <section id="concept">
     <div class="wrap concept">
@@ -153,13 +150,6 @@ const businesses = [
   .scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;color:#fff;font-size:10px;letter-spacing:.3em;writing-mode:vertical-rl;opacity:.8}
   .scroll-cue::after{content:"";display:block;width:1px;height:42px;background:#fff;margin:12px auto 0;animation:cue 2s ease-in-out infinite}
   @keyframes cue{0%,100%{transform:scaleY(.3);opacity:.3;transform-origin:top}50%{transform:scaleY(1);opacity:1;transform-origin:top}}
-
-  .ss-band{display:flex;align-items:center;gap:16px;justify-content:center;flex-wrap:wrap;
-    background:var(--ink);color:#fff;padding:16px 24px;text-align:center;transition:background .3s}
-  .ss-band:hover{background:#24343b}
-  .ss-band .ss-tag{font-size:11px;letter-spacing:.14em;background:var(--sand);color:#fff;padding:4px 12px;border-radius:2px;white-space:nowrap}
-  .ss-band .ss-txt{font-size:14px;letter-spacing:.02em;color:#fff}
-  .ss-band .ss-arrow{color:#e6c79a;font-size:15px}
 
   .concept{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
   .concept h2{font-size:clamp(21px,2.5vw,30px);margin-bottom:24px}
