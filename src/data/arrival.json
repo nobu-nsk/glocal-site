@@ -27,6 +27,7 @@
    "ssid": "gkasugai",
    "pass": "glocal@9667"
   },
+  "ogPhoto": "00_代表画像_玄関.jpg",
   "access": [
    {
     "ja": "JR石和温泉駅から車で4分／徒歩20分",
@@ -47,7 +48,7 @@
   },
   "urlKey": "90237b",
   "slug": "kasugai-90237b",
-  "ogImage": "/images/arrival/kasugai/s1-1.jpg",
+  "ogImage": "/images/arrival/kasugai/og.jpg",
   "steps": [
    {
     "h": {
