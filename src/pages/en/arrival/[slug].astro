@@ -1,0 +1,18 @@
+---
+// Arrival guide (English). /en/arrival/<property>-<random>/
+import ArrivalLayout from '../../../layouts/ArrivalLayout.astro';
+import ArrivalGuide from '../../../components/ArrivalGuide.astro';
+import arrival from '../../../data/arrival.json';
+
+export function getStaticPaths() {
+  return Object.values(arrival).map((p) => ({
+    params: { slug: p.slug },
+    props: { prop: p },
+  }));
+}
+
+const { prop } = Astro.props;
+---
+<ArrivalLayout title={`${prop.name.en} — Before you arrive`} lang="en">
+  <ArrivalGuide prop={prop} lang="en" />
+</ArrivalLayout>

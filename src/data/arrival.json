@@ -1,0 +1,401 @@
+{
+ "kasugai": {
+  "name": {
+   "ja": "グローカル春日居温泉",
+   "en": "Glocal Kasugai Onsen"
+  },
+  "tagline": {
+   "ja": "山梨県笛吹市春日居町 ・ 一棟貸し",
+   "en": "Kasugai-cho, Fuefuki, Yamanashi · Private villa"
+  },
+  "checkin": "15:00",
+  "checkinUntil": "21:00",
+  "checkout": "11:00",
+  "parking": {
+   "ja": "2台",
+   "en": "2 cars"
+  },
+  "parkingNote": {
+   "ja": "敷地入口に縦列",
+   "en": "In tandem at the entrance"
+  },
+  "address": {
+   "ja": "〒406-0014 山梨県笛吹市春日居町国府436-91",
+   "en": "436-91 Kokufu, Kasugai-cho, Fuefuki-city, Yamanashi 406-0014"
+  },
+  "wifi": {
+   "ssid": "gkasugai",
+   "pass": "glocal@9667"
+  },
+  "access": [
+   {
+    "ja": "JR石和温泉駅から車で4分／徒歩20分",
+    "en": "4 min by car or 20 min on foot from JR Isawa Onsen Station"
+   },
+   {
+    "ja": "中央自動車道 一宮御坂ICから8分",
+    "en": "8 min from Ichinomiya-Misaka IC, Chuo Expressway"
+   },
+   {
+    "ja": "富士急行線 河口湖駅から車で40分",
+    "en": "40 min by car from Kawaguchiko Station"
+   }
+  ],
+  "checkinNote": {
+   "ja": "21時以降のチェックインは事前にご連絡ください",
+   "en": "Please let us know in advance if you will arrive after 21:00"
+  },
+  "urlKey": "90237b",
+  "slug": "kasugai-90237b",
+  "steps": [
+   {
+    "h": {
+     "ja": "まず最寄りのセブンイレブンへ",
+     "en": "First, head to the nearest 7-Eleven"
+    },
+    "p": {
+     "ja": "施設は広い道路に面しておらず、直接ナビを設定すると迷いやすい場所にあります。いったんコンビニを目指していただくのが確実です。翌朝の買い物にも便利です。",
+     "en": "The house is not on a main road and is easy to miss if you navigate to it directly. Heading to the convenience store first is the reliable route — and it is handy for breakfast supplies."
+    },
+    "links": [
+     {
+      "label": {
+       "ja": "セブンイレブンを地図で開く",
+       "en": "Open 7-Eleven in Maps"
+      },
+      "url": "https://maps.app.goo.gl/6uBnkynW1Z11CLy98",
+      "qr": "/images/arrival/kasugai/map-s1-1.png"
+     }
+    ]
+   },
+   {
+    "h": {
+     "ja": "コンビニから施設へ（車で約5分）",
+     "en": "From the store to the house (about 5 min)"
+    },
+    "p": {
+     "ja": "ぶどう園「光玉園」が左手に見えてきます。その隣の細い道を左折すると、すぐ右手が施設です。",
+     "en": "You will see the Kogyokuen vineyard on your left. Turn left onto the narrow lane beside it — the house is immediately on your right."
+    },
+    "links": [
+     {
+      "label": {
+       "ja": "施設までの経路を開く",
+       "en": "Open route to the house"
+      },
+      "url": "https://maps.app.goo.gl/bvh7dCKtv9ZkNn9ZA",
+      "qr": "/images/arrival/kasugai/map-s2-1.png"
+     }
+    ]
+   },
+   {
+    "h": {
+     "ja": "敷地の入口に駐車",
+     "en": "Park at the entrance"
+    },
+    "p": {
+     "ja": "入口部分に2台、縦列で駐車できます。出発時に出しやすいよう、バックでお入れください。",
+     "en": "Two cars fit in tandem at the entrance. Please back in so you can leave easily."
+    }
+   },
+   {
+    "h": {
+     "ja": "キーボックスから鍵を取り出す",
+     "en": "Take the key from the key box"
+    },
+    "p": {
+     "ja": "玄関扉に向かって右手、インターフォンの脇にキーボックスがあります。パスコードを入力し、最後にチェックマーク（✔）を押すと開きます。取り出した鍵で、玄関扉の右端にある鍵穴を解錠してください。ご出発時は玄関を施錠し、鍵をキーボックスへお戻しください。",
+     "en": "The key box is next to the intercom, on the right-hand side of the entrance door. Enter your passcode and press the checkmark (✔) to open it. Use the key to unlock the keyhole at the right edge of the entrance door. On departure, lock the door and return the key to the box."
+    },
+    "note": {
+     "ja": "パスコードはご到着の2日前までに、ご予約のメッセージで個別にお送りします。",
+     "en": "Your passcode is sent to you individually via your booking message, at the latest two days before arrival."
+    }
+   }
+  ],
+  "wifiQr": "/images/arrival/kasugai/wifi.png"
+ },
+ "kawaguchiko": {
+  "name": {
+   "ja": "グローカル富士河口湖",
+   "en": "Glocal FUJI Kawaguchiko"
+  },
+  "tagline": {
+   "ja": "山梨県富士河口湖町大石 ・ 一棟貸し",
+   "en": "Oishi, Fujikawaguchiko, Yamanashi · Private villa"
+  },
+  "checkin": "15:00",
+  "checkinUntil": "21:00",
+  "checkout": "11:00",
+  "parking": {
+   "ja": "3台",
+   "en": "3 cars"
+  },
+  "parkingNote": {
+   "ja": "敷地内",
+   "en": "On site"
+  },
+  "address": {
+   "ja": "〒401-0305 山梨県南都留郡富士河口湖町大石887-1",
+   "en": "887-1 Oishi, Fujikawaguchiko-machi, Minamitsuru-gun, Yamanashi 401-0305"
+  },
+  "wifi": {
+   "ssid": "GFK",
+   "pass": "glocal@9667"
+  },
+  "access": [
+   {
+    "ja": "河口湖駅から車で約16分",
+    "en": "About 16 min by car from Kawaguchiko Station"
+   },
+   {
+    "ja": "中央自動車道 河口湖ICから約19分",
+    "en": "About 19 min from Kawaguchiko IC, Chuo Expressway"
+   },
+   {
+    "ja": "大石ハナテラスまで徒歩11分／大石公園まで徒歩12分",
+    "en": "11 min walk to Oishi Hanaterasu / 12 min to Oishi Park"
+   }
+  ],
+  "quiet": {
+   "ja": "静かな住宅地で、山あいのため音がよく響きます。夜20時以降は窓を閉めてお過ごしください。",
+   "en": "This is a quiet residential area in the hills, where sound carries further than you would expect. Please keep the windows closed after 20:00."
+  },
+  "checkinNote": {
+   "ja": "21時以降のチェックインは事前にご連絡ください",
+   "en": "Please let us know in advance if you will arrive after 21:00"
+  },
+  "urlKey": "ee237d",
+  "slug": "kawaguchiko-ee237d",
+  "steps": [
+   {
+    "h": {
+     "ja": "先にコンビニへ立ち寄る",
+     "en": "Stop at a convenience store first"
+    },
+    "p": {
+     "ja": "施設の周辺にお店はありません。翌朝の朝食や飲み物は、この2軒で揃えておくと安心です。",
+     "en": "There are no shops near the house. These two stores are the place to pick up breakfast and drinks for the next morning."
+    },
+    "links": [
+     {
+      "label": {
+       "ja": "セブンイレブン 河口湖美術館通り店",
+       "en": "7-Eleven Kawaguchiko Bijutsukan-dori"
+      },
+      "url": "https://maps.app.goo.gl/69CBuYAhcdA7Wu999",
+      "qr": "/images/arrival/kawaguchiko/map-s1-1.png"
+     },
+     {
+      "label": {
+       "ja": "ファミリーマート 北河口湖店",
+       "en": "FamilyMart Kita-Kawaguchiko"
+      },
+      "url": "https://maps.app.goo.gl/FyoWusgho2pqmHCF8",
+      "qr": "/images/arrival/kawaguchiko/map-s1-2.png"
+     }
+    ]
+   },
+   {
+    "h": {
+     "ja": "大石ハナテラスの脇から住宅街へ",
+     "en": "Enter the neighbourhood beside Oishi Hanaterasu"
+    },
+    "p": {
+     "ja": "大石公園を過ぎ、大石ハナテラス駐車場（P3）の脇から住宅街に入ります。途中「Fuji Nagi」の誘導看板が出ますので、そのまま従ってください。細い道に入ってから約3分で到着します。",
+     "en": "Pass Oishi Park and turn into the residential area beside parking lot P3 of Oishi Hanaterasu. Follow the signs for “Fuji Nagi” along the way. It is about 3 minutes from where the lane narrows."
+    },
+    "links": [
+     {
+      "label": {
+       "ja": "施設までの経路を開く",
+       "en": "Open route to the house"
+      },
+      "url": "https://maps.app.goo.gl/f3Vs1yCJPLL4umih9",
+      "qr": "/images/arrival/kawaguchiko/map-s2-1.png"
+     }
+    ],
+    "note": {
+     "ja": "道幅がかなり狭い区間があります。対向車にご注意のうえ、譲り合っての運転をお願いいたします。",
+     "en": "Some stretches are very narrow. Please watch for oncoming cars and give way to each other."
+    }
+   },
+   {
+    "h": {
+     "ja": "敷地内に駐車（3台）",
+     "en": "Park on site (3 cars)"
+    },
+    "p": {
+     "ja": "敷地内に3台分の駐車スペースがあります。路上駐車は近隣のご迷惑となりますのでお控えください。",
+     "en": "There is space for three cars on the property. Please do not park on the street — it disturbs the neighbours."
+    }
+   },
+   {
+    "h": {
+     "ja": "玄関のキーパッドで解錠",
+     "en": "Unlock with the keypad"
+    },
+    "p": {
+     "ja": "玄関のテンキーパッドにパスコードを入力し、確認キー（✔）を押すと解錠します。施錠は鍵マークのボタンです。外出時・ご就寝時も施錠をお願いします。",
+     "en": "Enter your passcode on the keypad at the entrance and press the confirm key (✔) to unlock. Press the key-symbol button to lock — please do so when going out and at night as well."
+    },
+    "note": {
+     "ja": "パスコードはご到着の2日前までに、ご予約のメッセージで個別にお送りします。",
+     "en": "Your passcode is sent to you individually via your booking message, at the latest two days before arrival."
+    }
+   }
+  ],
+  "wifiQr": "/images/arrival/kawaguchiko/wifi.png"
+ },
+ "kofu-isawa": {
+  "name": {
+   "ja": "グローカル甲府石和",
+   "en": "Glocal Kofu Isawa"
+  },
+  "tagline": {
+   "ja": "山梨県甲府市川田町 ・ 2LDK＋ロフト",
+   "en": "Kawada-machi, Kofu, Yamanashi · 2BR + loft"
+  },
+  "checkin": "15:00",
+  "checkinUntil": "21:00",
+  "checkout": "11:00",
+  "parking": {
+   "ja": "2台",
+   "en": "2 cars"
+  },
+  "parkingNote": {
+   "ja": "無料・最大4台は要相談",
+   "en": "Free · up to 4 on request"
+  },
+  "address": {
+   "ja": "〒400-0811 山梨県甲府市川田町928",
+   "en": "928 Kawada-machi, Kofu-city, Yamanashi 400-0811"
+  },
+  "wifi": {
+   "ssid": "GKI_A",
+   "pass": "glocal9667"
+  },
+  "access": [
+   {
+    "ja": "JR石和温泉駅から徒歩12分／車で3分",
+    "en": "12 min walk or 3 min by car from JR Isawa Onsen Station"
+   },
+   {
+    "ja": "新宿から特急で石和温泉駅まで約90分",
+    "en": "About 90 min from Shinjuku to Isawa Onsen Station by limited express"
+   },
+   {
+    "ja": "ファミリーマート・サンドラッグ・MEGAドン・キホーテUNYが近隣に",
+    "en": "FamilyMart, Sundrug and MEGA Don Quijote UNY are nearby"
+   }
+  ],
+  "checkinNote": {
+   "ja": "21時以降のチェックインは事前にご連絡ください",
+   "en": "Please let us know in advance if you will arrive after 21:00"
+  },
+  "urlKey": "7107ac",
+  "slug": "kofu-isawa-7107ac",
+  "steps": [
+   {
+    "h": {
+     "ja": "カーナビには「川田町927」を入力",
+     "en": "Enter “927 Kawada-machi” in your car navigation"
+    },
+    "p": {
+     "ja": "建物の正式な住所は928ですが、地図アプリで928を検索すると進入路のない場所が案内されます。建物前の駐車場である927、または下記のQRコード／リンクをご利用ください。JR石和温泉駅からは徒歩12分です。",
+     "en": "The building's registered address is 928, but searching 928 in a map app leads to a point with no access road. Please use 927 — the parking area in front of the building — or the link below. It is a 12-minute walk from JR Isawa Onsen Station."
+    },
+    "links": [
+     {
+      "label": {
+       "ja": "施設を地図で開く",
+       "en": "Open the house in Maps"
+      },
+      "url": "https://maps.app.goo.gl/oZV8s3aReNTn2dGn7",
+      "qr": "/images/arrival/kofu-isawa/map-s1-1.png"
+     }
+    ]
+   },
+   {
+    "h": {
+     "ja": "建物前の駐車場に停める",
+     "en": "Park in the lot in front of the building"
+    },
+    "p": {
+     "ja": "建物に向かって手前が駐車場です。「NO.1」「NO.2」と書かれた2区画をご利用ください。3台目以降が必要な場合は、事前にご相談いただければ最大4台までご案内できます。",
+     "en": "The parking area is directly in front of the building. Please use the two bays marked “NO.1” and “NO.2”. If you need space for a third or fourth car, ask us in advance."
+    },
+    "photos": [
+     {
+      "src": "/images/arrival/kofu-isawa/s2-1.jpg",
+      "w": 900,
+      "h": 680,
+      "cap": {
+       "ja": "NO.1・NO.2 の2区画をご利用ください",
+       "en": "Use the bays marked NO.1 and NO.2"
+      }
+     }
+    ]
+   },
+   {
+    "h": {
+     "ja": "玄関は建物の右手、奥に進んだ先",
+     "en": "The entrance is at the back, along the right-hand side"
+    },
+    "p": {
+     "ja": "建物に向かって右手から奥に進んでください。木目調のドアがゲスト用の玄関です。正面の玄関は管理人の居住部分の入口ですので、お間違いのないようお願いします。ゲスト用のスペースと管理人の居住部分は完全に分かれています。",
+     "en": "Facing the building, follow the path along the right-hand side towards the back. The wood-grain door is the guest entrance. The door at the front belongs to the caretaker's private unit, so please do not use it. The guest area and the caretaker's unit are entirely separate."
+    },
+    "photos": [
+     {
+      "src": "/images/arrival/kofu-isawa/s3-1.jpg",
+      "w": 900,
+      "h": 692,
+      "cap": {
+       "ja": "赤い印のあたりが玄関へのアプローチです",
+       "en": "The red mark shows the way to the entrance"
+      },
+      "pos": "62% 55%"
+     },
+     {
+      "src": "/images/arrival/kofu-isawa/s3-2.jpg",
+      "w": 625,
+      "h": 900,
+      "cap": {
+       "ja": "奥に進んだ先の木目調のドアが玄関です",
+       "en": "The wood-grain door at the end of the path"
+      },
+      "pos": "38% 45%"
+     }
+    ]
+   },
+   {
+    "h": {
+     "ja": "キーパッドにパスコードを入力して解錠",
+     "en": "Unlock with the passcode on the keypad"
+    },
+    "p": {
+     "ja": "ドアの右側にある黒いキーパッドにパスコードを入力し、下段右の確認キー（✔）を押すと解錠します。施錠は下段左の鍵マークのボタンです。",
+     "en": "Enter your passcode on the black keypad to the right of the door and press the confirm key (✓, bottom right) to unlock. To lock, press the key-symbol button at the bottom left."
+    },
+    "note": {
+     "ja": "パスコードはご到着の2日前までに、ご予約のメッセージで個別にお送りします。",
+     "en": "Your passcode is sent to you individually via your booking message, at the latest two days before arrival."
+    },
+    "photos": [
+     {
+      "src": "/images/arrival/kofu-isawa/s4-1.jpg",
+      "w": 738,
+      "h": 900,
+      "cap": {
+       "ja": "ドア右側のキーパッド。左はインターホン",
+       "en": "The keypad, right of the door. Intercom on the left"
+      },
+      "pos": "60% 40%"
+     }
+    ]
+   }
+  ],
+  "wifiQr": "/images/arrival/kofu-isawa/wifi.png"
+ }
+}

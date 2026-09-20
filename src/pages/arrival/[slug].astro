@@ -1,0 +1,19 @@
+---
+// 到着案内（日本語）。/arrival/<施設>-<ランダム文字列>/
+// データは src/data/arrival.json。書き出しは ゲストガイド/_共通/ビルド/build_site_arrival.py。
+import ArrivalLayout from '../../layouts/ArrivalLayout.astro';
+import ArrivalGuide from '../../components/ArrivalGuide.astro';
+import arrival from '../../data/arrival.json';
+
+export function getStaticPaths() {
+  return Object.values(arrival).map((p) => ({
+    params: { slug: p.slug },
+    props: { prop: p },
+  }));
+}
+
+const { prop } = Astro.props;
+---
+<ArrivalLayout title={`${prop.name.ja} ご到着までのご案内`} lang="ja">
+  <ArrivalGuide prop={prop} lang="ja" />
+</ArrivalLayout>

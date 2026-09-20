@@ -1,0 +1,12 @@
+# 到着案内はリンクを知っている人だけのページ。検索エンジンには載せない。
+# robots.txt には書かない。書くと「そこに何かある」と教えることになるため。
+/arrival/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Referrer-Policy: no-referrer
+
+/en/arrival/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Referrer-Policy: no-referrer
+
+/images/arrival/*
+  X-Robots-Tag: noindex, noimageindex

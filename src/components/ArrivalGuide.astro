@@ -1,0 +1,311 @@
+---
+// 到着案内の本体。施設1件ぶんを、指定された言語で描く。
+//
+// 検索エンジンには載せず、リンクを知っている人だけが開くページ。
+// URLに推測しにくい一段を入れているのは、Wi-Fiパスワードを載せているため。
+//
+// JavaScriptは使わない。駅に着いたばかりの人が、電波の細いところで開く前提。
+// 言語の切り替えも、もう一方の言語のURLへのただのリンクにしてある。
+const { prop, lang } = Astro.props;
+
+const HOST_PHONE = '080-9436-9667';
+const HOST_TEL = '+818094369667';
+
+const T = {
+  ja: {
+    eyebrow: 'ご到着までのご案内',
+    checkin: 'チェックイン', checkout: 'チェックアウト', parking: '駐車場',
+    route: '道順と入室', details: '滞在のはじめに', contact: 'お困りのときは',
+    address: '住所', wifi: 'Wi-Fi', wifiPass: 'パスワード', access: 'アクセス',
+    quiet: '近隣へのご配慮',
+    wifiQr: 'カメラで読み取ると接続できます',
+    mapQr: '別の端末で開くときはこちら',
+    pendingAddr: 'ご予約確定後に個別にご案内します',
+    pendingWifi: 'ご到着後、室内のハウスガイドをご覧ください',
+    contactBody: '道に迷われたとき、鍵が開かないとき、そのほか何かお困りのことがありましたら、遠慮なくお電話ください。日本語・英語で承ります。',
+    other: 'English',
+    foot: '合同会社グローカルコミューン ／ このページは予告なく更新されることがあります。',
+  },
+  en: {
+    eyebrow: 'Before you arrive',
+    checkin: 'Check-in', checkout: 'Check-out', parking: 'Parking',
+    route: 'Finding us & getting in', details: 'Settling in', contact: 'If anything goes wrong',
+    address: 'Address', wifi: 'Wi-Fi', wifiPass: 'Password', access: 'Access',
+    quiet: 'A note about the neighbours',
+    wifiQr: 'Point your camera at this to connect',
+    mapQr: 'Scan to open on another device',
+    pendingAddr: 'Sent to you individually once your booking is confirmed',
+    pendingWifi: 'See the house guide inside the property on arrival',
+    contactBody: 'If you get lost, the door will not open, or anything else goes wrong, please call us — we answer in Japanese or English.',
+    other: '日本語',
+    foot: 'Glocal Commune LLC · This page may be updated without notice.',
+  },
+};
+
+const t = T[lang];
+const otherLang = lang === 'ja' ? 'en' : 'ja';
+const otherHref = otherLang === 'en'
+  ? `/en/arrival/${prop.slug}/`
+  : `/arrival/${prop.slug}/`;
+
+const PIN = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`;
+---
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="brand">Glocal · Yamanashi</span>
+    <a class="lang" href={otherHref} hreflang={otherLang} rel="alternate">{t.other}</a>
+  </div>
+</div>
+
+<main class="wrap">
+  <header class="hero">
+    <p class="eyebrow">{t.eyebrow}</p>
+    <h1>{prop.name[lang]}</h1>
+    <p class="sub">{prop.tagline[lang]}</p>
+  </header>
+
+  <dl class="facts">
+    <div class="fact">
+      <dt>{t.checkin}</dt>
+      <dd>{prop.checkin}{prop.checkinUntil && <small>– {prop.checkinUntil}</small>}</dd>
+    </div>
+    <div class="fact">
+      <dt>{t.checkout}</dt>
+      <dd>{prop.checkout}</dd>
+    </div>
+    <div class="fact">
+      <dt>{t.parking}</dt>
+      <dd>{prop.parking?.[lang]}{prop.parkingNote && <small>{prop.parkingNote[lang]}</small>}</dd>
+    </div>
+  </dl>
+
+  {prop.checkinNote && <p class="band">{prop.checkinNote[lang]}</p>}
+
+  <h2 class="sect">{t.route}</h2>
+  <ol class="steps">
+    {prop.steps.map((s) => (
+      <li>
+        <h3>{s.h[lang]}</h3>
+        <p>{s.p[lang]}</p>
+        {s.links && (
+          <div class="links">
+            {s.links.map((l) => (
+              <div class="link">
+                <a class="maplink" href={l.url} target="_blank" rel="noopener">
+                  <Fragment set:html={PIN} />{l.label[lang]}
+                </a>
+                {l.qr && (
+                  <figure class="linkqr">
+                    <img src={l.qr} width="120" height="120" alt="" loading="lazy" />
+                    <figcaption>{t.mapQr}</figcaption>
+                  </figure>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+        {s.photos && (
+          <div class="shots">
+            {s.photos.map((ph) => (
+              <figure>
+                <img src={ph.src} width={ph.w} height={ph.h} alt="" loading="lazy" decoding="async" />
+                {ph.cap && <figcaption>{ph.cap[lang]}</figcaption>}
+              </figure>
+            ))}
+          </div>
+        )}
+        {s.note && <p class="note">{s.note[lang]}</p>}
+      </li>
+    ))}
+  </ol>
+
+  <h2 class="sect">{t.details}</h2>
+  <div class="panel">
+    <dl class="kv">
+      <div class="row">
+        <dt>{t.address}</dt>
+        <dd>{prop.address ? prop.address[lang] : <span class="pending">{t.pendingAddr}</span>}</dd>
+      </div>
+      <div class="row">
+        <dt>{t.wifi}</dt>
+        {prop.wifi ? (
+          <dd class="wifi">
+            <div>
+              <div><span class="code">{prop.wifi.ssid}</span></div>
+              <div class="pw">{t.wifiPass} <span class="code">{prop.wifi.pass}</span></div>
+            </div>
+            {prop.wifiQr && (
+              <figure class="qr">
+                <img src={prop.wifiQr} width="160" height="160" alt="" loading="lazy" />
+                <figcaption>{t.wifiQr}</figcaption>
+              </figure>
+            )}
+          </dd>
+        ) : (
+          <dd><span class="pending">{t.pendingWifi}</span></dd>
+        )}
+      </div>
+      {prop.access && (
+        <div class="row">
+          <dt>{t.access}</dt>
+          <dd><ul class="access">{prop.access.map((a) => <li>{a[lang]}</li>)}</ul></dd>
+        </div>
+      )}
+    </dl>
+  </div>
+
+  {prop.quiet && (
+    <div class="panel">
+      <dl class="kv"><div class="row">
+        <dt>{t.quiet}</dt>
+        <dd>{prop.quiet[lang]}</dd>
+      </div></dl>
+    </div>
+  )}
+
+  <h2 class="sect">{t.contact}</h2>
+  <div class="panel">
+    <a class="phone" href={`tel:${HOST_TEL}`}>{HOST_PHONE}</a>
+    <p class="contact-body">{t.contactBody}</p>
+  </div>
+
+  <footer>{prop.name[lang]} · {t.foot}</footer>
+</main>
+
+<style>
+  .bar {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(246, 242, 234, .93);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar-in {
+    max-width: 680px; margin: 0 auto; padding: 12px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .brand { font-size: 11px; letter-spacing: .26em; color: var(--sand-d); font-weight: 500; }
+  .lang {
+    font-size: 13px; letter-spacing: .08em; color: var(--sand-d);
+    border: 1px solid var(--sand); border-radius: 2px; padding: 6px 16px;
+  }
+  .lang:hover { background: var(--sand); color: #fff; }
+
+  .wrap { max-width: 680px; margin: 0 auto; padding: 36px 20px 72px; }
+
+  .hero { margin-bottom: 30px; }
+  .hero .eyebrow { margin-bottom: 12px; }
+  .hero h1 { font-size: clamp(26px, 6vw, 36px); line-height: 1.35; }
+  .hero .sub { color: var(--ink2); font-size: 14px; margin-top: 8px; }
+
+  .facts {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line);
+  }
+  .fact { background: var(--white); padding: 16px 18px; }
+  .fact dt {
+    font-size: 10.5px; letter-spacing: .18em; color: var(--sand-d);
+    font-weight: 500; text-transform: uppercase; margin-bottom: 4px;
+  }
+  .fact dd {
+    font-family: var(--serif); font-size: 19px; font-weight: 600;
+    color: var(--ink); line-height: 1.4;
+  }
+  .fact dd small {
+    display: block; font-family: var(--sans); font-size: 12px;
+    font-weight: 300; color: var(--ink2); line-height: 1.6; margin-top: 2px;
+  }
+  @media (max-width: 460px) {
+    .facts { grid-template-columns: 1fr 1fr; }
+    .fact:last-child { grid-column: 1 / -1; }
+  }
+
+  .band {
+    margin-top: 16px; padding: 14px 18px;
+    background: var(--paper2); border-left: 3px solid var(--sand);
+    font-size: 14px; color: var(--ink);
+  }
+
+  h2.sect {
+    font-family: var(--sans); font-size: 11.5px; font-weight: 500;
+    letter-spacing: .26em; text-transform: uppercase; color: var(--sand-d);
+    margin: 52px 0 20px; display: flex; align-items: center; gap: 14px;
+  }
+  h2.sect::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  ol.steps { list-style: none; display: flex; flex-direction: column; gap: 14px; counter-reset: s; }
+  ol.steps > li {
+    background: var(--white); border: 1px solid var(--line);
+    padding: 20px 20px 22px; position: relative;
+  }
+  ol.steps > li::before {
+    counter-increment: s; content: counter(s, decimal-leading-zero);
+    font-family: var(--serif); font-size: 13px; color: var(--sand-d);
+    letter-spacing: .1em; display: block; margin-bottom: 8px;
+  }
+  ol.steps h3 { font-size: 18px; line-height: 1.5; }
+  ol.steps p { margin-top: 8px; font-size: 14.5px; color: var(--ink2); }
+
+  .links { margin-top: 14px; display: flex; flex-direction: column; gap: 12px; }
+  .link { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .maplink {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: var(--sand); color: #fff; padding: 12px 22px; border-radius: 2px;
+    font-size: 14px; letter-spacing: .06em; font-weight: 500;
+  }
+  .maplink:hover { background: var(--sand-d); }
+  .linkqr { margin: 0; flex: none; text-align: center; }
+  .linkqr img { width: 82px; height: 82px; border: 1px solid var(--line); }
+  .linkqr figcaption {
+    font-size: 11px; color: var(--ink2); margin-top: 4px;
+    max-width: 100px; line-height: 1.45;
+  }
+
+  .note {
+    margin-top: 14px; padding: 12px 16px;
+    background: var(--paper2); border-left: 3px solid var(--sand);
+    font-size: 13.5px; color: var(--ink);
+  }
+
+  .shots { margin-top: 16px; display: grid; gap: 14px; }
+  @media (min-width: 560px) { .shots { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); } }
+  .shots figure { margin: 0; }
+  .shots img { width: 100%; height: auto; border: 1px solid var(--line); }
+  .shots figcaption { font-size: 12.5px; color: var(--ink2); margin-top: 6px; line-height: 1.6; }
+
+  .panel { background: var(--white); border: 1px solid var(--line); padding: 20px; }
+  .panel + .panel { margin-top: 14px; }
+  .kv { display: flex; flex-direction: column; gap: 18px; }
+  .kv dt {
+    font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--sand-d); font-weight: 500; margin-bottom: 5px;
+  }
+  .kv dd { font-size: 15px; color: var(--ink); }
+  .pending { color: var(--ink2); font-size: 14px; }
+
+  .code {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+    font-size: 16px; font-weight: 500; letter-spacing: .02em;
+    background: var(--paper2); padding: 4px 10px; display: inline-block;
+  }
+  .wifi { display: flex; gap: 22px; align-items: flex-start; flex-wrap: wrap; }
+  .wifi .pw { margin-top: 8px; font-size: 13px; color: var(--ink2); }
+  .qr { margin: 0; flex: none; text-align: center; }
+  .qr img { width: 130px; height: 130px; border: 1px solid var(--line); }
+  .qr figcaption { font-size: 11.5px; color: var(--ink2); margin-top: 5px; max-width: 130px; line-height: 1.5; }
+
+  .access { list-style: none; }
+  .access li { font-size: 14.5px; color: var(--ink2); }
+  .access li + li { margin-top: 4px; }
+
+  .phone {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+    font-size: 26px; font-weight: 500; color: var(--sand-d); letter-spacing: .02em;
+  }
+  .contact-body { font-size: 13.5px; color: var(--ink2); margin-top: 10px; }
+
+  footer {
+    margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line);
+    font-size: 12px; color: var(--ink2); line-height: 1.8;
+  }
+</style>
