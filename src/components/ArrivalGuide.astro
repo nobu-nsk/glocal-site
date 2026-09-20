@@ -18,8 +18,10 @@ const T = {
     route: '道順と入室', details: '滞在のはじめに', contact: 'お困りのときは',
     address: '住所', wifi: 'Wi-Fi', wifiPass: 'パスワード', access: 'アクセス',
     quiet: '近隣へのご配慮',
-    wifiQr: 'カメラで読み取ると接続できます',
-    mapQr: '別の端末で開くときはこちら',
+    wifiQr: 'カメラで読み取ると接続できます（タップで拡大）',
+    mapQr: '別の端末で開くときはこちら（タップで拡大）',
+    copy: 'コピー',
+    copied: 'コピーしました',
     pendingAddr: 'ご予約確定後に個別にご案内します',
     pendingWifi: 'ご到着後、室内のハウスガイドをご覧ください',
     contactBody: '道に迷われたとき、鍵が開かないとき、そのほか何かお困りのことがありましたら、遠慮なくお電話ください。日本語・英語で承ります。',
@@ -32,8 +34,10 @@ const T = {
     route: 'Finding us & getting in', details: 'Settling in', contact: 'If anything goes wrong',
     address: 'Address', wifi: 'Wi-Fi', wifiPass: 'Password', access: 'Access',
     quiet: 'A note about the neighbours',
-    wifiQr: 'Point your camera at this to connect',
-    mapQr: 'Scan to open on another device',
+    wifiQr: 'Point your camera at this to connect (tap to enlarge)',
+    mapQr: 'Scan to open on another device (tap to enlarge)',
+    copy: 'Copy',
+    copied: 'Copied',
     pendingAddr: 'Sent to you individually once your booking is confirmed',
     pendingWifi: 'See the house guide inside the property on arrival',
     contactBody: 'If you get lost, the door will not open, or anything else goes wrong, please call us — we answer in Japanese or English.',
@@ -97,7 +101,9 @@ const PIN = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke=
                 </a>
                 {l.qr && (
                   <figure class="linkqr">
-                    <img src={l.qr} width="120" height="120" alt="" loading="lazy" />
+                    <a href={l.qr} target="_blank" rel="noopener">
+                      <img src={l.qr} width="120" height="120" alt="" loading="lazy" />
+                    </a>
                     <figcaption>{t.mapQr}</figcaption>
                   </figure>
                 )}
@@ -133,11 +139,17 @@ const PIN = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke=
           <dd class="wifi">
             <div>
               <div><span class="code">{prop.wifi.ssid}</span></div>
-              <div class="pw">{t.wifiPass} <span class="code">{prop.wifi.pass}</span></div>
+              <div class="pw">
+                {t.wifiPass} <span class="code">{prop.wifi.pass}</span>
+                <button class="copy" type="button" hidden
+                        data-copy={prop.wifi.pass} data-done={t.copied}>{t.copy}</button>
+              </div>
             </div>
             {prop.wifiQr && (
               <figure class="qr">
-                <img src={prop.wifiQr} width="160" height="160" alt="" loading="lazy" />
+                <a href={prop.wifiQr} target="_blank" rel="noopener">
+                  <img src={prop.wifiQr} width="160" height="160" alt="" loading="lazy" />
+                </a>
                 <figcaption>{t.wifiQr}</figcaption>
               </figure>
             )}
@@ -172,6 +184,27 @@ const PIN = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke=
 
   <footer>{prop.name[lang]} · {t.foot}</footer>
 </main>
+
+<script is:inline>
+  // このページで動く唯一のJS。パスワードのコピーだけを担当する。
+  // クリップボードが使えないときはボタンを出さないので、その場合も
+  // これまでどおり文字列を選んで写せる。
+  document.querySelectorAll('button.copy').forEach(function (b) {
+    if (!navigator.clipboard) return;
+    b.hidden = false;
+    var label = b.textContent;
+    b.addEventListener('click', function () {
+      navigator.clipboard.writeText(b.dataset.copy).then(function () {
+        b.textContent = b.dataset.done;
+        b.classList.add('ok');
+        setTimeout(function () {
+          b.textContent = label;
+          b.classList.remove('ok');
+        }, 1600);
+      });
+    });
+  });
+</script>
 
 <style>
   .bar {
@@ -258,7 +291,7 @@ const PIN = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke=
   .linkqr img { width: 82px; height: 82px; border: 1px solid var(--line); }
   .linkqr figcaption {
     font-size: 11px; color: var(--ink2); margin-top: 4px;
-    max-width: 100px; line-height: 1.45;
+    max-width: 124px; line-height: 1.45;
   }
 
   .note {
@@ -290,9 +323,23 @@ const PIN = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke=
   }
   .wifi { display: flex; gap: 22px; align-items: flex-start; flex-wrap: wrap; }
   .wifi .pw { margin-top: 8px; font-size: 13px; color: var(--ink2); }
+
+  /* パスワードのコピー。@ や記号の打ち間違いが起きやすいので用意する。
+     クリップボードが使えない環境では出さない（下のスクリプトが外す）。 */
+  .copy[hidden] { display: none; }
+  .copy {
+    font-family: inherit; font-size: 12px; letter-spacing: .04em;
+    color: var(--sand-d); background: transparent;
+    border: 1px solid var(--sand); border-radius: 2px;
+    padding: 5px 12px; margin-left: 8px; cursor: pointer;
+    vertical-align: middle; min-height: 32px;
+  }
+  .copy:hover { background: var(--sand); color: #fff; }
+  .copy.ok { background: var(--sand-d); border-color: var(--sand-d); color: #fff; }
   .qr { margin: 0; flex: none; text-align: center; }
   .qr img { width: 130px; height: 130px; border: 1px solid var(--line); }
-  .qr figcaption { font-size: 11.5px; color: var(--ink2); margin-top: 5px; max-width: 130px; line-height: 1.5; }
+  .qr a, .linkqr a { display: inline-block; }
+  .qr figcaption { font-size: 11.5px; color: var(--ink2); margin-top: 5px; max-width: 168px; line-height: 1.5; }
 
   .access { list-style: none; }
   .access li { font-size: 14.5px; color: var(--ink2); }
