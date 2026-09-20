@@ -3,7 +3,11 @@
 // サイト本体の BaseLayout とは別にしてある。ヘッダーのナビやGA4を載せず、
 // 検索エンジンにも出さない、ゲスト専用の静かなページにするため。
 import '../styles/global.css';
-const { title, lang = 'ja' } = Astro.props;
+const { title, lang = 'ja', description = '', ogImage = '' } = Astro.props;
+
+// リンクを貼ったときのプレビュー画像。どれを出すかは data.json の og: true で決める。
+// 指定しないと、メッセージアプリがページ先頭の画像（QRなど）を勝手に選んでしまう。
+const ogUrl = ogImage ? new URL(ogImage, Astro.site).href : '';
 ---
 <!DOCTYPE html>
 <html lang={lang}>
@@ -11,9 +15,17 @@ const { title, lang = 'ja' } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <!-- リンクを知っている人だけのページ。検索結果にもSNSのプレビューにも出さない。 -->
+    <!-- リンクを知っている人だけのページ。検索結果には出さない。 -->
+    <!-- ただしメッセージアプリのプレビューは別物で、noindexでは止まらない。
+         出るものは出るので、何が出るかをこちらで決めておく。 -->
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
     <meta name="referrer" content="no-referrer" />
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    {description && <meta property="og:description" content={description} />}
+    {description && <meta name="description" content={description} />}
+    {ogUrl && <meta property="og:image" content={ogUrl} />}
+    {ogUrl && <meta name="twitter:card" content="summary_large_image" />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

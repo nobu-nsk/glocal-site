@@ -13,6 +13,7 @@ export function getStaticPaths() {
 
 const { prop } = Astro.props;
 ---
-<ArrivalLayout title={`${prop.name.en} — Before you arrive`} lang="en">
+<ArrivalLayout title={`${prop.name.en} — Before you arrive`} lang="en"
+  description={prop.tagline.en} ogImage={prop.ogImage}>
   <ArrivalGuide prop={prop} lang="en" />
 </ArrivalLayout>
