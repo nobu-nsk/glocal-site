@@ -1,0 +1,38 @@
+---
+// 周辺・おでかけのご案内ページの外枠。
+//
+// 到着案内（ArrivalLayout）とは方針が違う。あちらはWi-Fiパスワードを載せるので
+// 検索除外にしているが、こちらは公開情報しか無いので検索エンジンに載せる（2026-09-21 決定）。
+// 予約前の人に宿の周りの様子を見てもらう入口にもなる。
+import '../styles/global.css';
+const { title, lang = 'ja', description = '', slug = '' } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const jaHref = new URL(`/guide/${slug}/`, Astro.site).href;
+const enHref = new URL(`/en/guide/${slug}/`, Astro.site).href;
+---
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="ja" href={jaHref} />
+    <link rel="alternate" hreflang="en" href={enHref} />
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    {description && <meta property="og:description" content={description} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

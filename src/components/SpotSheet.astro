@@ -1,0 +1,233 @@
+---
+// 周辺・おでかけのご案内の本体。施設1件ぶんを、指定された言語で描く。
+//
+// 印刷用のA4シート（build_sheet.py）と同じ spots.csv から作っている。
+// 所要時間は実測値で、表記の出し分け（徒歩のみ／徒歩と車／車のみ）も印刷版と同じ。
+//
+// JavaScriptは使わない。言語の切り替えも、もう一方の言語のURLへのただのリンク。
+//
+// QRはスマホでは出さない。自分が持っている端末の画面に出たQRは読み取れないので、
+// 幅の狭い画面ではリンクのボタンだけにしてある。QRはPCで見ている人が手元に渡すためのもの。
+const { prop, lang } = Astro.props;
+
+const T = {
+  ja: {
+    eyebrow: '周辺とおでかけのご案内',
+    lead: '所要時間は宿の前から実際に測ったものです。営業時間は変わることがありますので、お出かけ前に地図アプリでご確認ください。',
+    open: '地図を開く',
+    site: '公式サイト',
+    closed: '定休',
+    qrCap: '別の端末で開くときはこちら',
+    other: 'English',
+    updated: '更新',
+    foot: '合同会社グローカルコミューン ／ このページは予告なく更新されることがあります。',
+  },
+  en: {
+    eyebrow: 'Around & Days Out',
+    lead: 'The travel times were measured from the front of the house. Opening hours change from time to time, so please check the map app before you set out.',
+    open: 'Open in maps',
+    site: 'Website',
+    closed: 'Closed',
+    qrCap: 'Scan to open on another device',
+    other: '日本語',
+    updated: 'Updated',
+    foot: 'Glocal Commune LLC · This page may be updated without notice.',
+  },
+};
+
+const t = T[lang];
+const otherLang = lang === 'ja' ? 'en' : 'ja';
+const otherHref = otherLang === 'en' ? `/en/guide/${prop.slug}/` : `/guide/${prop.slug}/`;
+
+const PIN = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`;
+---
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="brand">Glocal · Yamanashi</span>
+    <a class="lang" href={otherHref} hreflang={otherLang} rel="alternate">{t.other}</a>
+  </div>
+</div>
+
+<main class="wrap">
+  <header class="hero">
+    <p class="eyebrow">{t.eyebrow}</p>
+    <h1>{prop.name[lang]}</h1>
+    <p class="sub">{t.lead}</p>
+    {prop.sections.length > 1 && (
+      <nav class="jump">
+        {prop.sections.map((s) => (
+          <a href={`#${s.kind}`}>{s.title[lang]}</a>
+        ))}
+      </nav>
+    )}
+  </header>
+
+  {prop.sections.map((sec) => (
+    <section class="sheet" id={sec.kind}>
+      <h2 class="sect">{sec.title[lang]}<span>{sec.spots.length}</span></h2>
+
+      <div class="spots">
+        {sec.spots.map((s) => (
+          <article class="spot">
+            <div class="body">
+              <p class="genre">{s.genre[lang]}</p>
+              <h3>{s.name[lang]}</h3>
+              <p class="alt">{s.name[otherLang]}</p>
+
+              {s.travel.length > 0 && (
+                <p class="travel">
+                  {s.travel.map((v) => <span>{v[lang]}</span>)}
+                </p>
+              )}
+
+              {s.photo && (
+                <img class="shot" src={s.photo} alt="" loading="lazy" decoding="async" />
+              )}
+
+              <p class="desc">{s.desc[lang]}</p>
+
+              {(s.hours || s.closed) && (
+                <p class="meta">
+                  {s.hours}{s.hours && s.closed && ' / '}
+                  {s.closed && `${t.closed} ${s.closed}`}
+                </p>
+              )}
+
+              <p class="acts">
+                <a class="maplink" href={s.map} target="_blank" rel="noopener">
+                  <Fragment set:html={PIN} />{t.open}
+                </a>
+                {s.website && (
+                  <a class="web" href={s.website} target="_blank" rel="noopener">{t.site}</a>
+                )}
+              </p>
+            </div>
+
+            <figure class="qr">
+              <img src={s.qr} width="96" height="96" alt="" loading="lazy" />
+              <figcaption>{t.qrCap}</figcaption>
+            </figure>
+          </article>
+        ))}
+      </div>
+
+      {sec.note && <p class="note">{sec.note[lang]}</p>}
+    </section>
+  ))}
+
+  <footer>
+    {prop.name[lang]} · {t.foot}
+    {prop.updated && <span class="upd">{t.updated} {prop.updated}</span>}
+  </footer>
+</main>
+
+<style>
+  .bar {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(246, 242, 234, .93);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar-in {
+    max-width: 960px; margin: 0 auto; padding: 12px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .brand { font-size: 11px; letter-spacing: .26em; color: var(--sand-d); font-weight: 500; }
+  .lang {
+    font-size: 13px; letter-spacing: .08em; color: var(--sand-d);
+    border: 1px solid var(--sand); border-radius: 2px; padding: 6px 16px;
+  }
+  .lang:hover { background: var(--sand); color: #fff; }
+
+  .wrap { max-width: 960px; margin: 0 auto; padding: 36px 20px 72px; }
+
+  .hero { margin-bottom: 8px; }
+  .hero .eyebrow { margin-bottom: 12px; }
+  .hero h1 { font-size: clamp(25px, 5.4vw, 34px); line-height: 1.35; }
+  .hero .sub { color: var(--ink2); font-size: 14px; margin-top: 10px; max-width: 42em; }
+
+  .jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .jump a {
+    font-size: 13px; letter-spacing: .06em; color: var(--sand-d);
+    border: 1px solid var(--sand); border-radius: 2px; padding: 8px 18px;
+  }
+  .jump a:hover { background: var(--sand); color: #fff; }
+
+  h2.sect {
+    font-family: var(--sans); font-size: 11.5px; font-weight: 500;
+    letter-spacing: .26em; text-transform: uppercase; color: var(--sand-d);
+    margin: 52px 0 20px; display: flex; align-items: center; gap: 14px;
+    scroll-margin-top: 64px;
+  }
+  h2.sect span {
+    font-size: 11px; letter-spacing: .1em; color: var(--ink2);
+    border: 1px solid var(--line); border-radius: 999px; padding: 1px 9px;
+  }
+  h2.sect::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  /* global.css の section{padding:96px 0} が効いてしまうので打ち消す。
+     打ち消さないと、ナビとセクション見出しのあいだに96pxの空白が入る。 */
+  .sheet { padding: 0; scroll-margin-top: 56px; }
+
+  .spots { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 820px) { .spots { grid-template-columns: 1fr 1fr; } }
+
+  .spot {
+    background: var(--white); border: 1px solid var(--line);
+    padding: 20px; display: flex; gap: 18px; align-items: flex-start;
+  }
+  .spot .body { flex: 1; min-width: 0; }
+
+  .genre {
+    display: inline-block; font-size: 10.5px; letter-spacing: .14em;
+    color: var(--sand-d); background: var(--paper2);
+    padding: 2px 9px; border-radius: 2px; margin-bottom: 9px;
+  }
+  .spot h3 { font-size: 17.5px; line-height: 1.45; }
+  .alt { font-size: 12.5px; color: var(--ink2); margin-top: 2px; }
+
+  .travel { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 7px; }
+  .travel span {
+    font-size: 12.5px; font-weight: 500; letter-spacing: .04em;
+    color: var(--sand-d); background: var(--paper2);
+    border-radius: 2px; padding: 3px 11px;
+  }
+
+  .shot {
+    width: 100%; height: 150px; object-fit: cover;
+    margin-top: 13px; border: 1px solid var(--line);
+  }
+
+  .desc { margin-top: 11px; font-size: 14px; color: var(--ink2); }
+  .meta { margin-top: 9px; font-size: 12.5px; color: var(--ink2); }
+
+  .acts { margin-top: 15px; display: flex; align-items: center; flex-wrap: wrap; gap: 14px; }
+  .maplink {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--sand); color: #fff; padding: 11px 22px; border-radius: 2px;
+    font-size: 14px; letter-spacing: .06em; font-weight: 500;
+  }
+  .maplink:hover { background: var(--sand-d); }
+  .web { font-size: 13px; color: var(--sand-d); border-bottom: 1px solid var(--sand); }
+
+  /* QRは手元の端末では読み取れない。広い画面でだけ出す。 */
+  .qr { margin: 0; flex: none; text-align: center; display: none; }
+  .qr img { width: 96px; height: 96px; border: 1px solid var(--line); }
+  .qr figcaption {
+    font-size: 10.5px; color: var(--ink2); margin-top: 5px;
+    max-width: 104px; line-height: 1.5;
+  }
+  @media (min-width: 720px) { .qr { display: block; } }
+
+  .note {
+    margin-top: 18px; padding: 13px 17px;
+    background: var(--paper2); border-left: 3px solid var(--sand);
+    font-size: 13.5px; color: var(--ink);
+  }
+
+  footer {
+    margin-top: 64px; padding-top: 22px; border-top: 1px solid var(--line);
+    font-size: 12px; color: var(--ink2); line-height: 1.8;
+  }
+  footer .upd { display: block; margin-top: 4px; letter-spacing: .08em; }
+</style>

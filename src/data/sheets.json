@@ -1,0 +1,740 @@
+{
+ "garden-kai": {
+  "slug": "garden-kai",
+  "name": {
+   "ja": "グローカルガーデン甲斐",
+   "en": "Glocal Garden Kai"
+  },
+  "updated": "2026-09-21",
+  "sections": [
+   {
+    "kind": "around",
+    "title": {
+     "ja": "周辺のご案内",
+     "en": "Around the House"
+    },
+    "note": {
+     "ja": "営業時間は変わることがあります。お出かけ前に地図アプリでご確認ください。",
+     "en": "Opening hours change from time to time — please check the map app before you set out."
+    },
+    "spots": [
+     {
+      "id": "kurumi-herbal-works",
+      "name": {
+       "ja": "KURUMI HERBAL WORKS",
+       "en": "KURUMI Herbal Works"
+      },
+      "genre": {
+       "ja": "その他",
+       "en": "Other"
+      },
+      "desc": {
+       "ja": "歩いて3分、同じ集落にあるハーブの工房です。ものがたりのあるハーブティーと手作り石けんを作っていて、講座も開かれています。予約制ですので、訪ねてみたい方はホストにお声がけください。",
+       "en": "A herb atelier in the same hamlet, three minutes' walk away, making herbal teas and handmade soap, and running courses. Visits are by appointment — please let us know if you would like to go and we will help arrange it."
+      },
+      "travel": [
+       {
+        "ja": "徒歩3分",
+        "en": "3 min walk"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/oj3wwvKiUn8GjcSs5",
+      "qr": "/images/sheets/qr/kurumi-herbal-works.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "https://www.kurumi-herbalworks.com/"
+     },
+     {
+      "id": "only-one-jewelry",
+      "name": {
+       "ja": "ONLY ONE（手作り結婚指輪）",
+       "en": "ONLY ONE (handmade wedding rings)"
+      },
+      "genre": {
+       "ja": "その他",
+       "en": "Other"
+      },
+      "desc": {
+       "ja": "歩いて4分の宝飾工房です。オーダーメイドの結婚指輪のほか、自分たちで指輪を作る「クラフトジュエリー」もできます。指輪作りは事前予約が必要です。",
+       "en": "A jewellery workshop four minutes' walk away. As well as made-to-order wedding rings, you can make your own ring yourselves. The ring-making needs a reservation."
+      },
+      "travel": [
+       {
+        "ja": "徒歩4分",
+        "en": "4 min walk"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/SpVpbSesz7yGdHHD8",
+      "qr": "/images/sheets/qr/only-one-jewelry.png",
+      "photo": null,
+      "hours": "月木金13:00〜18:00 / 土日祝11:00〜18:00",
+      "closed": "火・水",
+      "website": "https://www.j-onlyone.com/"
+     },
+     {
+      "id": "seveneleven-kai-onuta",
+      "name": {
+       "ja": "セブン-イレブン 甲斐大垈店",
+       "en": "7-Eleven Kai Onuta"
+      },
+      "genre": {
+       "ja": "コンビニ",
+       "en": "Convenience store"
+      },
+      "desc": {
+       "ja": "いちばん近いコンビニです。集落の中にお店はないので、到着前にここで買い物を済ませておくと安心です。ATM、宅配便の受け取り・発送もできます。",
+       "en": "The nearest convenience store. There are no shops in the hamlet itself, so it is worth stopping here on the way in. ATM, parcel pick-up and drop-off."
+      },
+      "travel": [
+       {
+        "ja": "車で3分",
+        "en": "3 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/8zXGkWSqnhLvX13WA",
+      "qr": "/images/sheets/qr/seveneleven-kai-onuta.png",
+      "photo": null,
+      "hours": "24時間",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "cosmos-ryuji",
+      "name": {
+       "ja": "ドラッグストアコスモス 龍地店",
+       "en": "Drug Store Cosmos Ryuji"
+      },
+      "genre": {
+       "ja": "ドラッグストア",
+       "en": "Drugstore"
+      },
+      "desc": {
+       "ja": "いちばん近いドラッグストアです。薬や洗面用具のほか、食品や飲み物も安く揃います。歯ブラシなど、備えのないものはこちらで。",
+       "en": "The nearest drugstore. Medicines and toiletries, plus food and drinks at low prices. The place for a toothbrush and anything else we do not provide."
+      },
+      "travel": [
+       {
+        "ja": "車で5分",
+        "en": "5 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/XWt2cqmD151p3PZt6",
+      "qr": "/images/sheets/qr/cosmos-ryuji.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "ogino-futaba",
+      "name": {
+       "ja": "オギノ 双葉店",
+       "en": "Ogino Futaba"
+      },
+      "genre": {
+       "ja": "スーパー・大型店",
+       "en": "Supermarket"
+      },
+      "desc": {
+       "ja": "山梨のスーパーです。すぐ周りにホームセンターのDCM、イエローハット、しゃぶ葉、道頓堀、グラッチェガーデンズが集まっているので、買い物と食事をまとめて済ませられます。",
+       "en": "A Yamanashi supermarket chain. The DCM home centre, Yellow Hat, and the Shabu-yo, Dohtonbori and Gracie Gardens restaurants are all clustered around it, so shopping and a meal can be done in one trip."
+      },
+      "travel": [
+       {
+        "ja": "車で7分",
+        "en": "7 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/RzNeAJEnB737tqaw9",
+      "qr": "/images/sheets/qr/ogino-futaba.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "laza-walk-kai-futaba",
+      "name": {
+       "ja": "ラザウォーク甲斐双葉",
+       "en": "Laza Walk Kai Futaba"
+      },
+      "genre": {
+       "ja": "スーパー・大型店",
+       "en": "Supermarket"
+      },
+      "desc": {
+       "ja": "この辺りでいちばん大きなショッピングモールです。スーパーのアピタ、マツモトキヨシ、スターバックス、ニトリ、フードコートが入っているので、食材も日用品も一度で揃います。連泊のはじめにどうぞ。",
+       "en": "The largest shopping mall in the area, with the Apita supermarket, a Matsumoto Kiyoshi drugstore, Starbucks, Nitori and a food court — groceries and household goods in one stop. A good first errand on a longer stay."
+      },
+      "travel": [
+       {
+        "ja": "車で9分",
+        "en": "9 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/hopN4g2wHjvgMADU8",
+      "qr": "/images/sheets/qr/laza-walk-kai-futaba.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "yuunou-shikishima",
+      "name": {
+       "ja": "ゆうのう敷島",
+       "en": "Yuunou Shikishima"
+      },
+      "genre": {
+       "ja": "直売所・産直",
+       "en": "Farm stand"
+      },
+      "desc": {
+       "ja": "地元の農事組合が運営する施設です。「ゆうのう市場」で野菜や果物の直売、カフェ、バーベキュー場、貸農園（クラインガルテン）があります。バーベキューは予約が必要です。営業時間はお出かけ前にご確認ください。",
+       "en": "A facility run by the local farming cooperative. The Yuunou Ichiba market sells vegetables and fruit, and there is a cafe, a barbecue area and allotment gardens. The barbecue needs a reservation. Please check the opening hours before you set out."
+      },
+      "travel": [
+       {
+        "ja": "車で6分",
+        "en": "6 min by car"
+       }
+      ],
+      "map": "https://www.google.com/maps/search/?api=1&query=%E3%82%86%E3%81%86%E3%81%AE%E3%81%86%E6%95%B7%E5%B3%B6",
+      "qr": "/images/sheets/qr/yuunou-shikishima.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "https://www.youknowsksm.com/"
+     },
+     {
+      "id": "yumemi-no-oka",
+      "name": {
+       "ja": "山梨日帰り温泉 湯めみの丘",
+       "en": "Yumemi no Oka Hot Spring"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "源泉かけ流しの日帰り温泉です。露天風呂から甲府盆地を見下ろし、晴れていれば富士山も見えます。食事処もあり、料金は手頃です。ご利用時間・料金は事前にご確認ください。",
+       "en": "A day-visit hot spring with free-flowing source water. The open-air bath looks down over the Kofu basin, with Mt. Fuji on a clear day. There is somewhere to eat, and the fee is modest. Please check the hours and the fee in advance."
+      },
+      "travel": [
+       {
+        "ja": "車で6分",
+        "en": "6 min by car"
+       }
+      ],
+      "map": "https://www.google.com/maps/search/?api=1&query=%E6%B9%AF%E3%82%81%E3%81%BF%E3%81%AE%E4%B8%98%20%E7%94%B2%E6%96%90%E5%B8%82",
+      "qr": "/images/sheets/qr/yumemi-no-oka.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "kaminoyu-onsen",
+      "name": {
+       "ja": "ホテル神の湯温泉",
+       "en": "Hotel Kaminoyu Onsen"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "高台の温泉宿で、日帰り入浴ができます。洞窟風呂や樽風呂など11種類のお風呂があり、暗くなってからは甲府盆地の夜景が見えます。日帰り入浴の時間帯は事前にご確認ください。",
+       "en": "A hillside onsen hotel that opens its baths to day visitors, with eleven kinds of bath including a cave bath and barrel baths. After dark the Kofu basin lights up below. Please check the day-visit hours in advance."
+      },
+      "travel": [
+       {
+        "ja": "車で6分",
+        "en": "6 min by car"
+       }
+      ],
+      "map": "https://www.google.com/maps/search/?api=1&query=%E3%83%9B%E3%83%86%E3%83%AB%E7%A5%9E%E3%81%AE%E6%B9%AF%E6%B8%A9%E6%B3%89",
+      "qr": "/images/sheets/qr/kaminoyu-onsen.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "daisei",
+      "name": {
+       "ja": "れすとらん大清",
+       "en": "Restaurant Daisei"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "いちばん近い食事どころです。中華と洋食の定食を出す店で、分厚いジャンボカツやマーボーメンなど、量の多さで知られています。家族連れでも入りやすい店です。営業時間は事前にご確認ください。",
+       "en": "The nearest place to eat — a diner serving Chinese and Western set meals, known for its portions, including a very thick jumbo cutlet and mabo noodles. Easy to visit with family. Please check the opening hours in advance."
+      },
+      "travel": [
+       {
+        "ja": "車で4分",
+        "en": "4 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/pFVNLxKjwETUCoyu9",
+      "qr": "/images/sheets/qr/daisei.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "kosaku-futaba-bypass",
+      "name": {
+       "ja": "甲州ほうとう小作 双葉バイパス店",
+       "en": "Kosaku Hoto, Futaba Bypass"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "山梨の郷土料理「ほうとう」の店です。かぼちゃなどの野菜と幅広の麺を味噌仕立てで煮込み、鉄鍋のまま供されます。ひとり鍋なので、みんなで取り分ける必要がありません。",
+       "en": "Hoto is Yamanashi's own dish — flat wheat noodles simmered with pumpkin and vegetables in a miso broth, served bubbling in its own iron pot. Each person gets their own, so there is no sharing to negotiate."
+      },
+      "travel": [
+       {
+        "ja": "車で10分",
+        "en": "10 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/RyqddnhfS9sJQ8vH8",
+      "qr": "/images/sheets/qr/kosaku-futaba-bypass.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "sasa-curry-udon",
+      "name": {
+       "ja": "カレーうどん屋 咲々 響が丘店",
+       "en": "Sasa Curry Udon, Hibikigaoka"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "カレーうどんの専門店です。さっと食べたい昼に。営業時間は事前にご確認ください。",
+       "en": "A shop specialising in curry udon — good for a quick lunch. Please check the opening hours in advance."
+      },
+      "travel": [
+       {
+        "ja": "車で6分",
+        "en": "6 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/jLQmh3uziUDQqWrL9",
+      "qr": "/images/sheets/qr/sasa-curry-udon.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "la-pomme",
+      "name": {
+       "ja": "ビストロ・ラ・ポンム",
+       "en": "Bistro La Pomme"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "地元のビストロです。夕食を少しきちんと済ませたい晩に。営業時間と予約の要否は事前にご確認ください。",
+       "en": "A local bistro — for an evening when you would like dinner to be a little more of an occasion. Please check the hours, and whether you need to book, in advance."
+      },
+      "travel": [
+       {
+        "ja": "車で6分",
+        "en": "6 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/snn9zCbpJziJu7KA6",
+      "qr": "/images/sheets/qr/la-pomme.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "awajishima-burger",
+      "name": {
+       "ja": "淡路島バーガー 甲斐敷島店",
+       "en": "Awajishima Burger, Kai Shikishima"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "ご当地バーガーの店です。ボリュームのあるハンバーガーが食べられます。営業時間とテイクアウトの可否は事前にご確認ください。",
+       "en": "A regional burger shop with substantial burgers. Please check the opening hours, and whether they do takeaway, in advance."
+      },
+      "travel": [
+       {
+        "ja": "車で6分",
+        "en": "6 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/wc4jbsUZpDffH2rYA",
+      "qr": "/images/sheets/qr/awajishima-burger.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     }
+    ]
+   },
+   {
+    "kind": "daysout",
+    "title": {
+     "ja": "おでかけのご案内",
+     "en": "Days Out"
+    },
+    "note": {
+     "ja": "営業時間・定休日は変わることがあります。お出かけ前に地図アプリでご確認ください。",
+     "en": "Opening hours and closing days change from time to time — please check the map app before you set out."
+    },
+    "spots": [
+     {
+      "id": "suntory-tominooka-winery",
+      "name": {
+       "ja": "サントリー登美の丘ワイナリー",
+       "en": "Suntory Tomi no Oka Winery"
+      },
+      "genre": {
+       "ja": "ワイナリー",
+       "en": "Winery"
+      },
+      "desc": {
+       "ja": "施設と同じ大垈の丘にあるワイナリーです。ぶどう畑の向こうに富士山と甲府盆地が広がります。見学ツアー（要予約）、有料試飲、ショップがあります。運転される方はご注意ください。",
+       "en": "A winery on the same Onuta hillside as the house, with Mt. Fuji and the Kofu basin beyond the vineyards. Guided tours (reservation required), paid tastings and a shop. Mind who is driving."
+      },
+      "travel": [
+       {
+        "ja": "車で8分",
+        "en": "8 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/JCVJDxKJwrcWsFvU7",
+      "qr": "/images/sheets/qr/suntory-tominooka-winery.png",
+      "photo": null,
+      "hours": "10:00〜17:00",
+      "closed": "水曜",
+      "website": ""
+     },
+     {
+      "id": "chateraise-belleforet-winery",
+      "name": {
+       "ja": "シャトレーゼ・ベルフォーレ・ワイナリー",
+       "en": "Chateraise Belle Foret Winery"
+      },
+      "genre": {
+       "ja": "ワイナリー",
+       "en": "Winery"
+      },
+      "desc": {
+       "ja": "ワインの製造工程を見学できるワイナリーです。ローマンガラス美術館が併設され、シャトレーゼのお菓子も買えます。営業状況は事前にご確認ください。",
+       "en": "A winery where you can see the winemaking process, with a Roman glass museum attached and Chateraise sweets on sale. Please check that it is open before you set out."
+      },
+      "travel": [
+       {
+        "ja": "車で6分",
+        "en": "6 min by car"
+       }
+      ],
+      "map": "https://www.google.com/maps/search/?api=1&query=%E3%82%B7%E3%83%A3%E3%83%88%E3%83%AC%E3%83%BC%E3%82%BC%E3%83%99%E3%83%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AC%E3%83%AF%E3%82%A4%E3%83%8A%E3%83%AA%E3%83%BC",
+      "qr": "/images/sheets/qr/chateraise-belleforet-winery.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "akasakadai-park",
+      "name": {
+       "ja": "赤坂台総合公園（ドラゴンパーク）",
+       "en": "Akasakadai Park (Dragon Park)"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "高台の公園です。展望塔から南に富士山、北に八ヶ岳を望みます。大型の遊具があるので、お子さん連れの半日にちょうどよい場所です。",
+       "en": "A hilltop park. From the observation tower you look south to Mt. Fuji and north to the Yatsugatake range. There are large playgrounds, which makes it a good half day with children."
+      },
+      "travel": [
+       {
+        "ja": "車で8分",
+        "en": "8 min by car"
+       }
+      ],
+      "map": "https://www.google.com/maps/search/?api=1&query=%E8%B5%A4%E5%9D%82%E5%8F%B0%E7%B7%8F%E5%90%88%E5%85%AC%E5%9C%92%20%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%91%E3%83%BC%E3%82%AF",
+      "qr": "/images/sheets/qr/akasakadai-park.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "shingen-tsutsumi",
+      "name": {
+       "ja": "信玄堤公園",
+       "en": "Shingen Embankment Park"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "武田信玄が築いた治水施設として知られる釜無川の堤です。いまは公園として散策でき、春は桜が咲きます。",
+       "en": "The Kamanashi river embankment built under Takeda Shingen, known as one of his flood-control works. It is now a park to walk in, with cherry blossom in spring."
+      },
+      "travel": [
+       {
+        "ja": "車で9分",
+        "en": "9 min by car"
+       }
+      ],
+      "map": "https://www.google.com/maps/search/?api=1&query=%E4%BF%A1%E7%8E%84%E5%A0%A4%E5%85%AC%E5%9C%92",
+      "qr": "/images/sheets/qr/shingen-tsutsumi.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "haiji-no-mura",
+      "name": {
+       "ja": "ハイジの村",
+       "en": "Haiji no Mura (Heidi's Village)"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "「アルプスの少女ハイジ」をテーマにした花の公園です。長いバラのトンネル、季節の花畑、レストランと売店があります。お子さん連れでも、花の時期の散策にも。営業時間・料金は事前にご確認ください。",
+       "en": "A flower park themed on Heidi of the Alps, with a long rose tunnel, seasonal flower beds, a restaurant and a shop. Good with children, and good for a walk when the flowers are out. Please check the hours and the fee in advance."
+      },
+      "travel": [
+       {
+        "ja": "車で18分",
+        "en": "18 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/B8jruKxgWfkCGntV6",
+      "qr": "/images/sheets/qr/haiji-no-mura.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "shosenkyo",
+      "name": {
+       "ja": "昇仙峡",
+       "en": "Shosenkyo Gorge"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "日本有数の渓谷です。仙娥滝、覚円峰、ロープウェイがあり、紅葉は10月下旬から11月。歩く距離を選べるので、軽く見るだけでも、半日かけても楽しめます。",
+       "en": "One of Japan's celebrated gorges, with Sengataki Falls, the Kakuenbo rock face and a ropeway. The autumn colours come from late October into November. You can choose how far to walk, so it works as a short stop or as a half day."
+      },
+      "travel": [
+       {
+        "ja": "車で24分",
+        "en": "24 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/1osBiSqngKVHViaB7",
+      "qr": "/images/sheets/qr/shosenkyo.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "michinoeki-shirane",
+      "name": {
+       "ja": "道の駅しらね 農産物直売所",
+       "en": "Michi-no-Eki Shirane Farm Stand"
+      },
+      "genre": {
+       "ja": "直売所・産直",
+       "en": "Farm stand"
+      },
+      "desc": {
+       "ja": "南アルプス市の直売所です。果物の産地なので、さくらんぼ、桃、すももなど季節のものが並びます。量も種類も多く、値段も手頃です。",
+       "en": "A farm stand in Minami-Alps City, in the middle of fruit country — cherries, peaches and plums in their seasons. Plenty of choice, and reasonably priced."
+      },
+      "travel": [
+       {
+        "ja": "車で17分",
+        "en": "17 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/AJBg542st45PaRkV8",
+      "qr": "/images/sheets/qr/michinoeki-shirane.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "fumotto-minami-alps",
+      "name": {
+       "ja": "fumotto南アルプス 地域交流エリア",
+       "en": "fumotto Minami-Alps"
+      },
+      "genre": {
+       "ja": "その他",
+       "en": "Other"
+      },
+      "desc": {
+       "ja": "道の駅として計画された複合施設です。農産物の直売所、ビュッフェのレストラン、フードトレーラーが並ぶ屋外のフードコート、屋上の展望テラスがあります。オフロード自転車やラジコン、魚つかみなどの遊び場もあり、お子さん連れの半日になります。所要時間は有料区間を使った場合で、下道だけでも23分ほどです。",
+       "en": "A roadside complex built around a farm produce market, a buffet restaurant, an outdoor food court of food trailers, and a rooftop view terrace. There are also off-road bicycles, radio-control cars and fish-catching, which makes a half day with children. The time shown uses the toll expressway; on local roads alone it is about 23 minutes."
+      },
+      "travel": [
+       {
+        "ja": "車で20分",
+        "en": "20 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/ZFrt3EDEeeSNo52U6",
+      "qr": "/images/sheets/qr/fumotto-minami-alps.png",
+      "photo": null,
+      "hours": "8:00〜19:00",
+      "closed": "年中無休",
+      "website": ""
+     },
+     {
+      "id": "costco-minami-alps",
+      "name": {
+       "ja": "コストコホールセール 南アルプス倉庫店",
+       "en": "Costco Minami-Alps"
+      },
+      "genre": {
+       "ja": "スーパー・大型店",
+       "en": "Supermarket"
+      },
+      "desc": {
+       "ja": "会員制の大型倉庫店です。会員証がないと入店できないため、お持ちの方向けのご案内です。ガソリンスタンドも併設されています。所要時間は中部横断自動車道の有料区間を使った場合で、下道だけでも22分ほどで行けます。",
+       "en": "A members-only warehouse store — you cannot get in without a membership card, so this one is for those who already have one. There is a filling station on site. The time shown uses the toll expressway; on local roads alone it is about 22 minutes."
+      },
+      "travel": [
+       {
+        "ja": "車で20分",
+        "en": "20 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/dqp5kArjoK8gdauXA",
+      "qr": "/images/sheets/qr/costco-minami-alps.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "nakano-tanada",
+      "name": {
+       "ja": "中野の棚田",
+       "en": "Nakano Terraced Fields"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "標高450〜500mの斜面に、約150枚の田が段をなしています。富士山と甲府盆地が見渡せ、休んでいる田には菜の花やそばの花が植えられています。地図のリンクは見晴らしのための視点場です。駐車場とトイレがありませんので、すぐ近くのカフェ「月晴れる」と合わせてお出かけになるのがおすすめです。",
+       "en": "About 150 paddies stepping down a slope at 450–500 m, with Mt. Fuji and the Kofu basin in view; rapeseed and buckwheat flowers are planted on the plots at rest. The map link points to the viewpoint. There is no car park and no toilet here, so it is best combined with a stop at the Tsukihareru cafe just below."
+      },
+      "travel": [
+       {
+        "ja": "車で28分",
+        "en": "28 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/x3FENrEFr4Tbgf2C9",
+      "qr": "/images/sheets/qr/nakano-tanada.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "tsukihareru",
+      "name": {
+       "ja": "月晴れる",
+       "en": "Tsukihareru (cafe)"
+      },
+      "genre": {
+       "ja": "カフェ・スイーツ",
+       "en": "Cafe & sweets"
+      },
+      "desc": {
+       "ja": "中野の棚田の目の前にある、築100年の民家のカフェです。ワイナリー「ドメーヌヒデ」が営んでいて、野菜のプレートやカレーなどのランチと、米粉の蒸しパンや植物性のデザートがあります。日中はワインの試飲もできます。",
+       "en": "A cafe in a hundred-year-old farmhouse looking straight out at the Nakano terraces, run by the Domaine Hide winery. Lunch runs to vegetable plates and curry; the cafe menu has rice-flour steamed buns and plant-based desserts, and there is wine tasting during the day."
+      },
+      "travel": [
+       {
+        "ja": "車で28分",
+        "en": "28 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/UrBj2Ar48RxYv9Em9",
+      "qr": "/images/sheets/qr/tsukihareru.png",
+      "photo": null,
+      "hours": "ランチ11:30〜13:30 / カフェ14:00〜16:00（LO）",
+      "closed": "火〜木",
+      "website": ""
+     },
+     {
+      "id": "osotono-terrace",
+      "name": {
+       "ja": "おそとのてらす 南アルプス",
+       "en": "Osotono Terrace Minami-Alps"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "棚田の一帯にあるカフェ＆ダイニングです。屋外の席から南アルプスの山並みを眺めながら食事ができます。ドッグランもあるので（10:00〜17:00、犬1頭500円）、犬連れでも立ち寄れます。ご利用時間は事前にご確認ください。",
+       "en": "A cafe and dining room out in the terraced-field country, where you can eat outdoors looking across to the Southern Alps. There is a dog run too (10:00–17:00, 500 yen per dog), so it works if you have a dog with you. Please check the hours in advance."
+      },
+      "travel": [
+       {
+        "ja": "車で27分",
+        "en": "27 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/ENoY9FX65LRfSsmA7",
+      "qr": "/images/sheets/qr/osotono-terrace.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,21 @@
+---
+// 周辺・おでかけのご案内（日本語）。/guide/<施設>/
+// データは src/data/sheets.json。書き出しは ゲストガイド/_共通/ビルド/build_site_sheet.py。
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import SpotSheet from '../../components/SpotSheet.astro';
+import sheets from '../../data/sheets.json';
+
+export function getStaticPaths() {
+  return Object.values(sheets).map((p) => ({
+    params: { slug: p.slug },
+    props: { prop: p },
+  }));
+}
+
+const { prop } = Astro.props;
+const desc = `${prop.name.ja}のまわりの、買い物・食事・温泉と、車で出かけられる場所。所要時間は実際に測ったものです。`;
+---
+<GuideLayout title={`${prop.name.ja} 周辺とおでかけのご案内`} lang="ja"
+  description={desc} slug={prop.slug}>
+  <SpotSheet prop={prop} lang="ja" />
+</GuideLayout>

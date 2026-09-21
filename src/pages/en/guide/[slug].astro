@@ -1,0 +1,20 @@
+---
+// Around & days out (English). /en/guide/<property>/
+import GuideLayout from '../../../layouts/GuideLayout.astro';
+import SpotSheet from '../../../components/SpotSheet.astro';
+import sheets from '../../../data/sheets.json';
+
+export function getStaticPaths() {
+  return Object.values(sheets).map((p) => ({
+    params: { slug: p.slug },
+    props: { prop: p },
+  }));
+}
+
+const { prop } = Astro.props;
+const desc = `Shops, food and hot springs near ${prop.name.en}, and places worth the drive. The travel times are measured, not guessed.`;
+---
+<GuideLayout title={`${prop.name.en} — Around & Days Out`} lang="en"
+  description={desc} slug={prop.slug}>
+  <SpotSheet prop={prop} lang="en" />
+</GuideLayout>
