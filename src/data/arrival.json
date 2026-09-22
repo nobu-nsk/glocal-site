@@ -190,6 +190,7 @@
    "ssid": "GFK",
    "pass": "glocal@9667"
   },
+  "ogPhoto": "01_外観.jpg",
   "access": [
    {
     "ja": "河口湖駅から車で約16分",
@@ -214,6 +215,7 @@
   },
   "urlKey": "ee237d",
   "slug": "kawaguchiko-ee237d",
+  "ogImage": "/images/arrival/kawaguchiko/og.jpg",
   "steps": [
    {
     "h": {
@@ -265,7 +267,18 @@
     "note": {
      "ja": "道幅がかなり狭い区間があります。対向車にご注意のうえ、譲り合っての運転をお願いいたします。",
      "en": "Some stretches are very narrow. Please watch for oncoming cars and give way to each other."
-    }
+    },
+    "photos": [
+     {
+      "src": "/images/arrival/kawaguchiko/s2-1.jpg",
+      "w": 382,
+      "h": 560,
+      "cap": {
+       "ja": "この看板が目印です。矢印の向きへ進みます",
+       "en": "Look for this sign — follow the direction of the arrow"
+      }
+     }
+    ]
    },
    {
     "h": {
@@ -275,7 +288,18 @@
     "p": {
      "ja": "敷地内に3台分の駐車スペースがあります。路上駐車は近隣のご迷惑となりますのでお控えください。",
      "en": "There is space for three cars on the property. Please do not park on the street — it disturbs the neighbours."
-    }
+    },
+    "photos": [
+     {
+      "src": "/images/arrival/kawaguchiko/s3-1.jpg",
+      "w": 1400,
+      "h": 1050,
+      "cap": {
+       "ja": "建物の手前、砂利敷きが駐車スペースです",
+       "en": "The gravel area in front of the house is the parking space"
+      }
+     }
+    ]
    },
    {
     "h": {
@@ -289,7 +313,18 @@
     "note": {
      "ja": "パスコードはご到着の2日前までに、ご予約のメッセージで個別にお送りします。",
      "en": "Your passcode is sent to you individually via your booking message, at the latest two days before arrival."
-    }
+    },
+    "photos": [
+     {
+      "src": "/images/arrival/kawaguchiko/s4-1.jpg",
+      "w": 1316,
+      "h": 1400,
+      "cap": {
+       "ja": "キーパッドは玄関扉の右手にあります",
+       "en": "The keypad is on the right-hand side of the entrance door"
+      }
+     }
+    ]
    }
   ],
   "wifiQr": "/images/arrival/kawaguchiko/wifi.png"
