@@ -736,5 +736,1356 @@
     ]
    }
   ]
+ },
+ "kasugai": {
+  "slug": "kasugai",
+  "name": {
+   "ja": "グローカル春日居温泉",
+   "en": "Glocal Kasugai Onsen"
+  },
+  "updated": "2026-09-22",
+  "sections": [
+   {
+    "kind": "around",
+    "title": {
+     "ja": "周辺のご案内",
+     "en": "Around the House"
+    },
+    "note": {
+     "ja": "営業時間は変わることがあります。お出かけ前に地図アプリでご確認ください。",
+     "en": "Opening hours change from time to time — please check the map app before you set out."
+    },
+    "spots": [
+     {
+      "id": "isawa-station",
+      "name": {
+       "ja": "JR石和温泉駅",
+       "en": "JR Isawa Onsen Station"
+      },
+      "genre": {
+       "ja": "駅",
+       "en": "Station"
+      },
+      "desc": {
+       "ja": "普通列車で甲府まで2駅8分、ワイナリーで有名な勝沼ぶどう郷まで5駅17分。特急で新宿まで約90分です。駅前にインフォメーションセンター（ワイン試飲ができます）と足湯があります。",
+       "en": "Two stops (8 min) to Kofu on a local train, five stops (17 min) to Katsunuma-Budokyo and its wineries. The limited express reaches Shinjuku in about 90 minutes. By the entrance there is a tourist information centre with wine tasting, and a free foot bath."
+      },
+      "travel": [
+       {
+        "ja": "徒歩20分",
+        "en": "20 min walk"
+       },
+       {
+        "ja": "車で5分",
+        "en": "5 min by car"
+       }
+      ],
+      "map": "https://www.google.com/maps/search/?api=1&query=JR%E7%9F%B3%E5%92%8C%E6%B8%A9%E6%B3%89%E9%A7%85",
+      "qr": "/images/sheets/qr/isawa-station.png",
+      "photo": "/images/sheets/photo/isawa-station.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "seveneleven-kasugai-onsenkyo",
+      "name": {
+       "ja": "セブン-イレブン 春日居温泉郷店",
+       "en": "7-Eleven Kasugai Onsenkyo"
+      },
+      "genre": {
+       "ja": "コンビニ",
+       "en": "Convenience store"
+      },
+      "desc": {
+       "ja": "歩いて6分のコンビニです。ATM、宅配便の受け取り・発送もできます。24時間営業。",
+       "en": "A convenience store six minutes' walk away, with an ATM and parcel pick-up and drop-off. Open 24 hours."
+      },
+      "travel": [
+       {
+        "ja": "徒歩6分",
+        "en": "6 min walk"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/E4MepuGKgEayTuHY7",
+      "qr": "/images/sheets/qr/seveneleven-kasugai-onsenkyo.png",
+      "photo": null,
+      "hours": "24時間",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "lawson-kasugai-shizume",
+      "name": {
+       "ja": "ローソン 春日居鎮目店",
+       "en": "Lawson Kasugai Shizume"
+      },
+      "genre": {
+       "ja": "コンビニ",
+       "en": "Convenience store"
+      },
+      "desc": {
+       "ja": "もう一軒のコンビニです。ローソン銀行のATMがあります。24時間営業。",
+       "en": "The other convenience store nearby, with a Lawson Bank ATM. Open 24 hours."
+      },
+      "travel": [
+       {
+        "ja": "徒歩8分",
+        "en": "8 min walk"
+       },
+       {
+        "ja": "車で2分",
+        "en": "2 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/dYWEpsWPFqx3kd6U6",
+      "qr": "/images/sheets/qr/lawson-kasugai-shizume.png",
+      "photo": null,
+      "hours": "24時間",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "tsuruha-fuefuki-kasugai",
+      "name": {
+       "ja": "ツルハドラッグ 笛吹春日居店",
+       "en": "Tsuruha Drug Fuefuki Kasugai"
+      },
+      "genre": {
+       "ja": "ドラッグストア",
+       "en": "Drugstore"
+      },
+      "desc": {
+       "ja": "歩いて行けるドラッグストアです。薬や洗面用具のほか、食品や飲み物も扱っています。歯ブラシなど、備えのないものはこちらで。",
+       "en": "A drugstore within walking distance. Medicines and toiletries, plus food and drinks. The place for a toothbrush and anything else we do not provide."
+      },
+      "travel": [
+       {
+        "ja": "徒歩10分",
+        "en": "10 min walk"
+       },
+       {
+        "ja": "車で2分",
+        "en": "2 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/JgvMfDMn9A8pSg7f7",
+      "qr": "/images/sheets/qr/tsuruha-fuefuki-kasugai.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "megadonki-uny-isawa",
+      "name": {
+       "ja": "MEGAドン・キホーテUNY 石和店",
+       "en": "MEGA Don Quijote UNY Isawa"
+      },
+      "genre": {
+       "ja": "スーパー・大型店",
+       "en": "Supermarket"
+      },
+      "desc": {
+       "ja": "食材から日用品、衣料、お土産まで一度に揃います。自炊をされるならまずこちらへ。",
+       "en": "Groceries, household goods, clothing and souvenirs under one roof. Start here if you plan to cook."
+      },
+      "travel": [
+       {
+        "ja": "車で8分",
+        "en": "8 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/CvPWDDYEjuTrY8Fd7",
+      "qr": "/images/sheets/qr/megadonki-uny-isawa.png",
+      "photo": "/images/sheets/photo/megadonki-uny-isawa.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "ishibue-no-yu",
+      "name": {
+       "ja": "石笛の湯",
+       "en": "Ishibue no Yu"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "2025年秋にできた日帰り温泉です。源泉かけ流しで、露天風呂とサウナがあります。夜23時まで開いていて年中無休、料金も手頃です。歩いて行ける温泉として、滞在中に一度どうぞ。お出かけ前に最新の時間と料金をご確認ください。",
+       "en": "A day-visit hot spring that opened in autumn 2025, with free-flowing source water, an open-air bath and a sauna. It stays open until 23:00, every day of the year, and the fee is modest. Worth one visit during your stay, and you can walk there. Please check the current hours and fee before you set out."
+      },
+      "travel": [
+       {
+        "ja": "徒歩15分",
+        "en": "15 min walk"
+       },
+       {
+        "ja": "車で3分",
+        "en": "3 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/t3GS2NomXkddLx657",
+      "qr": "/images/sheets/qr/ishibue-no-yu.png",
+      "photo": null,
+      "hours": "10:00〜23:00（最終受付22:00）",
+      "closed": "年中無休",
+      "website": ""
+     },
+     {
+      "id": "ooedo-shinko",
+      "name": {
+       "ja": "大江戸温泉物語 ホテル新光",
+       "en": "Ooedo Onsen Monogatari Hotel Shinko"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "温泉ホテルの日帰り入浴です。予約は要りません。朝と夕方から夜24時まで開いているので、遅い時間でも入れます。ワイン風呂があるのが石和らしいところです。タオルは別料金で借りられます。入れ墨のある方は大浴場のご利用に制限があります。料金と時間は事前にご確認ください。",
+       "en": "Day bathing at an onsen hotel — no reservation needed. It opens in the morning and again from late afternoon until midnight, so a late soak is possible. There is a wine bath, which is very much an Isawa thing. Towels can be rented for a small fee. Guests with tattoos are restricted from the large baths. Please check the hours and the fee in advance."
+      },
+      "travel": [
+       {
+        "ja": "徒歩13分",
+        "en": "13 min walk"
+       },
+       {
+        "ja": "車で3分",
+        "en": "3 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/6UJfsXzGGs2WTgE19",
+      "qr": "/images/sheets/qr/ooedo-shinko.png",
+      "photo": null,
+      "hours": "7:00〜10:00 / 15:00〜24:00（最終受付22:00）",
+      "closed": "",
+      "website": "https://www.ooedoonsen.jp/shinko/day_trip/"
+     },
+     {
+      "id": "chateraise-hotel-isawa",
+      "name": {
+       "ja": "シャトレーゼホテル石和",
+       "en": "Chateraise Hotel Isawa"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "石和温泉のお湯に日帰りで入れます。滞在中に一度、大きな湯船につかるのもおすすめです。ご利用時間・料金は事前にご確認ください。",
+       "en": "A day-visit hot spring bath in Isawa Onsen — worth one evening in a big bath during your stay. Please check opening hours and the fee in advance."
+      },
+      "travel": [
+       {
+        "ja": "車で6分",
+        "en": "6 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/J5dCTfRVVnv1uiep7",
+      "qr": "/images/sheets/qr/chateraise-hotel-isawa.png",
+      "photo": "/images/sheets/photo/chateraise-hotel-isawa.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "miyuki-onsen",
+      "name": {
+       "ja": "旅館 深雪温泉",
+       "en": "Ryokan Miyuki Onsen"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "石和温泉の旅館で、日帰り入浴ができます。露天風呂もあります。ご利用時間・料金は事前にご確認ください。",
+       "en": "A ryokan in Isawa Onsen that opens its baths to day visitors, including an outdoor bath. Please check the hours and the fee in advance."
+      },
+      "travel": [
+       {
+        "ja": "車で7分",
+        "en": "7 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/XiaVjQb4NrQbMwQ96",
+      "qr": "/images/sheets/qr/miyuki-onsen.png",
+      "photo": "/images/sheets/photo/miyuki-onsen.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "mars-yamanashi-winery",
+      "name": {
+       "ja": "マルス山梨ワイナリー",
+       "en": "Mars Yamanashi Winery"
+      },
+      "genre": {
+       "ja": "ワイナリー",
+       "en": "Winery"
+      },
+      "desc": {
+       "ja": "歩いて8分のワイナリーです。入場無料で、7〜8種類のワインとぶどうジュースを無料で試飲できます。地下の樽貯蔵庫と瓶詰めラインを見学するツアーもあります（30〜40分・要予約）。歩いて行けるので、運転を気にせず試飲できるのがここの良いところです。9:00〜16:30。",
+       "en": "A winery eight minutes' walk away. Admission is free, and you can taste seven or eight wines and grape juice at no charge. There is also a guided tour of the underground barrel cellar and the bottling line (30–40 minutes, reservation required). Because you can walk there, you can taste without worrying about driving. 9:00–16:30."
+      },
+      "travel": [
+       {
+        "ja": "徒歩8分",
+        "en": "8 min walk"
+       },
+       {
+        "ja": "車で2分",
+        "en": "2 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/mzESjqew5eTFWSHZ7",
+      "qr": "/images/sheets/qr/mars-yamanashi-winery.png",
+      "photo": null,
+      "hours": "9:00〜16:30",
+      "closed": "",
+      "website": "https://www.hombo.co.jp/visiting/yamanashi/"
+     },
+     {
+      "id": "genbu-gyoza",
+      "name": {
+       "ja": "昭和レトロ 餃子酒場 玄武",
+       "en": "Genbu (gyoza izakaya)"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "歩いて10分の餃子の店です。昭和の雰囲気の店構えで、夕食を軽く済ませたい晩に。営業時間は事前にご確認ください。",
+       "en": "A gyoza place ten minutes' walk away, done up in a Showa-era style. Good for an easy supper. Please check the opening hours in advance."
+      },
+      "travel": [
+       {
+        "ja": "徒歩10分",
+        "en": "10 min walk"
+       },
+       {
+        "ja": "車で2分",
+        "en": "2 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/M9kK9VigahCPuRXVA",
+      "qr": "/images/sheets/qr/genbu-gyoza.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "mitsumura",
+      "name": {
+       "ja": "旬彩酒房みつむら",
+       "en": "Mitsumura (izakaya)"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "歩いて9分の居酒屋です。旬の料理とお酒を出す店で、外で夕食を済ませたい晩に。営業時間と予約の要否は事前にご確認ください。",
+       "en": "An izakaya nine minutes' walk away, serving seasonal dishes and drinks — for an evening when you would rather eat out. Please check the hours, and whether you need to book, in advance."
+      },
+      "travel": [
+       {
+        "ja": "徒歩9分",
+        "en": "9 min walk"
+       },
+       {
+        "ja": "車で2分",
+        "en": "2 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/xJDjgtPhLDebQ7UL9",
+      "qr": "/images/sheets/qr/mitsumura.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "kosaku-isawa-ekimae",
+      "name": {
+       "ja": "甲州ほうとう小作 石和駅前通り店",
+       "en": "Kosaku Hoto, Isawa Ekimae-dori"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "山梨の郷土料理「ほうとう」の店。かぼちゃなどの野菜と幅広の麺を味噌仕立てで煮込み、鉄鍋のまま供されます。ひとり鍋なので、みんなで取り分ける必要がありません。",
+       "en": "Hoto is Yamanashi's own dish — flat wheat noodles simmered with pumpkin and vegetables in a miso broth, served bubbling in its own iron pot. Each person gets their own, so there is no sharing to negotiate."
+      },
+      "travel": [
+       {
+        "ja": "車で7分",
+        "en": "7 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/iL9m9eeYd8kCUgZT7",
+      "qr": "/images/sheets/qr/kosaku-isawa-ekimae.png",
+      "photo": "/images/sheets/photo/kosaku-isawa-ekimae.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "tsuki-no-usagi",
+      "name": {
+       "ja": "食彩酒房 月のうさぎ",
+       "en": "Tsuki no Usagi (izakaya)"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "地元の食材とお酒を出す居酒屋です。夕食を外で済ませたい晩に。",
+       "en": "An izakaya serving local food and drink — a good option for an evening when you would rather not cook."
+      },
+      "travel": [
+       {
+        "ja": "徒歩18分",
+        "en": "18 min walk"
+       },
+       {
+        "ja": "車で3分",
+        "en": "3 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/z1R8k7Abt9iVcSGz9",
+      "qr": "/images/sheets/qr/tsuki-no-usagi.png",
+      "photo": "/images/sheets/photo/tsuki-no-usagi.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "rocks-french-italian",
+      "name": {
+       "ja": "ROCKSフレンチ&イタリアン",
+       "en": "ROCKS (French & Italian)"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "フレンチとイタリアンの店です。夕食を少しきちんと済ませたい晩に。営業時間と予約の要否は事前にご確認ください。",
+       "en": "A French and Italian restaurant — for an evening when you would like dinner to be a little more of an occasion. Please check the hours, and whether you need to book, in advance."
+      },
+      "travel": [
+       {
+        "ja": "車で5分",
+        "en": "5 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/WF7yLT3tgsY23nqj9",
+      "qr": "/images/sheets/qr/rocks-french-italian.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "xanadu-gelato",
+      "name": {
+       "ja": "Xanadu（シャナドゥ）",
+       "en": "Xanadu"
+      },
+      "genre": {
+       "ja": "カフェ・スイーツ",
+       "en": "Cafe & sweets"
+      },
+      "desc": {
+       "ja": "山梨の果物を使ったジェラートのお店。季節によって味が変わります。散歩やドライブのついでに。",
+       "en": "Gelato made with Yamanashi fruit, with flavours that change through the seasons. A good stop on a walk or a drive."
+      },
+      "travel": [
+       {
+        "ja": "車で6分",
+        "en": "6 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/h46EQQrEn7fz8qX98",
+      "qr": "/images/sheets/qr/xanadu-gelato.png",
+      "photo": "/images/sheets/photo/xanadu-gelato.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "shiratoya-isawa",
+      "name": {
+       "ja": "石わ しらと屋",
+       "en": "Shiratoya Isawa"
+      },
+      "genre": {
+       "ja": "カフェ・スイーツ",
+       "en": "Cafe & sweets"
+      },
+      "desc": {
+       "ja": "まんじゅう、ソフトクリーム、クレープのお店。散歩の途中の甘いものに。",
+       "en": "Manju buns, soft-serve ice cream and crepes — something sweet to pick up on a walk."
+      },
+      "travel": [
+       {
+        "ja": "徒歩17分",
+        "en": "17 min walk"
+       },
+       {
+        "ja": "車で3分",
+        "en": "3 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/ckzdhnvW4ybtC6766",
+      "qr": "/images/sheets/qr/shiratoya-isawa.png",
+      "photo": "/images/sheets/photo/shiratoya-isawa.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "budou-no-sato",
+      "name": {
+       "ja": "葡萄の里",
+       "en": "Budou no Sato (French pastry)"
+      },
+      "genre": {
+       "ja": "カフェ・スイーツ",
+       "en": "Cafe & sweets"
+      },
+      "desc": {
+       "ja": "フランス菓子の店。お土産にも、滞在中のおやつにも。",
+       "en": "A French pâtisserie — for a souvenir, or for something to have back at the house."
+      },
+      "travel": [
+       {
+        "ja": "車で8分",
+        "en": "8 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/uBJM3G8boDLWVfgt6",
+      "qr": "/images/sheets/qr/budou-no-sato.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     }
+    ]
+   },
+   {
+    "kind": "daysout",
+    "title": {
+     "ja": "おでかけのご案内",
+     "en": "Days Out"
+    },
+    "note": {
+     "ja": "営業時間・定休日は変わることがあります。お出かけ前に地図アプリでご確認ください。",
+     "en": "Opening hours and closing days change from time to time — please check the map app before you set out."
+    },
+    "spots": [
+     {
+      "id": "kikyouya-outlet",
+      "name": {
+       "ja": "桔梗屋工場 アウトレット",
+       "en": "Kikyoya Factory Outlet"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "山梨の銘菓「信玄餅」の工場に併設されたアウトレットです。早朝の詰め放題が人気で、並ぶこともあります。宿と一宮御坂ICのあいだにあるので、帰り道にも寄れます。",
+       "en": "The outlet at the factory that makes Shingen mochi, Yamanashi's best-known sweet. The early-morning “stuff the bag yourself” sale draws a queue. It sits between the house and the Ichinomiya-Misaka interchange, so it also works on the way home."
+      },
+      "travel": [
+       {
+        "ja": "車で7分",
+        "en": "7 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/ijZyuj7u9o1Zbpq97",
+      "qr": "/images/sheets/qr/kikyouya-outlet.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "sato-no-eki-ichinomiya",
+      "name": {
+       "ja": "里の駅いちのみや",
+       "en": "Sato-no-Eki Ichinomiya"
+      },
+      "genre": {
+       "ja": "直売所・産直",
+       "en": "Farm stand"
+      },
+      "desc": {
+       "ja": "果物と野菜の直売所です。この辺りは直売所が多いのですが、こちらは品数と在庫が多く買いやすいほうです。ぶどうは種類がいろいろあるので、食べ比べてみてください。",
+       "en": "A farm stand for fruit and vegetables. There are many in this area; this one carries more varieties and more stock, so it is the easier place to shop. The grapes come in several kinds — worth tasting your way through them."
+      },
+      "travel": [
+       {
+        "ja": "車で8分",
+        "en": "8 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/WagCtPGTqwpruxs88",
+      "qr": "/images/sheets/qr/sato-no-eki-ichinomiya.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "budou-no-oka",
+      "name": {
+       "ja": "甲州市勝沼 ぶどうの丘",
+       "en": "Budo-no-Oka, Katsunuma"
+      },
+      "genre": {
+       "ja": "ワイナリー",
+       "en": "Winery"
+      },
+      "desc": {
+       "ja": "ぶどう畑を見下ろす丘の上の施設です。地下のワインカーヴでは、県内ワイン100種類以上を定額で試飲できます。バーベキューもあります。運転される方はご注意を。",
+       "en": "A hilltop complex above the vineyards. In the cellar below, you can taste more than a hundred Yamanashi wines for a single fee. There is a barbecue restaurant too. Mind who is driving."
+      },
+      "travel": [
+       {
+        "ja": "車で17分",
+        "en": "17 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/eTJcXG7YSKnHHk3Q8",
+      "qr": "/images/sheets/qr/budou-no-oka.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "pukupuku-fruits-onsen",
+      "name": {
+       "ja": "やまなしフルーツ温泉 ぷくぷく",
+       "en": "Yamanashi Fruits Onsen Pukupuku"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "笛吹川フルーツ公園の高台にある日帰り温泉です。露天風呂から甲府盆地を見下ろします。昼の山並みも、暗くなってからの夜景も、それぞれいいものです。",
+       "en": "A day-visit hot spring on the hillside by Fuefukigawa Fruit Park, looking down over the Kofu basin from the open-air bath. Good in daylight for the mountains, good after dark for the lights below."
+      },
+      "travel": [
+       {
+        "ja": "車で14分",
+        "en": "14 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/PnLXCo81vbmUPqT56",
+      "qr": "/images/sheets/qr/pukupuku-fruits-onsen.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "hottarakashi-onsen",
+      "name": {
+       "ja": "ほったらかし温泉",
+       "en": "Hottarakashi Onsen"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "同じ高台にある、名前で知られた露天風呂です。「あっちの湯」「こっちの湯」の2つがあり、見える範囲が少し違います。早い時間から開いています。",
+       "en": "A famous open-air bath on the same ridge. There are two baths, “Acchi no Yu” and “Kocchi no Yu”, each looking out a little differently. It opens early."
+      },
+      "travel": [
+       {
+        "ja": "車で17分",
+        "en": "17 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/x3Zr4nBgCsoUxW8L7",
+      "qr": "/images/sheets/qr/hottarakashi-onsen.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "gaia-restaurant",
+      "name": {
+       "ja": "展望・星屑レストラン ガイア",
+       "en": "Gaia — Stardust Restaurant"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "こちらも同じ高台です。窓の外に甲府盆地が広がります。温泉のあとの食事にも、夜景を見に行くだけでも。",
+       "en": "Also on the ridge, with the Kofu basin spread out beyond the windows. Worth a meal after the bath, or just the view."
+      },
+      "travel": [
+       {
+        "ja": "車で12分",
+        "en": "12 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/vKPGWRYisQK8fTBi7",
+      "qr": "/images/sheets/qr/gaia-restaurant.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "fujimibashi-tenboudai",
+      "name": {
+       "ja": "富士見橋展望台",
+       "en": "Fujimibashi Viewpoint"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "御坂みちの途中にある展望台です。笛吹市側から富士山を見に行くなら、いちばん近い場所のひとつ。晴れていれば、という前提はつきます。",
+       "en": "A viewpoint on the Misaka road. If you are heading out from the Fuefuki side to see Mt. Fuji, this is one of the closest places — weather permitting."
+      },
+      "travel": [
+       {
+        "ja": "車で24分",
+        "en": "24 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/71cFjhH6jLxcL8D9A",
+      "qr": "/images/sheets/qr/fujimibashi-tenboudai.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "oishi-park",
+      "name": {
+       "ja": "大石公園",
+       "en": "Oishi Park"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "河口湖の北岸から、湖ごしに富士山を望む公園です。花の季節には湖畔が色づきます。売店と食事どころもあります。",
+       "en": "A park on the north shore of Lake Kawaguchi, with Mt. Fuji across the water. The lakeside turns colourful in the flowering season. There are shops and somewhere to eat."
+      },
+      "travel": [
+       {
+        "ja": "車で34分",
+        "en": "34 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/biKzmvaTgx1JM7i17",
+      "qr": "/images/sheets/qr/oishi-park.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     }
+    ]
+   }
+  ]
+ },
+ "kofu-isawa": {
+  "slug": "kofu-isawa",
+  "name": {
+   "ja": "グローカル甲府石和",
+   "en": "Glocal Kofu Isawa"
+  },
+  "updated": "2026-09-22",
+  "sections": [
+   {
+    "kind": "around",
+    "title": {
+     "ja": "周辺のご案内",
+     "en": "Around the House"
+    },
+    "note": {
+     "ja": "営業時間は変わることがあります。お出かけ前に地図アプリでご確認ください。",
+     "en": "Opening hours change from time to time — please check the map app before you set out."
+    },
+    "spots": [
+     {
+      "id": "isawa-station",
+      "name": {
+       "ja": "JR石和温泉駅",
+       "en": "JR Isawa Onsen Station"
+      },
+      "genre": {
+       "ja": "駅",
+       "en": "Station"
+      },
+      "desc": {
+       "ja": "普通列車で甲府まで2駅8分、ワイナリーで有名な勝沼ぶどう郷まで5駅17分。特急で新宿まで約90分です。駅前にインフォメーションセンター（ワイン試飲ができます）と足湯があります。",
+       "en": "Two stops (8 min) to Kofu on a local train, five stops (17 min) to Katsunuma-Budokyo and its wineries. The limited express reaches Shinjuku in about 90 minutes. By the entrance there is a tourist information centre with wine tasting, and a free foot bath."
+      },
+      "travel": [
+       {
+        "ja": "徒歩12分",
+        "en": "12 min walk"
+       },
+       {
+        "ja": "車で3分",
+        "en": "3 min by car"
+       }
+      ],
+      "map": "https://www.google.com/maps/search/?api=1&query=JR%E7%9F%B3%E5%92%8C%E6%B8%A9%E6%B3%89%E9%A7%85",
+      "qr": "/images/sheets/qr/isawa-station.png",
+      "photo": "/images/sheets/photo/isawa-station.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "familymart-isawa-ichibu",
+      "name": {
+       "ja": "ファミリーマート 石和町市部店",
+       "en": "FamilyMart Isawa Ichibu"
+      },
+      "genre": {
+       "ja": "コンビニ",
+       "en": "Convenience store"
+      },
+      "desc": {
+       "ja": "24時間営業のコンビニです。ATM、宅配便の受け取り・発送、チケット発券もできます。",
+       "en": "A convenience store open 24 hours. ATM, parcel pick-up and drop-off, ticket machine."
+      },
+      "travel": [
+       {
+        "ja": "徒歩3分",
+        "en": "3 min walk"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/piJc5NCfpqh1EnEW7",
+      "qr": "/images/sheets/qr/familymart-isawa-ichibu.png",
+      "photo": "/images/sheets/photo/familymart-isawa-ichibu.jpg",
+      "hours": "24時間",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "sundrug-isawa",
+      "name": {
+       "ja": "サンドラッグ 石和店",
+       "en": "Sundrug Isawa"
+      },
+      "genre": {
+       "ja": "ドラッグストア",
+       "en": "Drugstore"
+      },
+      "desc": {
+       "ja": "医薬品、洗面用具、化粧品のほか、食品や飲み物も扱っています。歯ブラシなどの備えのないアメニティはこちらで。",
+       "en": "Medicines, toiletries and cosmetics, plus food and drinks. The place for a toothbrush and anything else we do not provide."
+      },
+      "travel": [
+       {
+        "ja": "徒歩3分",
+        "en": "3 min walk"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/Bdm8sh5B29SrcYYT9",
+      "qr": "/images/sheets/qr/sundrug-isawa.png",
+      "photo": "/images/sheets/photo/sundrug-isawa.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "megadonki-uny-isawa",
+      "name": {
+       "ja": "MEGAドン・キホーテUNY 石和店",
+       "en": "MEGA Don Quijote UNY Isawa"
+      },
+      "genre": {
+       "ja": "スーパー・大型店",
+       "en": "Supermarket"
+      },
+      "desc": {
+       "ja": "食材から日用品、衣料、お土産まで一度に揃います。自炊をされるならまずこちらへ。",
+       "en": "Groceries, household goods, clothing and souvenirs under one roof. Start here if you plan to cook."
+      },
+      "travel": [
+       {
+        "ja": "徒歩12分",
+        "en": "12 min walk"
+       },
+       {
+        "ja": "車で2分",
+        "en": "2 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/CvPWDDYEjuTrY8Fd7",
+      "qr": "/images/sheets/qr/megadonki-uny-isawa.png",
+      "photo": "/images/sheets/photo/megadonki-uny-isawa.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "chateraise-hotel-isawa",
+      "name": {
+       "ja": "シャトレーゼホテル石和",
+       "en": "Chateraise Hotel Isawa"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "石和温泉のお湯に日帰りで入れます。滞在中に一度、大きな湯船につかるのもおすすめです。ご利用時間・料金は事前にご確認ください。",
+       "en": "A day-visit hot spring bath in Isawa Onsen — worth one evening in a big bath during your stay. Please check opening hours and the fee in advance."
+      },
+      "travel": [
+       {
+        "ja": "徒歩7分",
+        "en": "7 min walk"
+       },
+       {
+        "ja": "車で2分",
+        "en": "2 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/J5dCTfRVVnv1uiep7",
+      "qr": "/images/sheets/qr/chateraise-hotel-isawa.png",
+      "photo": "/images/sheets/photo/chateraise-hotel-isawa.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "miyuki-onsen",
+      "name": {
+       "ja": "旅館 深雪温泉",
+       "en": "Ryokan Miyuki Onsen"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "石和温泉の旅館で、日帰り入浴ができます。露天風呂もあります。ご利用時間・料金は事前にご確認ください。",
+       "en": "A ryokan in Isawa Onsen that opens its baths to day visitors, including an outdoor bath. Please check the hours and the fee in advance."
+      },
+      "travel": [
+       {
+        "ja": "徒歩3分",
+        "en": "3 min walk"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/XiaVjQb4NrQbMwQ96",
+      "qr": "/images/sheets/qr/miyuki-onsen.png",
+      "photo": "/images/sheets/photo/miyuki-onsen.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "kosaku-isawa-ekimae",
+      "name": {
+       "ja": "甲州ほうとう小作 石和駅前通り店",
+       "en": "Kosaku Hoto, Isawa Ekimae-dori"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "山梨の郷土料理「ほうとう」の店。かぼちゃなどの野菜と幅広の麺を味噌仕立てで煮込み、鉄鍋のまま供されます。ひとり鍋なので、みんなで取り分ける必要がありません。",
+       "en": "Hoto is Yamanashi's own dish — flat wheat noodles simmered with pumpkin and vegetables in a miso broth, served bubbling in its own iron pot. Each person gets their own, so there is no sharing to negotiate."
+      },
+      "travel": [
+       {
+        "ja": "徒歩9分",
+        "en": "9 min walk"
+       },
+       {
+        "ja": "車で2分",
+        "en": "2 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/iL9m9eeYd8kCUgZT7",
+      "qr": "/images/sheets/qr/kosaku-isawa-ekimae.png",
+      "photo": "/images/sheets/photo/kosaku-isawa-ekimae.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "tsuki-no-usagi",
+      "name": {
+       "ja": "食彩酒房 月のうさぎ",
+       "en": "Tsuki no Usagi (izakaya)"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "地元の食材とお酒を出す居酒屋です。夕食を外で済ませたい晩に。",
+       "en": "An izakaya serving local food and drink — a good option for an evening when you would rather not cook."
+      },
+      "travel": [
+       {
+        "ja": "徒歩13分",
+        "en": "13 min walk"
+       },
+       {
+        "ja": "車で3分",
+        "en": "3 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/z1R8k7Abt9iVcSGz9",
+      "qr": "/images/sheets/qr/tsuki-no-usagi.png",
+      "photo": "/images/sheets/photo/tsuki-no-usagi.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "xanadu-gelato",
+      "name": {
+       "ja": "Xanadu（シャナドゥ）",
+       "en": "Xanadu"
+      },
+      "genre": {
+       "ja": "カフェ・スイーツ",
+       "en": "Cafe & sweets"
+      },
+      "desc": {
+       "ja": "山梨の果物を使ったジェラートのお店。季節によって味が変わります。散歩やドライブのついでに。",
+       "en": "Gelato made with Yamanashi fruit, with flavours that change through the seasons. A good stop on a walk or a drive."
+      },
+      "travel": [
+       {
+        "ja": "徒歩4分",
+        "en": "4 min walk"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/h46EQQrEn7fz8qX98",
+      "qr": "/images/sheets/qr/xanadu-gelato.png",
+      "photo": "/images/sheets/photo/xanadu-gelato.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "shiratoya-isawa",
+      "name": {
+       "ja": "石わ しらと屋",
+       "en": "Shiratoya Isawa"
+      },
+      "genre": {
+       "ja": "カフェ・スイーツ",
+       "en": "Cafe & sweets"
+      },
+      "desc": {
+       "ja": "まんじゅう、ソフトクリーム、クレープのお店。散歩の途中の甘いものに。",
+       "en": "Manju buns, soft-serve ice cream and crepes — something sweet to pick up on a walk."
+      },
+      "travel": [
+       {
+        "ja": "徒歩14分",
+        "en": "14 min walk"
+       },
+       {
+        "ja": "車で3分",
+        "en": "3 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/ckzdhnvW4ybtC6766",
+      "qr": "/images/sheets/qr/shiratoya-isawa.png",
+      "photo": "/images/sheets/photo/shiratoya-isawa.jpg",
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "budou-no-sato",
+      "name": {
+       "ja": "葡萄の里",
+       "en": "Budou no Sato (French pastry)"
+      },
+      "genre": {
+       "ja": "カフェ・スイーツ",
+       "en": "Cafe & sweets"
+      },
+      "desc": {
+       "ja": "フランス菓子の店。お土産にも、滞在中のおやつにも。",
+       "en": "A French pâtisserie — for a souvenir, or for something to have back at the house."
+      },
+      "travel": [
+       {
+        "ja": "徒歩5分",
+        "en": "5 min walk"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/uBJM3G8boDLWVfgt6",
+      "qr": "/images/sheets/qr/budou-no-sato.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     }
+    ]
+   },
+   {
+    "kind": "daysout",
+    "title": {
+     "ja": "おでかけのご案内",
+     "en": "Days Out"
+    },
+    "note": {
+     "ja": "営業時間・定休日は変わることがあります。お出かけ前に地図アプリでご確認ください。",
+     "en": "Opening hours and closing days change from time to time — please check the map app before you set out."
+    },
+    "spots": [
+     {
+      "id": "kikyouya-outlet",
+      "name": {
+       "ja": "桔梗屋工場 アウトレット",
+       "en": "Kikyoya Factory Outlet"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "山梨の銘菓「信玄餅」の工場に併設されたアウトレットです。早朝の詰め放題が人気で、並ぶこともあります。宿と一宮御坂ICのあいだにあるので、帰り道にも寄れます。",
+       "en": "The outlet at the factory that makes Shingen mochi, Yamanashi's best-known sweet. The early-morning “stuff the bag yourself” sale draws a queue. It sits between the house and the Ichinomiya-Misaka interchange, so it also works on the way home."
+      },
+      "travel": [
+       {
+        "ja": "車で9分",
+        "en": "9 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/ijZyuj7u9o1Zbpq97",
+      "qr": "/images/sheets/qr/kikyouya-outlet.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "sato-no-eki-ichinomiya",
+      "name": {
+       "ja": "里の駅いちのみや",
+       "en": "Sato-no-Eki Ichinomiya"
+      },
+      "genre": {
+       "ja": "直売所・産直",
+       "en": "Farm stand"
+      },
+      "desc": {
+       "ja": "果物と野菜の直売所です。この辺りは直売所が多いのですが、こちらは品数と在庫が多く買いやすいほうです。ぶどうは種類がいろいろあるので、食べ比べてみてください。",
+       "en": "A farm stand for fruit and vegetables. There are many in this area; this one carries more varieties and more stock, so it is the easier place to shop. The grapes come in several kinds — worth tasting your way through them."
+      },
+      "travel": [
+       {
+        "ja": "車で8分",
+        "en": "8 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/WagCtPGTqwpruxs88",
+      "qr": "/images/sheets/qr/sato-no-eki-ichinomiya.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "budou-no-oka",
+      "name": {
+       "ja": "甲州市勝沼 ぶどうの丘",
+       "en": "Budo-no-Oka, Katsunuma"
+      },
+      "genre": {
+       "ja": "ワイナリー",
+       "en": "Winery"
+      },
+      "desc": {
+       "ja": "ぶどう畑を見下ろす丘の上の施設です。地下のワインカーヴでは、県内ワイン100種類以上を定額で試飲できます。バーベキューもあります。運転される方はご注意を。",
+       "en": "A hilltop complex above the vineyards. In the cellar below, you can taste more than a hundred Yamanashi wines for a single fee. There is a barbecue restaurant too. Mind who is driving."
+      },
+      "travel": [
+       {
+        "ja": "車で20分",
+        "en": "20 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/eTJcXG7YSKnHHk3Q8",
+      "qr": "/images/sheets/qr/budou-no-oka.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "pukupuku-fruits-onsen",
+      "name": {
+       "ja": "やまなしフルーツ温泉 ぷくぷく",
+       "en": "Yamanashi Fruits Onsen Pukupuku"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "笛吹川フルーツ公園の高台にある日帰り温泉です。露天風呂から甲府盆地を見下ろします。昼の山並みも、暗くなってからの夜景も、それぞれいいものです。",
+       "en": "A day-visit hot spring on the hillside by Fuefukigawa Fruit Park, looking down over the Kofu basin from the open-air bath. Good in daylight for the mountains, good after dark for the lights below."
+      },
+      "travel": [
+       {
+        "ja": "車で17分",
+        "en": "17 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/PnLXCo81vbmUPqT56",
+      "qr": "/images/sheets/qr/pukupuku-fruits-onsen.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "hottarakashi-onsen",
+      "name": {
+       "ja": "ほったらかし温泉",
+       "en": "Hottarakashi Onsen"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "同じ高台にある、名前で知られた露天風呂です。「あっちの湯」「こっちの湯」の2つがあり、見える範囲が少し違います。早い時間から開いています。",
+       "en": "A famous open-air bath on the same ridge. There are two baths, “Acchi no Yu” and “Kocchi no Yu”, each looking out a little differently. It opens early."
+      },
+      "travel": [
+       {
+        "ja": "車で20分",
+        "en": "20 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/x3Zr4nBgCsoUxW8L7",
+      "qr": "/images/sheets/qr/hottarakashi-onsen.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "gaia-restaurant",
+      "name": {
+       "ja": "展望・星屑レストラン ガイア",
+       "en": "Gaia — Stardust Restaurant"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "こちらも同じ高台です。窓の外に甲府盆地が広がります。温泉のあとの食事にも、夜景を見に行くだけでも。",
+       "en": "Also on the ridge, with the Kofu basin spread out beyond the windows. Worth a meal after the bath, or just the view."
+      },
+      "travel": [
+       {
+        "ja": "車で16分",
+        "en": "16 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/vKPGWRYisQK8fTBi7",
+      "qr": "/images/sheets/qr/gaia-restaurant.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "fujimibashi-tenboudai",
+      "name": {
+       "ja": "富士見橋展望台",
+       "en": "Fujimibashi Viewpoint"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "御坂みちの途中にある展望台です。笛吹市側から富士山を見に行くなら、いちばん近い場所のひとつ。晴れていれば、という前提はつきます。",
+       "en": "A viewpoint on the Misaka road. If you are heading out from the Fuefuki side to see Mt. Fuji, this is one of the closest places — weather permitting."
+      },
+      "travel": [
+       {
+        "ja": "車で26分",
+        "en": "26 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/71cFjhH6jLxcL8D9A",
+      "qr": "/images/sheets/qr/fujimibashi-tenboudai.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     },
+     {
+      "id": "oishi-park",
+      "name": {
+       "ja": "大石公園",
+       "en": "Oishi Park"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "河口湖の北岸から、湖ごしに富士山を望む公園です。花の季節には湖畔が色づきます。売店と食事どころもあります。",
+       "en": "A park on the north shore of Lake Kawaguchi, with Mt. Fuji across the water. The lakeside turns colourful in the flowering season. There are shops and somewhere to eat."
+      },
+      "travel": [
+       {
+        "ja": "車で35分",
+        "en": "35 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/biKzmvaTgx1JM7i17",
+      "qr": "/images/sheets/qr/oishi-park.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": ""
+     }
+    ]
+   }
+  ]
  }
 }
