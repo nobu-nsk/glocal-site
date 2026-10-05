@@ -304,14 +304,14 @@
       "w": 1400,
       "h": 1050,
       "cap": {
-       "ja": "分かれ道に看板が立っています",
-       "en": "A sign stands at each junction"
+       "ja": "壁に「Fuji Nagi」の看板があります",
+       "en": "A Fuji Nagi sign is mounted on the wall"
       }
      },
      {
       "src": "/images/arrival/kawaguchiko/s3-2.jpg",
-      "w": 1400,
-      "h": 1050,
+      "w": 1050,
+      "h": 1400,
       "cap": {
        "ja": "看板には曲がり方が描かれています",
        "en": "The sign shows which way to turn"
@@ -334,8 +334,8 @@
       "w": 1400,
       "h": 1050,
       "cap": {
-       "ja": "看板のある砂利の入口が駐車場です",
-       "en": "The gravel entrance by the sign is the parking area"
+       "ja": "分かれ道にも看板が立っています",
+       "en": "Signs also stand at the junctions"
       }
      },
      {
