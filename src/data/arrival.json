@@ -251,8 +251,8 @@
      "en": "Enter the neighbourhood beside Oishi Hanaterasu"
     },
     "p": {
-     "ja": "大石公園を過ぎ、大石ハナテラス駐車場（P3）の脇から住宅街に入ります。途中「Fuji Nagi」の誘導看板が出ますので、そのまま従ってください。細い道に入ってから約3分で到着します。",
-     "en": "Pass Oishi Park and turn into the residential area beside parking lot P3 of Oishi Hanaterasu. Follow the signs for “Fuji Nagi” along the way. It is about 3 minutes from where the lane narrows."
+     "ja": "大石公園を過ぎ、大石ハナテラス駐車場（P3）の脇から住宅街に入ります。",
+     "en": "Pass Oishi Park and turn into the residential area beside parking lot P3 of Oishi Hanaterasu."
     },
     "links": [
      {
@@ -267,7 +267,57 @@
     "note": {
      "ja": "道幅がかなり狭い区間があります。対向車にご注意のうえ、譲り合っての運転をお願いいたします。",
      "en": "Some stretches are very narrow. Please watch for oncoming cars and give way to each other."
-    }
+    },
+    "photos": [
+     {
+      "src": "/images/arrival/kawaguchiko/s2-1.jpg",
+      "w": 1400,
+      "h": 1050,
+      "cap": {
+       "ja": "この「ハナテラス P3」の看板が目印です",
+       "en": "Look for this Hanaterasu P3 sign"
+      }
+     },
+     {
+      "src": "/images/arrival/kawaguchiko/s2-2.jpg",
+      "w": 1400,
+      "h": 1050,
+      "cap": {
+       "ja": "看板のある駐車場の脇から住宅街へ入ります",
+       "en": "Turn in beside the car park where the sign stands"
+      }
+     }
+    ]
+   },
+   {
+    "h": {
+     "ja": "「Fuji Nagi」の看板に従う",
+     "en": "Follow the Fuji Nagi signs"
+    },
+    "p": {
+     "ja": "住宅街に入ると、分かれ道に白い「Fuji Nagi」の看板が出ます。赤い矢印の向きへ進んでください。細い道に入ってから約3分です。",
+     "en": "Once you are in the residential streets, white “Fuji Nagi” signs appear at the junctions. Follow the direction of the red arrow. It is about 3 minutes from where the lane narrows."
+    },
+    "photos": [
+     {
+      "src": "/images/arrival/kawaguchiko/s3-1.jpg",
+      "w": 1400,
+      "h": 1050,
+      "cap": {
+       "ja": "分かれ道に看板が立っています",
+       "en": "A sign stands at each junction"
+      }
+     },
+     {
+      "src": "/images/arrival/kawaguchiko/s3-2.jpg",
+      "w": 1400,
+      "h": 1050,
+      "cap": {
+       "ja": "看板には曲がり方が描かれています",
+       "en": "The sign shows which way to turn"
+      }
+     }
+    ]
    },
    {
     "h": {
@@ -280,7 +330,16 @@
     },
     "photos": [
      {
-      "src": "/images/arrival/kawaguchiko/s3-1.jpg",
+      "src": "/images/arrival/kawaguchiko/s4-1.jpg",
+      "w": 1400,
+      "h": 1050,
+      "cap": {
+       "ja": "看板のある砂利の入口が駐車場です",
+       "en": "The gravel entrance by the sign is the parking area"
+      }
+     },
+     {
+      "src": "/images/arrival/kawaguchiko/s4-2.jpg",
       "w": 1400,
       "h": 1050,
       "cap": {
@@ -305,7 +364,7 @@
     },
     "photos": [
      {
-      "src": "/images/arrival/kawaguchiko/s4-1.jpg",
+      "src": "/images/arrival/kawaguchiko/s5-1.jpg",
       "w": 1316,
       "h": 1400,
       "cap": {
