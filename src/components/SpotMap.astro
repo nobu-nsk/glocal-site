@@ -1,0 +1,45 @@
+---
+// セクションの先頭に置く地図。Google Maps JavaScript API で描く。
+//
+// 地図に出すのは「宿」と、そのセクションのスポット。番号は下のカードと対応する。
+// 中心と縮尺は決め打ちせず、ビルド時に計算した四隅（bounds）に合わせる。
+// 「御坂峠を越えて向こう側へ行く」のような位置関係が、1枚で伝わるのが狙い。
+//
+// APIキーが無いときは何も描かない。ページはいままでどおり一覧だけで成立する。
+// キーは PUBLIC_GOOGLE_MAPS_API_KEY（.env）。公開ページのソースに出るので、
+// Google Cloud 側で必ずリファラ制限（*.glocal-commune.com/*）をかけること。
+const { section, lang } = Astro.props;
+const hasKey = Boolean(import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY);
+const show = hasKey && section.map;
+
+const payload = show ? JSON.stringify({
+  bounds: section.map.bounds,
+  home: section.map.home ? {
+    lat: section.map.home.lat,
+    lng: section.map.home.lng,
+    label: section.map.home.label ? section.map.home.label[lang] : '',
+  } : null,
+  homeTag: lang === 'ja' ? '宿' : 'Here',
+  open: lang === 'ja' ? '地図アプリで開く' : 'Open in maps',
+  spots: section.spots
+    .filter((s) => s.lat != null && s.lng != null)
+    .map((s) => ({ no: s.no, lat: s.lat, lng: s.lng, name: s.name[lang],
+                   travel: s.travel.map((v) => v[lang]).join(' / '), map: s.map })),
+}) : '';
+---
+
+{show && (
+  <div class="gmap" data-spotmap={payload} aria-label={section.title[lang]}></div>
+)}
+
+<style>
+  .gmap {
+    height: clamp(260px, 52vh, 440px);
+    margin: 0 0 18px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--paper2, #efe9dd);
+  }
+  @media print { .gmap { display: none; } }
+</style>

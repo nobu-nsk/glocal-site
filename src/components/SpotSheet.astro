@@ -4,11 +4,17 @@
 // 印刷用のA4シート（build_sheet.py）と同じ spots.csv から作っている。
 // 所要時間は実測値で、表記の出し分け（徒歩のみ／徒歩と車／車のみ）も印刷版と同じ。
 //
-// JavaScriptは使わない。言語の切り替えも、もう一方の言語のURLへのただのリンク。
+// JavaScriptは、セクション先頭のGoogle地図だけに使う。本文・言語切り替え・リンクは
+// JavaScriptなしで成立する（地図が出なくてもページは完全に読める）。
+// APIキーが設定されていないビルドでは地図そのものを出さない。
 //
 // QRはスマホでは出さない。自分が持っている端末の画面に出たQRは読み取れないので、
 // 幅の狭い画面ではリンクのボタンだけにしてある。QRはPCで見ている人が手元に渡すためのもの。
+import SpotMap from './SpotMap.astro';
+
 const { prop, lang } = Astro.props;
+const mapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || '';
+const mapsId = import.meta.env.PUBLIC_GOOGLE_MAPS_MAP_ID || 'DEMO_MAP_ID';
 
 const T = {
   ja: {
@@ -57,21 +63,27 @@ const PIN = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke=
     {prop.sections.length > 1 && (
       <nav class="jump">
         {prop.sections.map((s) => (
-          <a href={`#${s.kind}`}>{s.title[lang]}</a>
+          <a href={`#${s.id || s.kind}`}>{s.title[lang]}</a>
         ))}
       </nav>
     )}
   </header>
 
   {prop.sections.map((sec) => (
-    <section class="sheet" id={sec.kind}>
+    <section class="sheet" id={sec.id || sec.kind}>
       <h2 class="sect">{sec.title[lang]}<span>{sec.spots.length}</span></h2>
+      {sec.lead && sec.lead[lang] && <p class="sect-lead">{sec.lead[lang]}</p>}
+
+      <SpotMap section={sec} lang={lang} />
 
       <div class="spots">
         {sec.spots.map((s) => (
           <article class="spot">
             <div class="body">
-              <p class="genre">{s.genre[lang]}</p>
+              <p class="tags">
+                {s.no && <b class="no">{s.no}</b>}
+                <span class="genre">{s.genre[lang]}</span>
+              </p>
               <h3>{s.name[lang]}</h3>
               <p class="alt">{s.name[otherLang]}</p>
 
@@ -122,7 +134,118 @@ const PIN = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke=
   </footer>
 </main>
 
+{mapsKey && (
+  <script is:inline define:vars={{ mapsKey, mapsId }}>
+    // セクション先頭の地図。data-spotmap に入っている値だけで描く。
+    // 失敗してもページの本文には影響しない（地図の枠が空のまま残るだけ）。
+    (function () {
+      const nodes = Array.from(document.querySelectorAll('[data-spotmap]'));
+      if (!nodes.length) return;
+
+      ((g) => { let h, a, k, p = 'The Google Maps JavaScript API', c = 'google', l = 'importLibrary',
+        q = '__ib__', m = document, b = window; b = b[c] || (b[c] = {});
+        const d = b.maps || (b.maps = {}), r = new Set(), e = new URLSearchParams(),
+        u = () => h || (h = new Promise(async (f, n) => {
+          a = m.createElement('script'); e.set('libraries', [...r] + '');
+          for (k in g) e.set(k.replace(/[A-Z]/g, (t) => '_' + t[0].toLowerCase()), g[k]);
+          e.set('callback', c + '.maps.' + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+          d[q] = f; a.onerror = () => h = n(Error(p + ' could not load.'));
+          m.head.append(a); }));
+        d[l] ? console.warn(p + ' only loads once. Ignoring:', g)
+             : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)); })
+        ({ key: mapsKey, v: 'weekly', language: document.documentElement.lang || 'ja', region: 'JP' });
+
+      function badge(text, home) {
+        const el = document.createElement('div');
+        el.className = 'gpin' + (home ? ' gpin-home' : '');
+        el.textContent = text;
+        return el;
+      }
+
+      // 地図が出せないとき（キーの制限・1日の上限・通信不良）は枠ごと消す。
+      // カードはサーバ側で描いてあるので、ページの中身は欠けない。
+      const giveUp = () => nodes.forEach((n) => { n.style.display = 'none'; });
+      setTimeout(() => {
+        if (!document.querySelector('.gmap .gpin')) giveUp();
+      }, 8000);
+
+      (async () => {
+       try {
+        const { Map } = await google.maps.importLibrary('maps');
+        const { AdvancedMarkerElement } = await google.maps.importLibrary('marker');
+        const { LatLngBounds } = await google.maps.importLibrary('core');
+
+        for (const node of nodes) {
+          let d;
+          try { d = JSON.parse(node.dataset.spotmap); } catch (err) { continue; }
+          const map = new Map(node, {
+            mapId: mapsId,
+            mapTypeControl: false,
+            streetViewControl: false,
+            fullscreenControl: true,
+            gestureHandling: 'cooperative',
+          });
+          const info = new google.maps.InfoWindow();
+          const b = new LatLngBounds(
+            { lat: d.bounds.south, lng: d.bounds.west },
+            { lat: d.bounds.north, lng: d.bounds.east });
+          map.fitBounds(b, 40);
+
+          if (d.home) {
+            new AdvancedMarkerElement({ map, position: { lat: d.home.lat, lng: d.home.lng },
+              content: badge(d.homeTag, true), title: d.home.label, zIndex: 99 });
+          }
+          d.spots.forEach((s) => {
+            const mk = new AdvancedMarkerElement({ map, position: { lat: s.lat, lng: s.lng },
+              content: badge(String(s.no)), title: s.name });
+            mk.addListener('gmp-click', () => {
+              info.setContent(
+                '<div class="gpop"><b>' + s.no + '. ' + s.name + '</b>'
+                + (s.travel ? '<span>' + s.travel + '</span>' : '')
+                + '<a href="' + s.map + '" target="_blank" rel="noopener">' + d.open + '</a></div>');
+              info.open({ map, anchor: mk });
+            });
+          });
+        }
+       } catch (err) {
+        giveUp();
+       }
+      })();
+    })();
+  </script>
+)}
+
+<style is:global>
+  .gpin {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: #8a6736; color: #fff; border: 2px solid #fff;
+    display: grid; place-items: center;
+    font: 700 12px/1 system-ui, sans-serif;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .35);
+  }
+  .gpin-home { background: #1d2a30; width: 30px; height: 30px; font-size: 11px; }
+  .gpop { font-size: 13px; line-height: 1.6; max-width: 220px; }
+  .gpop b { display: block; font-size: 14px; margin-bottom: 2px; }
+  .gpop span { display: block; color: #34464e; }
+  .gpop a { display: inline-block; margin-top: 4px; color: #8a6736; }
+</style>
+
 <style>
+  .sect-lead {
+    margin: -6px 0 14px; font-size: 13.5px; color: var(--muted, #5C6A7C);
+  }
+  /* 地図のピンと同じ番号。ジャンルの札の左に並べる */
+  .tags {
+    display: flex; align-items: center; gap: 7px; margin: 0 0 9px;
+  }
+  .tags .genre { margin-bottom: 0; }
+  .no {
+    flex: 0 0 19px;
+    display: grid; place-items: center;
+    width: 19px; height: 19px; border-radius: 50%;
+    background: var(--sand-d); color: var(--white);
+    font-size: 11px; font-weight: 700; line-height: 1;
+  }
   .bar {
     position: sticky; top: 0; z-index: 10;
     background: rgba(246, 242, 234, .93);

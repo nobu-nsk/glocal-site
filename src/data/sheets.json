@@ -8,18 +8,39 @@
   "updated": "2026-09-21",
   "sections": [
    {
+    "id": "around",
     "kind": "around",
+    "slot": "around_garden_kai",
     "title": {
      "ja": "周辺のご案内",
      "en": "Around the House"
     },
+    "lead": null,
     "note": {
      "ja": "営業時間は変わることがあります。お出かけ前に地図アプリでご確認ください。",
      "en": "Opening hours change from time to time — please check the map app before you set out."
     },
+    "map": {
+     "home": {
+      "lat": 35.7061076,
+      "lng": 138.4970545,
+      "label": {
+       "ja": "グローカルガーデン甲斐",
+       "en": "Glocal Garden Kai"
+      }
+     },
+     "bounds": {
+      "south": 35.6751992,
+      "west": 138.484054,
+      "north": 35.7083621,
+      "east": 138.5213497
+     },
+     "missing": []
+    },
     "spots": [
      {
       "id": "kurumi-herbal-works",
+      "no": 1,
       "name": {
        "ja": "KURUMI HERBAL WORKS",
        "en": "KURUMI Herbal Works"
@@ -43,10 +64,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": "https://www.kurumi-herbalworks.com/"
+      "website": "https://www.kurumi-herbalworks.com/",
+      "lat": 35.7076292,
+      "lng": 138.4977897
      },
      {
       "id": "only-one-jewelry",
+      "no": 2,
       "name": {
        "ja": "ONLY ONE（手作り結婚指輪）",
        "en": "ONLY ONE (handmade wedding rings)"
@@ -70,10 +94,13 @@
       "photo": null,
       "hours": "月木金13:00〜18:00 / 土日祝11:00〜18:00",
       "closed": "火・水",
-      "website": "https://www.j-onlyone.com/"
+      "website": "https://www.j-onlyone.com/",
+      "lat": 35.7035241,
+      "lng": 138.4972845
      },
      {
       "id": "seveneleven-kai-onuta",
+      "no": 3,
       "name": {
        "ja": "セブン-イレブン 甲斐大垈店",
        "en": "7-Eleven Kai Onuta"
@@ -97,10 +124,13 @@
       "photo": null,
       "hours": "24時間",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6946918,
+      "lng": 138.5012016
      },
      {
       "id": "cosmos-ryuji",
+      "no": 4,
       "name": {
        "ja": "ドラッグストアコスモス 龍地店",
        "en": "Drug Store Cosmos Ryuji"
@@ -124,10 +154,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6862881,
+      "lng": 138.5098827
      },
      {
       "id": "ogino-futaba",
+      "no": 5,
       "name": {
        "ja": "オギノ 双葉店",
        "en": "Ogino Futaba"
@@ -151,10 +184,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6850252,
+      "lng": 138.5081452
      },
      {
       "id": "laza-walk-kai-futaba",
+      "no": 6,
       "name": {
        "ja": "ラザウォーク甲斐双葉",
        "en": "Laza Walk Kai Futaba"
@@ -178,10 +214,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6845621,
+      "lng": 138.484054
      },
      {
       "id": "yuunou-shikishima",
+      "no": 7,
       "name": {
        "ja": "ゆうのう敷島",
        "en": "Yuunou Shikishima"
@@ -205,10 +244,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": "https://www.youknowsksm.com/"
+      "website": "https://www.youknowsksm.com/",
+      "lat": 35.7083621,
+      "lng": 138.5211765
      },
      {
       "id": "yumemi-no-oka",
+      "no": 8,
       "name": {
        "ja": "山梨日帰り温泉 湯めみの丘",
        "en": "Yumemi no Oka Hot Spring"
@@ -232,10 +274,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6832806,
+      "lng": 138.5000444
      },
      {
       "id": "kaminoyu-onsen",
+      "no": 9,
       "name": {
        "ja": "ホテル神の湯温泉",
        "en": "Hotel Kaminoyu Onsen"
@@ -259,10 +304,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6830063,
+      "lng": 138.516769
      },
      {
       "id": "daisei",
+      "no": 10,
       "name": {
        "ja": "れすとらん大清",
        "en": "Restaurant Daisei"
@@ -286,10 +334,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.688036,
+      "lng": 138.5039537
      },
      {
       "id": "kosaku-futaba-bypass",
+      "no": 11,
       "name": {
        "ja": "甲州ほうとう小作 双葉バイパス店",
        "en": "Kosaku Hoto, Futaba Bypass"
@@ -313,10 +364,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6751992,
+      "lng": 138.4980284
      },
      {
       "id": "sasa-curry-udon",
+      "no": 12,
       "name": {
        "ja": "カレーうどん屋 咲々 響が丘店",
        "en": "Sasa Curry Udon, Hibikigaoka"
@@ -340,10 +394,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6833597,
+      "lng": 138.5083307
      },
      {
       "id": "la-pomme",
+      "no": 13,
       "name": {
        "ja": "ビストロ・ラ・ポンム",
        "en": "Bistro La Pomme"
@@ -367,10 +424,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6847301,
+      "lng": 138.5190383
      },
      {
       "id": "awajishima-burger",
+      "no": 14,
       "name": {
        "ja": "淡路島バーガー 甲斐敷島店",
        "en": "Awajishima Burger, Kai Shikishima"
@@ -394,23 +454,46 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6847591,
+      "lng": 138.5213497
      }
     ]
    },
    {
+    "id": "daysout-kai",
     "kind": "daysout",
+    "slot": "out_kai",
     "title": {
-     "ja": "おでかけのご案内",
-     "en": "Days Out"
+     "ja": "甲斐・北杜エリア",
+     "en": "Kai and Hokuto"
     },
-    "note": {
-     "ja": "営業時間・定休日は変わることがあります。お出かけ前に地図アプリでご確認ください。",
-     "en": "Opening hours and closing days change from time to time — please check the map app before you set out."
+    "lead": {
+     "ja": "ワイナリーと、広い公園。",
+     "en": "Wineries, and parks with room to run."
+    },
+    "note": null,
+    "map": {
+     "home": {
+      "lat": 35.7061076,
+      "lng": 138.4970545,
+      "label": {
+       "ja": "グローカルガーデン甲斐",
+       "en": "Glocal Garden Kai"
+      }
+     },
+     "bounds": {
+      "south": 35.6674453,
+      "west": 138.4642421,
+      "north": 35.7803561,
+      "east": 138.5119691
+     },
+     "missing": []
     },
     "spots": [
      {
       "id": "suntory-tominooka-winery",
+      "no": 1,
       "name": {
        "ja": "サントリー登美の丘ワイナリー",
        "en": "Suntory Tomi no Oka Winery"
@@ -434,10 +517,13 @@
       "photo": null,
       "hours": "10:00〜17:00",
       "closed": "水曜",
-      "website": ""
+      "website": "",
+      "lat": 35.7103332,
+      "lng": 138.5119691
      },
      {
       "id": "chateraise-belleforet-winery",
+      "no": 2,
       "name": {
        "ja": "シャトレーゼ・ベルフォーレ・ワイナリー",
        "en": "Chateraise Belle Foret Winery"
@@ -461,10 +547,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6878482,
+      "lng": 138.4904331
      },
      {
       "id": "akasakadai-park",
+      "no": 3,
       "name": {
        "ja": "赤坂台総合公園（ドラゴンパーク）",
        "en": "Akasakadai Park (Dragon Park)"
@@ -488,10 +577,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6743719,
+      "lng": 138.5051998
      },
      {
       "id": "shingen-tsutsumi",
+      "no": 4,
       "name": {
        "ja": "信玄堤公園",
        "en": "Shingen Embankment Park"
@@ -515,10 +607,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6674453,
+      "lng": 138.5019977
      },
      {
       "id": "haiji-no-mura",
+      "no": 5,
       "name": {
        "ja": "ハイジの村",
        "en": "Haiji no Mura (Heidi's Village)"
@@ -542,37 +637,46 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.7803561,
+      "lng": 138.4642421
+     }
+    ]
+   },
+   {
+    "id": "daysout-minami_alps",
+    "kind": "daysout",
+    "slot": "out_minami_alps",
+    "title": {
+     "ja": "南アルプスエリア",
+     "en": "Minami-Alps"
+    },
+    "lead": {
+     "ja": "釜無川を渡って西へ。直売所と棚田。",
+     "en": "West across the Kamanashi river: farm stands and terraced rice fields."
+    },
+    "note": null,
+    "map": {
+     "home": {
+      "lat": 35.7061076,
+      "lng": 138.4970545,
+      "label": {
+       "ja": "グローカルガーデン甲斐",
+       "en": "Glocal Garden Kai"
+      }
      },
-     {
-      "id": "shosenkyo",
-      "name": {
-       "ja": "昇仙峡",
-       "en": "Shosenkyo Gorge"
-      },
-      "genre": {
-       "ja": "観光",
-       "en": "Sightseeing"
-      },
-      "desc": {
-       "ja": "日本有数の渓谷です。仙娥滝、覚円峰、ロープウェイがあり、紅葉は10月下旬から11月。歩く距離を選べるので、軽く見るだけでも、半日かけても楽しめます。",
-       "en": "One of Japan's celebrated gorges, with Sengataki Falls, the Kakuenbo rock face and a ropeway. The autumn colours come from late October into November. You can choose how far to walk, so it works as a short stop or as a half day."
-      },
-      "travel": [
-       {
-        "ja": "車で24分",
-        "en": "24 min by car"
-       }
-      ],
-      "map": "https://maps.app.goo.gl/1osBiSqngKVHViaB7",
-      "qr": "/images/sheets/qr/shosenkyo.png",
-      "photo": null,
-      "hours": "",
-      "closed": "",
-      "website": ""
+     "bounds": {
+      "south": 35.6027951,
+      "west": 138.4281914,
+      "north": 35.7061076,
+      "east": 138.4970545
      },
+     "missing": []
+    },
+    "spots": [
      {
       "id": "michinoeki-shirane",
+      "no": 1,
       "name": {
        "ja": "道の駅しらね 農産物直売所",
        "en": "Michi-no-Eki Shirane Farm Stand"
@@ -596,10 +700,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6388509,
+      "lng": 138.4713521
      },
      {
       "id": "fumotto-minami-alps",
+      "no": 2,
       "name": {
        "ja": "fumotto南アルプス 地域交流エリア",
        "en": "fumotto Minami-Alps"
@@ -623,10 +730,13 @@
       "photo": null,
       "hours": "8:00〜19:00",
       "closed": "年中無休",
-      "website": ""
+      "website": "",
+      "lat": 35.6125791,
+      "lng": 138.481965
      },
      {
       "id": "costco-minami-alps",
+      "no": 3,
       "name": {
        "ja": "コストコホールセール 南アルプス倉庫店",
        "en": "Costco Minami-Alps"
@@ -650,10 +760,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6117129,
+      "lng": 138.4843266
      },
      {
       "id": "nakano-tanada",
+      "no": 4,
       "name": {
        "ja": "中野の棚田",
        "en": "Nakano Terraced Fields"
@@ -677,10 +790,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6027951,
+      "lng": 138.429552
      },
      {
       "id": "tsukihareru",
+      "no": 5,
       "name": {
        "ja": "月晴れる",
        "en": "Tsukihareru (cafe)"
@@ -704,10 +820,13 @@
       "photo": null,
       "hours": "ランチ11:30〜13:30 / カフェ14:00〜16:00（LO）",
       "closed": "火〜木",
-      "website": ""
+      "website": "",
+      "lat": 35.6033242,
+      "lng": 138.4302331
      },
      {
       "id": "osotono-terrace",
+      "no": 6,
       "name": {
        "ja": "おそとのてらす 南アルプス",
        "en": "Osotono Terrace Minami-Alps"
@@ -731,7 +850,72 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.605507,
+      "lng": 138.4281914
+     }
+    ]
+   },
+   {
+    "id": "daysout-kofu",
+    "kind": "daysout",
+    "slot": "out_kofu",
+    "title": {
+     "ja": "甲府エリア",
+     "en": "Kofu"
+    },
+    "lead": null,
+    "note": {
+     "ja": "営業時間・定休日は変わることがあります。お出かけ前に地図アプリでご確認ください。",
+     "en": "Opening hours and closing days change from time to time — please check the map app before you set out."
+    },
+    "map": {
+     "home": {
+      "lat": 35.7061076,
+      "lng": 138.4970545,
+      "label": {
+       "ja": "グローカルガーデン甲斐",
+       "en": "Glocal Garden Kai"
+      }
+     },
+     "bounds": {
+      "south": 35.7061076,
+      "west": 138.4970545,
+      "north": 35.7454865,
+      "east": 138.5676333
+     },
+     "missing": []
+    },
+    "spots": [
+     {
+      "id": "shosenkyo",
+      "no": 1,
+      "name": {
+       "ja": "昇仙峡",
+       "en": "Shosenkyo Gorge"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "日本有数の渓谷です。仙娥滝、覚円峰、ロープウェイがあり、紅葉は10月下旬から11月。歩く距離を選べるので、軽く見るだけでも、半日かけても楽しめます。",
+       "en": "One of Japan's celebrated gorges, with Sengataki Falls, the Kakuenbo rock face and a ropeway. The autumn colours come from late October into November. You can choose how far to walk, so it works as a short stop or as a half day."
+      },
+      "travel": [
+       {
+        "ja": "車で24分",
+        "en": "24 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/1osBiSqngKVHViaB7",
+      "qr": "/images/sheets/qr/shosenkyo.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.7454865,
+      "lng": 138.5676333
      }
     ]
    }
@@ -743,21 +927,42 @@
    "ja": "グローカル春日居温泉",
    "en": "Glocal Kasugai Onsen"
   },
-  "updated": "2026-09-22",
+  "updated": "2026-10-12",
   "sections": [
    {
+    "id": "around",
     "kind": "around",
+    "slot": "around_kasugai",
     "title": {
      "ja": "周辺のご案内",
      "en": "Around the House"
     },
+    "lead": null,
     "note": {
      "ja": "営業時間は変わることがあります。お出かけ前に地図アプリでご確認ください。",
      "en": "Opening hours change from time to time — please check the map app before you set out."
     },
+    "map": {
+     "home": {
+      "lat": 35.6594024,
+      "lng": 138.649449,
+      "label": {
+       "ja": "グローカル春日居温泉",
+       "en": "Glocal Kasugai Onsen"
+      }
+     },
+     "bounds": {
+      "south": 35.6458077,
+      "west": 138.6313778,
+      "north": 35.6621447,
+      "east": 138.6558797
+     },
+     "missing": []
+    },
     "spots": [
      {
       "id": "isawa-station",
+      "no": 1,
       "name": {
        "ja": "JR石和温泉駅",
        "en": "JR Isawa Onsen Station"
@@ -785,10 +990,13 @@
       "photo": "/images/sheets/photo/isawa-station.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6576641,
+      "lng": 138.6352719
      },
      {
       "id": "seveneleven-kasugai-onsenkyo",
+      "no": 2,
       "name": {
        "ja": "セブン-イレブン 春日居温泉郷店",
        "en": "7-Eleven Kasugai Onsenkyo"
@@ -812,10 +1020,13 @@
       "photo": null,
       "hours": "24時間",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6580222,
+      "lng": 138.645346
      },
      {
       "id": "lawson-kasugai-shizume",
+      "no": 3,
       "name": {
        "ja": "ローソン 春日居鎮目店",
        "en": "Lawson Kasugai Shizume"
@@ -843,10 +1054,13 @@
       "photo": null,
       "hours": "24時間",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6595557,
+      "lng": 138.6442821
      },
      {
       "id": "tsuruha-fuefuki-kasugai",
+      "no": 4,
       "name": {
        "ja": "ツルハドラッグ 笛吹春日居店",
        "en": "Tsuruha Drug Fuefuki Kasugai"
@@ -874,10 +1088,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6621447,
+      "lng": 138.6558797
      },
      {
       "id": "megadonki-uny-isawa",
+      "no": 5,
       "name": {
        "ja": "MEGAドン・キホーテUNY 石和店",
        "en": "MEGA Don Quijote UNY Isawa"
@@ -901,10 +1118,13 @@
       "photo": "/images/sheets/photo/megadonki-uny-isawa.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6458077,
+      "lng": 138.6320453
      },
      {
       "id": "ishibue-no-yu",
+      "no": 6,
       "name": {
        "ja": "石笛の湯",
        "en": "Ishibue no Yu"
@@ -932,10 +1152,13 @@
       "photo": null,
       "hours": "10:00〜23:00（最終受付22:00）",
       "closed": "年中無休",
-      "website": ""
+      "website": "",
+      "lat": 35.6564781,
+      "lng": 138.6426551
      },
      {
       "id": "ooedo-shinko",
+      "no": 7,
       "name": {
        "ja": "大江戸温泉物語 ホテル新光",
        "en": "Ooedo Onsen Monogatari Hotel Shinko"
@@ -963,10 +1186,13 @@
       "photo": null,
       "hours": "7:00〜10:00 / 15:00〜24:00（最終受付22:00）",
       "closed": "",
-      "website": "https://www.ooedoonsen.jp/shinko/day_trip/"
+      "website": "https://www.ooedoonsen.jp/shinko/day_trip/",
+      "lat": 35.6554639,
+      "lng": 138.6422581
      },
      {
       "id": "chateraise-hotel-isawa",
+      "no": 8,
       "name": {
        "ja": "シャトレーゼホテル石和",
        "en": "Chateraise Hotel Isawa"
@@ -990,10 +1216,13 @@
       "photo": "/images/sheets/photo/chateraise-hotel-isawa.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6538005,
+      "lng": 138.6332768
      },
      {
       "id": "miyuki-onsen",
+      "no": 9,
       "name": {
        "ja": "旅館 深雪温泉",
        "en": "Ryokan Miyuki Onsen"
@@ -1017,10 +1246,13 @@
       "photo": "/images/sheets/photo/miyuki-onsen.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6514281,
+      "lng": 138.6334296
      },
      {
       "id": "mars-yamanashi-winery",
+      "no": 10,
       "name": {
        "ja": "マルス山梨ワイナリー",
        "en": "Mars Yamanashi Winery"
@@ -1048,10 +1280,13 @@
       "photo": null,
       "hours": "9:00〜16:30",
       "closed": "",
-      "website": "https://www.hombo.co.jp/visiting/yamanashi/"
+      "website": "https://www.hombo.co.jp/visiting/yamanashi/",
+      "lat": 35.6593806,
+      "lng": 138.6437668
      },
      {
       "id": "genbu-gyoza",
+      "no": 11,
       "name": {
        "ja": "昭和レトロ 餃子酒場 玄武",
        "en": "Genbu (gyoza izakaya)"
@@ -1079,10 +1314,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6567559,
+      "lng": 138.6471046
      },
      {
       "id": "mitsumura",
+      "no": 12,
       "name": {
        "ja": "旬彩酒房みつむら",
        "en": "Mitsumura (izakaya)"
@@ -1110,10 +1348,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.656628,
+      "lng": 138.644371
      },
      {
       "id": "kosaku-isawa-ekimae",
+      "no": 13,
       "name": {
        "ja": "甲州ほうとう小作 石和駅前通り店",
        "en": "Kosaku Hoto, Isawa Ekimae-dori"
@@ -1137,10 +1378,13 @@
       "photo": "/images/sheets/photo/kosaku-isawa-ekimae.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.648296,
+      "lng": 138.635883
      },
      {
       "id": "tsuki-no-usagi",
+      "no": 14,
       "name": {
        "ja": "食彩酒房 月のうさぎ",
        "en": "Tsuki no Usagi (izakaya)"
@@ -1168,10 +1412,13 @@
       "photo": "/images/sheets/photo/tsuki-no-usagi.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6571197,
+      "lng": 138.6370544
      },
      {
       "id": "rocks-french-italian",
+      "no": 15,
       "name": {
        "ja": "ROCKSフレンチ&イタリアン",
        "en": "ROCKS (French & Italian)"
@@ -1195,10 +1442,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6558486,
+      "lng": 138.6356528
      },
      {
       "id": "xanadu-gelato",
+      "no": 16,
       "name": {
        "ja": "Xanadu（シャナドゥ）",
        "en": "Xanadu"
@@ -1222,10 +1472,13 @@
       "photo": "/images/sheets/photo/xanadu-gelato.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6530534,
+      "lng": 138.6338562
      },
      {
       "id": "shiratoya-isawa",
+      "no": 17,
       "name": {
        "ja": "石わ しらと屋",
        "en": "Shiratoya Isawa"
@@ -1253,10 +1506,13 @@
       "photo": "/images/sheets/photo/shiratoya-isawa.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6571752,
+      "lng": 138.6379654
      },
      {
       "id": "budou-no-sato",
+      "no": 18,
       "name": {
        "ja": "葡萄の里",
        "en": "Budou no Sato (French pastry)"
@@ -1280,23 +1536,46 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6499487,
+      "lng": 138.6313778
      }
     ]
    },
    {
+    "id": "daysout-fuefuki",
     "kind": "daysout",
+    "slot": "out_fuefuki",
     "title": {
-     "ja": "おでかけのご案内",
-     "en": "Days Out"
+     "ja": "笛吹・峡東エリア",
+     "en": "Fuefuki and the Kyoto district"
     },
-    "note": {
-     "ja": "営業時間・定休日は変わることがあります。お出かけ前に地図アプリでご確認ください。",
-     "en": "Opening hours and closing days change from time to time — please check the map app before you set out."
+    "lead": {
+     "ja": "ぶどうとワイナリー、山の上の温泉。",
+     "en": "Grapes and wineries, and hot springs up on the hillside."
+    },
+    "note": null,
+    "map": {
+     "home": {
+      "lat": 35.6594024,
+      "lng": 138.649449,
+      "label": {
+       "ja": "グローカル春日居温泉",
+       "en": "Glocal Kasugai Onsen"
+      }
+     },
+     "bounds": {
+      "south": 35.5465926,
+      "west": 138.649449,
+      "north": 35.7061003,
+      "east": 138.753224
+     },
+     "missing": []
     },
     "spots": [
      {
       "id": "kikyouya-outlet",
+      "no": 1,
       "name": {
        "ja": "桔梗屋工場 アウトレット",
        "en": "Kikyoya Factory Outlet"
@@ -1320,10 +1599,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6479099,
+      "lng": 138.6633669
      },
      {
       "id": "sato-no-eki-ichinomiya",
+      "no": 2,
       "name": {
        "ja": "里の駅いちのみや",
        "en": "Sato-no-Eki Ichinomiya"
@@ -1347,10 +1629,43 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.646098,
+      "lng": 138.67668
+     },
+     {
+      "id": "asamaen-ichinomiya",
+      "no": 3,
+      "name": {
+       "ja": "浅間園",
+       "en": "Asamaen Orchard"
+      },
+      "genre": {
+       "ja": "直売所・産直",
+       "en": "Farm stand"
+      },
+      "desc": {
+       "ja": "蜂城山のふもとにある観光農園です。桃狩りは6月下旬から9月上旬、ぶどう狩りは8月上旬から11月中旬。4月上旬から中旬は桃の花が見頃です。甲府盆地と南アルプスを見渡せます。時期と料金は事前にご確認ください。",
+       "en": "A pick-your-own orchard at the foot of Mt Hachijo. Peach picking runs from late June to early September and grape picking from early August to mid November; in early to mid April the peach blossom is out. There is a wide view over the Kofu basin to the Southern Alps. Please check seasons and prices in advance."
+      },
+      "travel": [
+       {
+        "ja": "車で14分",
+        "en": "14 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/HZJWbjGJyVa4gRvv6",
+      "qr": "/images/sheets/qr/asamaen-ichinomiya.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.6375,
+      "lng": 138.705
      },
      {
       "id": "budou-no-oka",
+      "no": 4,
       "name": {
        "ja": "甲州市勝沼 ぶどうの丘",
        "en": "Budo-no-Oka, Katsunuma"
@@ -1374,64 +1689,43 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6745907,
+      "lng": 138.73664
      },
      {
-      "id": "pukupuku-fruits-onsen",
+      "id": "kanjukuya",
+      "no": 5,
       "name": {
-       "ja": "やまなしフルーツ温泉 ぷくぷく",
-       "en": "Yamanashi Fruits Onsen Pukupuku"
+       "ja": "甲州古民家ほうとう 完熟屋",
+       "en": "Kanjukuya"
       },
       "genre": {
-       "ja": "日帰り温泉",
-       "en": "Hot spring"
+       "ja": "飲食店",
+       "en": "Restaurant"
       },
       "desc": {
-       "ja": "笛吹川フルーツ公園の高台にある日帰り温泉です。露天風呂から甲府盆地を見下ろします。昼の山並みも、暗くなってからの夜景も、それぞれいいものです。",
-       "en": "A day-visit hot spring on the hillside by Fuefukigawa Fruit Park, looking down over the Kofu basin from the open-air bath. Good in daylight for the mountains, good after dark for the lights below."
+       "ja": "築120年の古民家を使ったほうとうの店です。毎年仕込む自家製の味噌で仕立てます。地元の食材を使った料理と山梨のお酒も置いています。",
+       "en": "Hoto noodles served in a 120-year-old farmhouse. The broth uses miso the staff make themselves each year. They also serve dishes built on local produce, with Yamanashi wine and sake."
       },
       "travel": [
        {
-        "ja": "車で14分",
-        "en": "14 min by car"
+        "ja": "車で19分",
+        "en": "19 min by car"
        }
       ],
-      "map": "https://maps.app.goo.gl/PnLXCo81vbmUPqT56",
-      "qr": "/images/sheets/qr/pukupuku-fruits-onsen.png",
+      "map": "https://maps.app.goo.gl/LgRvpnGKiWRU2jcP7",
+      "qr": "/images/sheets/qr/kanjukuya.png",
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
-     },
-     {
-      "id": "hottarakashi-onsen",
-      "name": {
-       "ja": "ほったらかし温泉",
-       "en": "Hottarakashi Onsen"
-      },
-      "genre": {
-       "ja": "日帰り温泉",
-       "en": "Hot spring"
-      },
-      "desc": {
-       "ja": "同じ高台にある、名前で知られた露天風呂です。「あっちの湯」「こっちの湯」の2つがあり、見える範囲が少し違います。早い時間から開いています。",
-       "en": "A famous open-air bath on the same ridge. There are two baths, “Acchi no Yu” and “Kocchi no Yu”, each looking out a little differently. It opens early."
-      },
-      "travel": [
-       {
-        "ja": "車で17分",
-        "en": "17 min by car"
-       }
-      ],
-      "map": "https://maps.app.goo.gl/x3Zr4nBgCsoUxW8L7",
-      "qr": "/images/sheets/qr/hottarakashi-onsen.png",
-      "photo": null,
-      "hours": "",
-      "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.7017546,
+      "lng": 138.7375482
      },
      {
       "id": "gaia-restaurant",
+      "no": 6,
       "name": {
        "ja": "展望・星屑レストラン ガイア",
        "en": "Gaia — Stardust Restaurant"
@@ -1455,10 +1749,169 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.7019521,
+      "lng": 138.664844
      },
      {
+      "id": "pukupuku-fruits-onsen",
+      "no": 7,
+      "name": {
+       "ja": "やまなしフルーツ温泉 ぷくぷく",
+       "en": "Yamanashi Fruits Onsen Pukupuku"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "笛吹川フルーツ公園の高台にある日帰り温泉です。露天風呂から甲府盆地を見下ろします。昼の山並みも、暗くなってからの夜景も、それぞれいいものです。",
+       "en": "A day-visit hot spring on the hillside by Fuefukigawa Fruit Park, looking down over the Kofu basin from the open-air bath. Good in daylight for the mountains, good after dark for the lights below."
+      },
+      "travel": [
+       {
+        "ja": "車で14分",
+        "en": "14 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/PnLXCo81vbmUPqT56",
+      "qr": "/images/sheets/qr/pukupuku-fruits-onsen.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.7053423,
+      "lng": 138.6623796
+     },
+     {
+      "id": "hottarakashi-onsen",
+      "no": 8,
+      "name": {
+       "ja": "ほったらかし温泉",
+       "en": "Hottarakashi Onsen"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "同じ高台にある、名前で知られた露天風呂です。「あっちの湯」「こっちの湯」の2つがあり、見える範囲が少し違います。早い時間から開いています。",
+       "en": "A famous open-air bath on the same ridge. There are two baths, “Acchi no Yu” and “Kocchi no Yu”, each looking out a little differently. It opens early."
+      },
+      "travel": [
+       {
+        "ja": "車で17分",
+        "en": "17 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/x3Zr4nBgCsoUxW8L7",
+      "qr": "/images/sheets/qr/hottarakashi-onsen.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.7061003,
+      "lng": 138.6521434
+     },
+     {
+      "id": "shindo-touge-twin-terrace",
+      "no": 9,
+      "name": {
+       "ja": "新道峠 FUJIYAMAツインテラス",
+       "en": "Shindo Pass FUJIYAMA Twin Terrace"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "御坂山地の尾根に張り出した展望テラスです。眼下に河口湖、正面に富士山が開けます。駐車場から先はシャトルバスか徒歩で上がります。運行の有無と時間は季節で変わりますので、お出かけ前にご確認ください。",
+       "en": "A viewing deck built out on the Misaka ridge, looking down over Lake Kawaguchi with Mt Fuji straight ahead. From the car park you continue by shuttle bus or on foot. Whether the shuttle runs changes with the season, so please check before you set out."
+      },
+      "travel": [
+       {
+        "ja": "車で47分",
+        "en": "47 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/eUuZyXJiTiWqtB716",
+      "qr": "/images/sheets/qr/shindo-touge-twin-terrace.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.5465926,
+      "lng": 138.7318469
+     },
+     {
+      "id": "kamui-misaka-ski",
+      "no": 10,
+      "name": {
+       "ja": "カムイみさかスキー場",
+       "en": "Kamui Misaka Ski Resort"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "御坂峠の山梨側にある小さなスキー場です。ゆるやかな斜面で、初めての方や小さなお子さま連れでも通いやすい規模です。シーズンと営業時間は年によって変わりますので、お出かけ前にご確認ください。",
+       "en": "A small ski area on the Yamanashi side of the Misaka pass. The slopes are gentle and the scale is manageable for beginners and families with young children. The season and opening hours vary from year to year, so please check before you go."
+      },
+      "travel": [
+       {
+        "ja": "車で20分",
+        "en": "20 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/oX698yWXDbQeWNBs7",
+      "qr": "/images/sheets/qr/kamui-misaka-ski.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.582349,
+      "lng": 138.753224
+     }
+    ]
+   },
+   {
+    "id": "daysout-kawaguchiko",
+    "kind": "daysout",
+    "slot": "out_kawaguchiko",
+    "title": {
+     "ja": "河口湖エリア",
+     "en": "Lake Kawaguchi"
+    },
+    "lead": {
+     "ja": "御坂峠を越えて、富士山と湖のほうへ。",
+     "en": "Over the Misaka pass, towards Mt Fuji and the lake."
+    },
+    "note": {
+     "ja": "営業時間・定休日は変わることがあります。お出かけ前に地図アプリでご確認ください。",
+     "en": "Opening hours and closing days change from time to time — please check the map app before you set out."
+    },
+    "map": {
+     "home": {
+      "lat": 35.6594024,
+      "lng": 138.649449,
+      "label": {
+       "ja": "グローカル春日居温泉",
+       "en": "Glocal Kasugai Onsen"
+      }
+     },
+     "bounds": {
+      "south": 35.522904,
+      "west": 138.649449,
+      "north": 35.6594024,
+      "east": 138.7700889
+     },
+     "missing": []
+    },
+    "spots": [
+     {
       "id": "fujimibashi-tenboudai",
+      "no": 1,
       "name": {
        "ja": "富士見橋展望台",
        "en": "Fujimibashi Viewpoint"
@@ -1482,10 +1935,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.5405123,
+      "lng": 138.7700889
      },
      {
       "id": "oishi-park",
+      "no": 2,
       "name": {
        "ja": "大石公園",
        "en": "Oishi Park"
@@ -1509,7 +1965,39 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.522904,
+      "lng": 138.7457522
+     },
+     {
+      "id": "kawaguchiko-momiji-kairo",
+      "no": 3,
+      "name": {
+       "ja": "河口湖もみじ回廊",
+       "en": "Kawaguchiko Maple Corridor"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "河口湖の北岸、梨川沿いのもみじのトンネルです。見頃は11月上旬から中旬で、その時期は夜のライトアップもあります。時期を外れると静かな遊歩道です。",
+       "en": "A tunnel of maples along the Nashi river on the north shore of Lake Kawaguchi. The colour peaks in early to mid November, when the trees are lit at night. Outside that season it is a quiet walking path."
+      },
+      "travel": [
+       {
+        "ja": "車で33分",
+        "en": "33 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/ZACABYoNAHE3JRrNA",
+      "qr": "/images/sheets/qr/kawaguchiko-momiji-kairo.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.525818,
+      "lng": 138.7623326
      }
     ]
    }
@@ -1521,21 +2009,35 @@
    "ja": "グローカル甲府石和",
    "en": "Glocal Kofu Isawa"
   },
-  "updated": "2026-09-22",
+  "updated": "2026-10-12",
   "sections": [
    {
+    "id": "around",
     "kind": "around",
+    "slot": "around_kofu_isawa",
     "title": {
      "ja": "周辺のご案内",
      "en": "Around the House"
     },
+    "lead": null,
     "note": {
      "ja": "営業時間は変わることがあります。お出かけ前に地図アプリでご確認ください。",
      "en": "Opening hours change from time to time — please check the map app before you set out."
     },
+    "map": {
+     "home": null,
+     "bounds": {
+      "south": 35.6458077,
+      "west": 138.6313778,
+      "north": 35.6576641,
+      "east": 138.6379654
+     },
+     "missing": []
+    },
     "spots": [
      {
       "id": "isawa-station",
+      "no": 1,
       "name": {
        "ja": "JR石和温泉駅",
        "en": "JR Isawa Onsen Station"
@@ -1563,10 +2065,13 @@
       "photo": "/images/sheets/photo/isawa-station.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6576641,
+      "lng": 138.6352719
      },
      {
       "id": "familymart-isawa-ichibu",
+      "no": 2,
       "name": {
        "ja": "ファミリーマート 石和町市部店",
        "en": "FamilyMart Isawa Ichibu"
@@ -1590,10 +2095,13 @@
       "photo": "/images/sheets/photo/familymart-isawa-ichibu.jpg",
       "hours": "24時間",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6508241,
+      "lng": 138.6334115
      },
      {
       "id": "sundrug-isawa",
+      "no": 3,
       "name": {
        "ja": "サンドラッグ 石和店",
        "en": "Sundrug Isawa"
@@ -1617,10 +2125,13 @@
       "photo": "/images/sheets/photo/sundrug-isawa.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6510477,
+      "lng": 138.6338281
      },
      {
       "id": "megadonki-uny-isawa",
+      "no": 4,
       "name": {
        "ja": "MEGAドン・キホーテUNY 石和店",
        "en": "MEGA Don Quijote UNY Isawa"
@@ -1648,10 +2159,13 @@
       "photo": "/images/sheets/photo/megadonki-uny-isawa.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6458077,
+      "lng": 138.6320453
      },
      {
       "id": "chateraise-hotel-isawa",
+      "no": 5,
       "name": {
        "ja": "シャトレーゼホテル石和",
        "en": "Chateraise Hotel Isawa"
@@ -1679,10 +2193,13 @@
       "photo": "/images/sheets/photo/chateraise-hotel-isawa.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6538005,
+      "lng": 138.6332768
      },
      {
       "id": "miyuki-onsen",
+      "no": 6,
       "name": {
        "ja": "旅館 深雪温泉",
        "en": "Ryokan Miyuki Onsen"
@@ -1706,10 +2223,13 @@
       "photo": "/images/sheets/photo/miyuki-onsen.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6514281,
+      "lng": 138.6334296
      },
      {
       "id": "kosaku-isawa-ekimae",
+      "no": 7,
       "name": {
        "ja": "甲州ほうとう小作 石和駅前通り店",
        "en": "Kosaku Hoto, Isawa Ekimae-dori"
@@ -1737,10 +2257,13 @@
       "photo": "/images/sheets/photo/kosaku-isawa-ekimae.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.648296,
+      "lng": 138.635883
      },
      {
       "id": "tsuki-no-usagi",
+      "no": 8,
       "name": {
        "ja": "食彩酒房 月のうさぎ",
        "en": "Tsuki no Usagi (izakaya)"
@@ -1768,10 +2291,13 @@
       "photo": "/images/sheets/photo/tsuki-no-usagi.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6571197,
+      "lng": 138.6370544
      },
      {
       "id": "xanadu-gelato",
+      "no": 9,
       "name": {
        "ja": "Xanadu（シャナドゥ）",
        "en": "Xanadu"
@@ -1795,10 +2321,13 @@
       "photo": "/images/sheets/photo/xanadu-gelato.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6530534,
+      "lng": 138.6338562
      },
      {
       "id": "shiratoya-isawa",
+      "no": 10,
       "name": {
        "ja": "石わ しらと屋",
        "en": "Shiratoya Isawa"
@@ -1826,10 +2355,13 @@
       "photo": "/images/sheets/photo/shiratoya-isawa.jpg",
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6571752,
+      "lng": 138.6379654
      },
      {
       "id": "budou-no-sato",
+      "no": 11,
       "name": {
        "ja": "葡萄の里",
        "en": "Budou no Sato (French pastry)"
@@ -1853,23 +2385,39 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6499487,
+      "lng": 138.6313778
      }
     ]
    },
    {
+    "id": "daysout-fuefuki",
     "kind": "daysout",
+    "slot": "out_fuefuki",
     "title": {
-     "ja": "おでかけのご案内",
-     "en": "Days Out"
+     "ja": "笛吹・峡東エリア",
+     "en": "Fuefuki and the Kyoto district"
     },
-    "note": {
-     "ja": "営業時間・定休日は変わることがあります。お出かけ前に地図アプリでご確認ください。",
-     "en": "Opening hours and closing days change from time to time — please check the map app before you set out."
+    "lead": {
+     "ja": "ぶどうとワイナリー、山の上の温泉。",
+     "en": "Grapes and wineries, and hot springs up on the hillside."
+    },
+    "note": null,
+    "map": {
+     "home": null,
+     "bounds": {
+      "south": 35.5465926,
+      "west": 138.6521434,
+      "north": 35.7061003,
+      "east": 138.753224
+     },
+     "missing": []
     },
     "spots": [
      {
       "id": "kikyouya-outlet",
+      "no": 1,
       "name": {
        "ja": "桔梗屋工場 アウトレット",
        "en": "Kikyoya Factory Outlet"
@@ -1893,10 +2441,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6479099,
+      "lng": 138.6633669
      },
      {
       "id": "sato-no-eki-ichinomiya",
+      "no": 2,
       "name": {
        "ja": "里の駅いちのみや",
        "en": "Sato-no-Eki Ichinomiya"
@@ -1920,10 +2471,43 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.646098,
+      "lng": 138.67668
+     },
+     {
+      "id": "asamaen-ichinomiya",
+      "no": 3,
+      "name": {
+       "ja": "浅間園",
+       "en": "Asamaen Orchard"
+      },
+      "genre": {
+       "ja": "直売所・産直",
+       "en": "Farm stand"
+      },
+      "desc": {
+       "ja": "蜂城山のふもとにある観光農園です。桃狩りは6月下旬から9月上旬、ぶどう狩りは8月上旬から11月中旬。4月上旬から中旬は桃の花が見頃です。甲府盆地と南アルプスを見渡せます。時期と料金は事前にご確認ください。",
+       "en": "A pick-your-own orchard at the foot of Mt Hachijo. Peach picking runs from late June to early September and grape picking from early August to mid November; in early to mid April the peach blossom is out. There is a wide view over the Kofu basin to the Southern Alps. Please check seasons and prices in advance."
+      },
+      "travel": [
+       {
+        "ja": "車で17分",
+        "en": "17 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/HZJWbjGJyVa4gRvv6",
+      "qr": "/images/sheets/qr/asamaen-ichinomiya.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.6375,
+      "lng": 138.705
      },
      {
       "id": "budou-no-oka",
+      "no": 4,
       "name": {
        "ja": "甲州市勝沼 ぶどうの丘",
        "en": "Budo-no-Oka, Katsunuma"
@@ -1947,64 +2531,43 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.6745907,
+      "lng": 138.73664
      },
      {
-      "id": "pukupuku-fruits-onsen",
+      "id": "kanjukuya",
+      "no": 5,
       "name": {
-       "ja": "やまなしフルーツ温泉 ぷくぷく",
-       "en": "Yamanashi Fruits Onsen Pukupuku"
+       "ja": "甲州古民家ほうとう 完熟屋",
+       "en": "Kanjukuya"
       },
       "genre": {
-       "ja": "日帰り温泉",
-       "en": "Hot spring"
+       "ja": "飲食店",
+       "en": "Restaurant"
       },
       "desc": {
-       "ja": "笛吹川フルーツ公園の高台にある日帰り温泉です。露天風呂から甲府盆地を見下ろします。昼の山並みも、暗くなってからの夜景も、それぞれいいものです。",
-       "en": "A day-visit hot spring on the hillside by Fuefukigawa Fruit Park, looking down over the Kofu basin from the open-air bath. Good in daylight for the mountains, good after dark for the lights below."
+       "ja": "築120年の古民家を使ったほうとうの店です。毎年仕込む自家製の味噌で仕立てます。地元の食材を使った料理と山梨のお酒も置いています。",
+       "en": "Hoto noodles served in a 120-year-old farmhouse. The broth uses miso the staff make themselves each year. They also serve dishes built on local produce, with Yamanashi wine and sake."
       },
       "travel": [
        {
-        "ja": "車で17分",
-        "en": "17 min by car"
+        "ja": "車で24分",
+        "en": "24 min by car"
        }
       ],
-      "map": "https://maps.app.goo.gl/PnLXCo81vbmUPqT56",
-      "qr": "/images/sheets/qr/pukupuku-fruits-onsen.png",
+      "map": "https://maps.app.goo.gl/LgRvpnGKiWRU2jcP7",
+      "qr": "/images/sheets/qr/kanjukuya.png",
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
-     },
-     {
-      "id": "hottarakashi-onsen",
-      "name": {
-       "ja": "ほったらかし温泉",
-       "en": "Hottarakashi Onsen"
-      },
-      "genre": {
-       "ja": "日帰り温泉",
-       "en": "Hot spring"
-      },
-      "desc": {
-       "ja": "同じ高台にある、名前で知られた露天風呂です。「あっちの湯」「こっちの湯」の2つがあり、見える範囲が少し違います。早い時間から開いています。",
-       "en": "A famous open-air bath on the same ridge. There are two baths, “Acchi no Yu” and “Kocchi no Yu”, each looking out a little differently. It opens early."
-      },
-      "travel": [
-       {
-        "ja": "車で20分",
-        "en": "20 min by car"
-       }
-      ],
-      "map": "https://maps.app.goo.gl/x3Zr4nBgCsoUxW8L7",
-      "qr": "/images/sheets/qr/hottarakashi-onsen.png",
-      "photo": null,
-      "hours": "",
-      "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.7017546,
+      "lng": 138.7375482
      },
      {
       "id": "gaia-restaurant",
+      "no": 6,
       "name": {
        "ja": "展望・星屑レストラン ガイア",
        "en": "Gaia — Stardust Restaurant"
@@ -2028,10 +2591,162 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.7019521,
+      "lng": 138.664844
      },
      {
+      "id": "pukupuku-fruits-onsen",
+      "no": 7,
+      "name": {
+       "ja": "やまなしフルーツ温泉 ぷくぷく",
+       "en": "Yamanashi Fruits Onsen Pukupuku"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "笛吹川フルーツ公園の高台にある日帰り温泉です。露天風呂から甲府盆地を見下ろします。昼の山並みも、暗くなってからの夜景も、それぞれいいものです。",
+       "en": "A day-visit hot spring on the hillside by Fuefukigawa Fruit Park, looking down over the Kofu basin from the open-air bath. Good in daylight for the mountains, good after dark for the lights below."
+      },
+      "travel": [
+       {
+        "ja": "車で17分",
+        "en": "17 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/PnLXCo81vbmUPqT56",
+      "qr": "/images/sheets/qr/pukupuku-fruits-onsen.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.7053423,
+      "lng": 138.6623796
+     },
+     {
+      "id": "hottarakashi-onsen",
+      "no": 8,
+      "name": {
+       "ja": "ほったらかし温泉",
+       "en": "Hottarakashi Onsen"
+      },
+      "genre": {
+       "ja": "日帰り温泉",
+       "en": "Hot spring"
+      },
+      "desc": {
+       "ja": "同じ高台にある、名前で知られた露天風呂です。「あっちの湯」「こっちの湯」の2つがあり、見える範囲が少し違います。早い時間から開いています。",
+       "en": "A famous open-air bath on the same ridge. There are two baths, “Acchi no Yu” and “Kocchi no Yu”, each looking out a little differently. It opens early."
+      },
+      "travel": [
+       {
+        "ja": "車で20分",
+        "en": "20 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/x3Zr4nBgCsoUxW8L7",
+      "qr": "/images/sheets/qr/hottarakashi-onsen.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.7061003,
+      "lng": 138.6521434
+     },
+     {
+      "id": "shindo-touge-twin-terrace",
+      "no": 9,
+      "name": {
+       "ja": "新道峠 FUJIYAMAツインテラス",
+       "en": "Shindo Pass FUJIYAMA Twin Terrace"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "御坂山地の尾根に張り出した展望テラスです。眼下に河口湖、正面に富士山が開けます。駐車場から先はシャトルバスか徒歩で上がります。運行の有無と時間は季節で変わりますので、お出かけ前にご確認ください。",
+       "en": "A viewing deck built out on the Misaka ridge, looking down over Lake Kawaguchi with Mt Fuji straight ahead. From the car park you continue by shuttle bus or on foot. Whether the shuttle runs changes with the season, so please check before you set out."
+      },
+      "travel": [
+       {
+        "ja": "車で45分",
+        "en": "45 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/eUuZyXJiTiWqtB716",
+      "qr": "/images/sheets/qr/shindo-touge-twin-terrace.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.5465926,
+      "lng": 138.7318469
+     },
+     {
+      "id": "kamui-misaka-ski",
+      "no": 10,
+      "name": {
+       "ja": "カムイみさかスキー場",
+       "en": "Kamui Misaka Ski Resort"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "御坂峠の山梨側にある小さなスキー場です。ゆるやかな斜面で、初めての方や小さなお子さま連れでも通いやすい規模です。シーズンと営業時間は年によって変わりますので、お出かけ前にご確認ください。",
+       "en": "A small ski area on the Yamanashi side of the Misaka pass. The slopes are gentle and the scale is manageable for beginners and families with young children. The season and opening hours vary from year to year, so please check before you go."
+      },
+      "travel": [
+       {
+        "ja": "車で22分",
+        "en": "22 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/oX698yWXDbQeWNBs7",
+      "qr": "/images/sheets/qr/kamui-misaka-ski.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.582349,
+      "lng": 138.753224
+     }
+    ]
+   },
+   {
+    "id": "daysout-kawaguchiko",
+    "kind": "daysout",
+    "slot": "out_kawaguchiko",
+    "title": {
+     "ja": "河口湖エリア",
+     "en": "Lake Kawaguchi"
+    },
+    "lead": {
+     "ja": "御坂峠を越えて、富士山と湖のほうへ。",
+     "en": "Over the Misaka pass, towards Mt Fuji and the lake."
+    },
+    "note": {
+     "ja": "営業時間・定休日は変わることがあります。お出かけ前に地図アプリでご確認ください。",
+     "en": "Opening hours and closing days change from time to time — please check the map app before you set out."
+    },
+    "map": {
+     "home": null,
+     "bounds": {
+      "south": 35.522904,
+      "west": 138.7457522,
+      "north": 35.5405123,
+      "east": 138.7700889
+     },
+     "missing": []
+    },
+    "spots": [
+     {
       "id": "fujimibashi-tenboudai",
+      "no": 1,
       "name": {
        "ja": "富士見橋展望台",
        "en": "Fujimibashi Viewpoint"
@@ -2055,10 +2770,13 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.5405123,
+      "lng": 138.7700889
      },
      {
       "id": "oishi-park",
+      "no": 2,
       "name": {
        "ja": "大石公園",
        "en": "Oishi Park"
@@ -2082,7 +2800,634 @@
       "photo": null,
       "hours": "",
       "closed": "",
-      "website": ""
+      "website": "",
+      "lat": 35.522904,
+      "lng": 138.7457522
+     },
+     {
+      "id": "kawaguchiko-momiji-kairo",
+      "no": 3,
+      "name": {
+       "ja": "河口湖もみじ回廊",
+       "en": "Kawaguchiko Maple Corridor"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "河口湖の北岸、梨川沿いのもみじのトンネルです。見頃は11月上旬から中旬で、その時期は夜のライトアップもあります。時期を外れると静かな遊歩道です。",
+       "en": "A tunnel of maples along the Nashi river on the north shore of Lake Kawaguchi. The colour peaks in early to mid November, when the trees are lit at night. Outside that season it is a quiet walking path."
+      },
+      "travel": [
+       {
+        "ja": "車で35分",
+        "en": "35 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/ZACABYoNAHE3JRrNA",
+      "qr": "/images/sheets/qr/kawaguchiko-momiji-kairo.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.525818,
+      "lng": 138.7623326
+     }
+    ]
+   }
+  ]
+ },
+ "kawaguchiko": {
+  "slug": "kawaguchiko",
+  "name": {
+   "ja": "グローカル富士河口湖",
+   "en": "Glocal FUJI Kawaguchiko"
+  },
+  "updated": "2026-10-12",
+  "sections": [
+   {
+    "id": "around",
+    "kind": "around",
+    "slot": "around_kawaguchiko",
+    "title": {
+     "ja": "周辺のご案内",
+     "en": "Around the House"
+    },
+    "lead": null,
+    "note": {
+     "ja": "営業時間は変わることがあります。お出かけ前に地図アプリでご確認ください。",
+     "en": "Opening hours change from time to time — please check the map app before you set out."
+    },
+    "map": {
+     "home": {
+      "lat": 35.5275351,
+      "lng": 138.7384784,
+      "label": {
+       "ja": "グローカル富士河口湖",
+       "en": "Glocal FUJI Kawaguchiko"
+      }
+     },
+     "bounds": {
+      "south": 35.4911082,
+      "west": 138.7384784,
+      "north": 35.5275351,
+      "east": 138.7457522
+     },
+     "missing": [
+      "hanaterasu-highway-bus",
+      "shizen-seikatsukan-bus",
+      "yshop-kawaguchiko-oishi",
+      "hanaterasu"
+     ]
+    },
+    "spots": [
+     {
+      "id": "hanaterasu-highway-bus",
+      "no": 1,
+      "name": {
+       "ja": "富士大石ハナテラス 高速バスのりば（VIPライナー）",
+       "en": "Fuji Oishi Hanaterasu Highway Bus Stop (VIP Liner)"
+      },
+      "genre": {
+       "ja": "駅",
+       "en": "Station"
+      },
+      "desc": {
+       "ja": "東京駅（バスターミナル東京八重洲）・秋葉原と河口湖を結ぶ高速バス「VIPライナー河口湖便」が停まります。1日1往復、要予約。河口湖駅で乗り換えずに施設の近くまで来られます。",
+       "en": "Stop for the VIP Liner highway bus between Tokyo (Bus Terminal Tokyo Yaesu), Akihabara and Lake Kawaguchi. One round trip a day, reservation required. It brings you close to the house without changing at Kawaguchiko Station."
+      },
+      "travel": [
+       {
+        "ja": "徒歩11分",
+        "en": "11 min walk"
+       },
+       {
+        "ja": "車で4分",
+        "en": "4 min by car"
+       }
+      ],
+      "map": "https://www.google.com/maps/search/?api=1&query=%E5%AF%8C%E5%A3%AB%E5%A4%A7%E7%9F%B3%E3%83%8F%E3%83%8A%E3%83%86%E3%83%A9%E3%82%B9",
+      "qr": "/images/sheets/qr/hanaterasu-highway-bus.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "https://vipliner.biz/bus-list/kawaguchiko/",
+      "lat": null,
+      "lng": null
+     },
+     {
+      "id": "shizen-seikatsukan-bus",
+      "no": 2,
+      "name": {
+       "ja": "河口湖周遊バス「河口湖自然生活館」バス停",
+       "en": "Kawaguchiko Sightseeing Bus Stop: Shizen Seikatsukan"
+      },
+      "genre": {
+       "ja": "駅",
+       "en": "Station"
+      },
+      "desc": {
+       "ja": "大石公園入口にある河口湖周遊バス（レッドライン）の停留所。河口湖駅から約30分。",
+       "en": "Stop for the Kawaguchiko Sightseeing Bus (Red Line) at the entrance to Oishi Park, about 30 minutes from Kawaguchiko Station."
+      },
+      "travel": [
+       {
+        "ja": "徒歩12分",
+        "en": "12 min walk"
+       },
+       {
+        "ja": "車で6分",
+        "en": "6 min by car"
+       }
+      ],
+      "map": "https://www.google.com/maps/search/?api=1&query=%E6%B2%B3%E5%8F%A3%E6%B9%96%E8%87%AA%E7%84%B6%E7%94%9F%E6%B4%BB%E9%A4%A8",
+      "qr": "/images/sheets/qr/shizen-seikatsukan-bus.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "https://www.fujikyubus.co.jp/shuyu",
+      "lat": null,
+      "lng": null
+     },
+     {
+      "id": "yshop-kawaguchiko-oishi",
+      "no": 3,
+      "name": {
+       "ja": "ヤマザキショップ（Yショップ）河口湖大石店",
+       "en": "Yamazaki Y-Shop Kawaguchiko Oishi"
+      },
+      "genre": {
+       "ja": "コンビニ",
+       "en": "Convenience store"
+      },
+      "desc": {
+       "ja": "施設から歩いて行ける唯一のコンビニ。パン、飲み物、日用品など最低限のものが揃います。大手チェーンより品数は少なめで、ATMはありません。",
+       "en": "The only convenience store within walking distance, with bread, drinks and basic daily goods. Smaller range than the big chains, and no ATM."
+      },
+      "travel": [
+       {
+        "ja": "徒歩11分",
+        "en": "11 min walk"
+       },
+       {
+        "ja": "車で4分",
+        "en": "4 min by car"
+       }
+      ],
+      "map": "https://www.google.com/maps/search/?api=1&query=%E3%83%A4%E3%83%9E%E3%82%B6%E3%82%AD%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97%20%E6%B2%B3%E5%8F%A3%E6%B9%96%E5%A4%A7%E7%9F%B3%E5%BA%97",
+      "qr": "/images/sheets/qr/yshop-kawaguchiko-oishi.png",
+      "photo": null,
+      "hours": "7:00〜21:00",
+      "closed": "",
+      "website": "",
+      "lat": null,
+      "lng": null
+     },
+     {
+      "id": "maxvalu-fujikawaguchiko",
+      "no": 4,
+      "name": {
+       "ja": "マックスバリュ富士河口湖店",
+       "en": "MaxValu Fujikawaguchiko"
+      },
+      "genre": {
+       "ja": "スーパー・大型店",
+       "en": "Supermarket"
+      },
+      "desc": {
+       "ja": "食材から日用品までひととおり揃うスーパーです。自炊をされるならまずこちらへ。",
+       "en": "A supermarket stocking everything from groceries to household basics. The first stop if you plan to cook."
+      },
+      "travel": [
+       {
+        "ja": "車で16分",
+        "en": "16 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/3Fssy3eKZQ3h6A3G7",
+      "qr": "/images/sheets/qr/maxvalu-fujikawaguchiko.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.4911082,
+      "lng": 138.7430664
+     },
+     {
+      "id": "oishi-park",
+      "no": 5,
+      "name": {
+       "ja": "大石公園",
+       "en": "Oishi Park"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "河口湖の北岸から、湖ごしに富士山を望む公園です。花の季節には湖畔が色づきます。売店と食事どころもあります。",
+       "en": "A park on the north shore of Lake Kawaguchi, with Mt. Fuji across the water. The lakeside turns colourful in the flowering season. There are shops and somewhere to eat."
+      },
+      "travel": [
+       {
+        "ja": "徒歩14分",
+        "en": "14 min walk"
+       },
+       {
+        "ja": "車で6分",
+        "en": "6 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/biKzmvaTgx1JM7i17",
+      "qr": "/images/sheets/qr/oishi-park.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.522904,
+      "lng": 138.7457522
+     },
+     {
+      "id": "hanaterasu",
+      "no": 6,
+      "name": {
+       "ja": "富士大石ハナテラス",
+       "en": "Fuji Oishi Hanaterasu"
+      },
+      "genre": {
+       "ja": "カフェ・スイーツ",
+       "en": "Cafe & sweets"
+      },
+      "desc": {
+       "ja": "大石公園に隣接する小さな商業施設。スイーツ、カフェ、雑貨、山梨の特産品の店が並びます。多くの店は夕方に閉まります。",
+       "en": "A small cluster of shops next to Oishi Park: sweets, cafés, crafts and Yamanashi specialities. Most shops close in the late afternoon."
+      },
+      "travel": [
+       {
+        "ja": "徒歩11分",
+        "en": "11 min walk"
+       },
+       {
+        "ja": "車で4分",
+        "en": "4 min by car"
+       }
+      ],
+      "map": "https://www.google.com/maps/search/?api=1&query=%E5%AF%8C%E5%A3%AB%E5%A4%A7%E7%9F%B3%E3%83%8F%E3%83%8A%E3%83%86%E3%83%A9%E3%82%B9",
+      "qr": "/images/sheets/qr/hanaterasu.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "https://www.fujioishihanaterasu.com/",
+      "lat": null,
+      "lng": null
+     },
+     {
+      "id": "kobaiya-oishi",
+      "no": 7,
+      "name": {
+       "ja": "紅梅や 河口湖大石公園店",
+       "en": "Kobaiya Oishi Park"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "大石公園のすぐ隣にある郷土料理の店。出汁にこだわったほうとうが名物で、富士山と河口湖を望むテラス席はペット同伴可。昼夜の切れ目なく通し営業です。",
+       "en": "A Yamanashi-cuisine restaurant right beside Oishi Park, known for its houtou noodle hot pot. The terrace looks out over Mt Fuji and the lake and welcomes pets. Open right through the day, with no afternoon break."
+      },
+      "travel": [
+       {
+        "ja": "徒歩12分",
+        "en": "12 min walk"
+       },
+       {
+        "ja": "車で5分",
+        "en": "5 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/7Mu7yikGkgNV4bAR9",
+      "qr": "/images/sheets/qr/kobaiya-oishi.png",
+      "photo": null,
+      "hours": "〜20:30",
+      "closed": "",
+      "website": "https://kobaiya.jp",
+      "lat": 35.5235767,
+      "lng": 138.7455892
+     },
+     {
+      "id": "sansuien",
+      "no": 8,
+      "name": {
+       "ja": "山水縁",
+       "en": "Sansuien"
+      },
+      "genre": {
+       "ja": "飲食店",
+       "en": "Restaurant"
+      },
+      "desc": {
+       "ja": "大石公園の隣にある気軽な食堂。ほうとう、カツカレー、麺類など手頃な価格でボリュームがあります。",
+       "en": "A casual diner next to Oishi Park serving houtou, katsu curry and noodles at friendly prices with generous portions."
+      },
+      "travel": [
+       {
+        "ja": "徒歩12分",
+        "en": "12 min walk"
+       },
+       {
+        "ja": "車で4分",
+        "en": "4 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/ze2kckZjnFZ65kdq6",
+      "qr": "/images/sheets/qr/sansuien.png",
+      "photo": null,
+      "hours": "〜21:00",
+      "closed": "",
+      "website": "",
+      "lat": 35.5233451,
+      "lng": 138.7450772
+     }
+    ]
+   },
+   {
+    "id": "daysout-kawaguchiko",
+    "kind": "daysout",
+    "slot": "out_kawaguchiko",
+    "title": {
+     "ja": "河口湖エリア",
+     "en": "Lake Kawaguchi"
+    },
+    "lead": {
+     "ja": "御坂峠を越えて、富士山と湖のほうへ。",
+     "en": "Over the Misaka pass, towards Mt Fuji and the lake."
+    },
+    "note": null,
+    "map": {
+     "home": {
+      "lat": 35.5275351,
+      "lng": 138.7384784,
+      "label": {
+       "ja": "グローカル富士河口湖",
+       "en": "Glocal FUJI Kawaguchiko"
+      }
+     },
+     "bounds": {
+      "south": 35.525818,
+      "west": 138.7318469,
+      "north": 35.5465926,
+      "east": 138.7700889
+     },
+     "missing": []
+    },
+    "spots": [
+     {
+      "id": "kawaguchiko-momiji-kairo",
+      "no": 1,
+      "name": {
+       "ja": "河口湖もみじ回廊",
+       "en": "Kawaguchiko Maple Corridor"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "河口湖の北岸、梨川沿いのもみじのトンネルです。見頃は11月上旬から中旬で、その時期は夜のライトアップもあります。時期を外れると静かな遊歩道です。",
+       "en": "A tunnel of maples along the Nashi river on the north shore of Lake Kawaguchi. The colour peaks in early to mid November, when the trees are lit at night. Outside that season it is a quiet walking path."
+      },
+      "travel": [
+       {
+        "ja": "車で7分",
+        "en": "7 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/ZACABYoNAHE3JRrNA",
+      "qr": "/images/sheets/qr/kawaguchiko-momiji-kairo.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.525818,
+      "lng": 138.7623326
+     },
+     {
+      "id": "fujimibashi-tenboudai",
+      "no": 2,
+      "name": {
+       "ja": "富士見橋展望台",
+       "en": "Fujimibashi Viewpoint"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "御坂みちの途中にある展望台です。笛吹市側から富士山を見に行くなら、いちばん近い場所のひとつ。晴れていれば、という前提はつきます。",
+       "en": "A viewpoint on the Misaka road. If you are heading out from the Fuefuki side to see Mt. Fuji, this is one of the closest places — weather permitting."
+      },
+      "travel": [
+       {
+        "ja": "車で14分",
+        "en": "14 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/71cFjhH6jLxcL8D9A",
+      "qr": "/images/sheets/qr/fujimibashi-tenboudai.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.5405123,
+      "lng": 138.7700889
+     },
+     {
+      "id": "shindo-touge-twin-terrace",
+      "no": 3,
+      "name": {
+       "ja": "新道峠 FUJIYAMAツインテラス",
+       "en": "Shindo Pass FUJIYAMA Twin Terrace"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "御坂山地の尾根に張り出した展望テラスです。眼下に河口湖、正面に富士山が開けます。駐車場から先はシャトルバスか徒歩で上がります。運行の有無と時間は季節で変わりますので、お出かけ前にご確認ください。",
+       "en": "A viewing deck built out on the Misaka ridge, looking down over Lake Kawaguchi with Mt Fuji straight ahead. From the car park you continue by shuttle bus or on foot. Whether the shuttle runs changes with the season, so please check before you set out."
+      },
+      "travel": [
+       {
+        "ja": "車で23分",
+        "en": "23 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/eUuZyXJiTiWqtB716",
+      "qr": "/images/sheets/qr/shindo-touge-twin-terrace.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.5465926,
+      "lng": 138.7318469
+     }
+    ]
+   },
+   {
+    "id": "daysout-fujigoko",
+    "kind": "daysout",
+    "slot": "out_fujigoko",
+    "title": {
+     "ja": "富士五湖・御殿場エリア",
+     "en": "Fuji Five Lakes and Gotemba"
+    },
+    "lead": {
+     "ja": "河口湖より外側。忍野・富士吉田から、静岡県の御殿場まで。",
+     "en": "Beyond Lake Kawaguchi: Oshino and Fujiyoshida, and on to Gotemba in Shizuoka."
+    },
+    "note": {
+     "ja": "営業時間・定休日は変わることがあります。お出かけ前に地図アプリでご確認ください。",
+     "en": "Opening hours and closing days change from time to time — please check the map app before you set out."
+    },
+    "map": {
+     "home": {
+      "lat": 35.5275351,
+      "lng": 138.7384784,
+      "label": {
+       "ja": "グローカル富士河口湖",
+       "en": "Glocal FUJI Kawaguchiko"
+      }
+     },
+     "bounds": {
+      "south": 35.307271,
+      "west": 138.7384784,
+      "north": 35.5275351,
+      "east": 138.9656467
+     },
+     "missing": []
+    },
+    "spots": [
+     {
+      "id": "arakurayama-sengen-park",
+      "no": 1,
+      "name": {
+       "ja": "新倉山浅間公園",
+       "en": "Arakurayama Sengen Park"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "五重塔と桜と富士山が一枚に収まる展望デッキで知られる公園です。展望デッキまでは約400段の階段を上ります。脇に坂の道もあります。",
+       "en": "The park known for the deck where a five-storey pagoda, cherry trees and Mt Fuji line up in a single view. It is about 400 steps up to the deck, with a sloped path alongside."
+      },
+      "travel": [
+       {
+        "ja": "車で18分",
+        "en": "18 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/KfKw9sUbeWhA7A6X6",
+      "qr": "/images/sheets/qr/arakurayama-sengen-park.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.5013898,
+      "lng": 138.80163
+     },
+     {
+      "id": "kitaguchi-hongu-sengen",
+      "no": 2,
+      "name": {
+       "ja": "北口本宮冨士浅間神社",
+       "en": "Kitaguchi Hongu Fuji Sengen Shrine"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "富士山の吉田口登山道の起点にある神社です。杉木立の参道と大きな鳥居が印象に残ります。富士山の世界文化遺産の構成資産のひとつです。",
+       "en": "The shrine at the foot of the Yoshida trail up Mt Fuji. The approach runs between tall cedars to a large torii gate. It is one of the component parts of the Mt Fuji World Heritage site."
+      },
+      "travel": [
+       {
+        "ja": "車で24分",
+        "en": "24 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/2BSvLfxiqqQg3yJn7",
+      "qr": "/images/sheets/qr/kitaguchi-hongu-sengen.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.470696,
+      "lng": 138.7922637
+     },
+     {
+      "id": "oshino-hakkai",
+      "no": 3,
+      "name": {
+       "ja": "忍野八海",
+       "en": "Oshino Hakkai"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "富士山の伏流水が湧き出す8つの池です。水が澄んでいて底まで見えます。池のまわりに茶屋や土産物店があり、歩いて回れます。日中は混み合いますので、朝のほうがゆっくり見られます。",
+       "en": "Eight ponds fed by spring water filtered down from Mt Fuji. The water is clear enough to see the bottom. Tea houses and souvenir shops stand around them and you can walk the whole circuit. It gets busy during the day, so mornings are calmer."
+      },
+      "travel": [
+       {
+        "ja": "車で30分",
+        "en": "30 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/NfFvqPjA33L5W9ZJ9",
+      "qr": "/images/sheets/qr/oshino-hakkai.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.4600674,
+      "lng": 138.8324749
+     },
+     {
+      "id": "gotemba-premium-outlets",
+      "no": 4,
+      "name": {
+       "ja": "御殿場プレミアム・アウトレット",
+       "en": "Gotemba Premium Outlets"
+      },
+      "genre": {
+       "ja": "観光",
+       "en": "Sightseeing"
+      },
+      "desc": {
+       "ja": "山中湖から籠坂峠を越えて静岡県側に下りたところにある大型アウトレットです。店舗数が多く、晴れていれば富士山を眺めながら買い物ができます。一日かけて出かける先です。",
+       "en": "A large outlet mall over the pass on the Shizuoka side, beyond Lake Yamanaka. There are a great many shops, and on a clear day you shop with Mt Fuji in view. It makes a full day out."
+      },
+      "travel": [
+       {
+        "ja": "車で53分",
+        "en": "53 min by car"
+       }
+      ],
+      "map": "https://maps.app.goo.gl/yTYLuMnFeiuTQNwd9",
+      "qr": "/images/sheets/qr/gotemba-premium-outlets.png",
+      "photo": null,
+      "hours": "",
+      "closed": "",
+      "website": "",
+      "lat": 35.307271,
+      "lng": 138.9656467
      }
     ]
    }
