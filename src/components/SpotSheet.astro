@@ -27,6 +27,7 @@ const T = {
     other: 'English',
     updated: '更新',
     foot: '合同会社グローカルコミューン ／ このページは予告なく更新されることがあります。',
+    jumpLabel: 'ページ内の行き先',
   },
   en: {
     eyebrow: 'Around & Days Out',
@@ -38,6 +39,7 @@ const T = {
     other: '日本語',
     updated: 'Updated',
     foot: 'Glocal Commune LLC · This page may be updated without notice.',
+    jumpLabel: 'Jump to a section',
   },
 };
 
@@ -51,6 +53,13 @@ const PIN = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke=
 <div class="bar">
   <div class="bar-in">
     <span class="brand">Glocal · Yamanashi</span>
+    {prop.sections.length > 1 && (
+      <nav class="jump" aria-label={t.jumpLabel}>
+        {prop.sections.map((s) => (
+          <a href={`#${s.id || s.kind}`}>{s.title[lang]}</a>
+        ))}
+      </nav>
+    )}
     <a class="lang" href={otherHref} hreflang={otherLang} rel="alternate">{t.other}</a>
   </div>
 </div>
@@ -60,13 +69,6 @@ const PIN = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke=
     <p class="eyebrow">{t.eyebrow}</p>
     <h1>{prop.name[lang]}</h1>
     <p class="sub">{t.lead}</p>
-    {prop.sections.length > 1 && (
-      <nav class="jump">
-        {prop.sections.map((s) => (
-          <a href={`#${s.id || s.kind}`}>{s.title[lang]}</a>
-        ))}
-      </nav>
-    )}
   </header>
 
   {prop.sections.map((sec) => (
@@ -133,6 +135,66 @@ const PIN = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke=
     {prop.updated && <span class="upd">{t.updated} {prop.updated}</span>}
   </footer>
 </main>
+
+<script is:inline>
+  // 上部バーの行き先に「いま読んでいるセクション」の印を付ける。
+  // 行き先そのものはただのリンクなので、これが動かなくても移動はできる。
+  //
+  // IntersectionObserver だけだと、しきい値をまたがない範囲の移動
+  //（長いセクションの中をスクロールする、など）で印が古いまま残る。
+  // スクロールのたびに位置を測り直す形にしてある（rAFで1フレーム1回に間引く）。
+  (function () {
+    const nav = document.querySelector('.bar .jump');
+    if (!nav) return;
+    const links = Array.from(nav.querySelectorAll('a'));
+    const pairs = [];
+    links.forEach((a) => {
+      const el = document.querySelector(a.getAttribute('href'));
+      if (el) pairs.push([el, a]);
+    });
+    if (!pairs.length) return;
+
+    const BAR = 80;            // 上部バーの高さぶん（.sheet の scroll-margin-top より少し大きく）
+    let current = null;
+    let queued = false;
+
+    function pick() {
+      queued = false;
+      // 上部バーのすぐ下の線を、いちばん最後にまたいだセクション
+      let found = pairs[0][1];
+      for (const [el, a] of pairs) {
+        if (el.getBoundingClientRect().top - BAR <= 0) found = a;
+      }
+      // 最後のセクションが短いと、押しても線まで上がりきらない。
+      // ページの末尾まで来ていたら最後のセクションを現在地にする。
+      const atEnd = innerHeight + scrollY >= document.documentElement.scrollHeight - 4;
+      if (atEnd) found = pairs[pairs.length - 1][1];
+      if (found === current) return;
+      links.forEach((x) => x.removeAttribute('aria-current'));
+      found.setAttribute('aria-current', 'true');
+      current = found;
+      // 横に流れて隠れているときは、見える位置まで寄せる
+      const nr = nav.getBoundingClientRect();
+      const ar = found.getBoundingClientRect();
+      if (ar.left < nr.left || ar.right > nr.right) {
+        nav.scrollTo({
+          left: found.offsetLeft - nav.clientWidth / 2 + found.offsetWidth / 2,
+          behavior: 'smooth',
+        });
+      }
+    }
+
+    function onScroll() {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(pick);
+    }
+
+    addEventListener('scroll', onScroll, { passive: true });
+    addEventListener('resize', onScroll);
+    pick();
+  })();
+</script>
 
 {mapsKey && (
   <script is:inline define:vars={{ mapsKey, mapsId }}>
@@ -253,10 +315,16 @@ const PIN = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke=
     border-bottom: 1px solid var(--line);
   }
   .bar-in {
-    max-width: 960px; margin: 0 auto; padding: 12px 20px;
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    max-width: 960px; margin: 0 auto; padding: 9px 20px;
+    display: flex; align-items: center; gap: 14px;
   }
-  .brand { font-size: 11px; letter-spacing: .26em; color: var(--sand-d); font-weight: 500; }
+  .brand {
+    font-size: 11px; letter-spacing: .26em; color: var(--sand-d); font-weight: 500;
+    white-space: nowrap; flex: 0 0 auto;
+  }
+  /* 行き先が増えても折り返さず、横に流して出し切る。
+     幅が足りない端末では屋号を引っ込めて、行き先の幅を優先する。 */
+  @media (max-width: 760px) { .brand { display: none; } }
   .lang {
     font-size: 13px; letter-spacing: .08em; color: var(--sand-d);
     border: 1px solid var(--sand); border-radius: 2px; padding: 6px 16px;
@@ -270,18 +338,33 @@ const PIN = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke=
   .hero h1 { font-size: clamp(25px, 5.4vw, 34px); line-height: 1.35; }
   .hero .sub { color: var(--ink2); font-size: 14px; margin-top: 10px; max-width: 42em; }
 
-  .jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  /* 上部バーの中。セクションが2つ以上あるときだけ出る。
+     読んでいる途中でも行き先が見えているように、バーごと貼り付けてある。 */
+  .jump {
+    flex: 1 1 auto; min-width: 0;
+    display: flex; gap: 8px;
+    overflow-x: auto; scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-inline: 20px;
+  }
+  .jump::-webkit-scrollbar { display: none; }
   .jump a {
-    font-size: 13px; letter-spacing: .06em; color: var(--sand-d);
-    border: 1px solid var(--sand); border-radius: 2px; padding: 8px 18px;
+    flex: 0 0 auto; white-space: nowrap;
+    font-size: 12px; letter-spacing: .06em; color: var(--sand-d);
+    border: 1px solid var(--sand); border-radius: 2px; padding: 6px 13px;
+    transition: background .15s, color .15s;
   }
   .jump a:hover { background: var(--sand); color: #fff; }
+  /* いま読んでいるセクション。JavaScriptが動かない端末では付かないだけ */
+  .jump a[aria-current="true"] {
+    background: var(--sand-d); color: #fff; border-color: var(--sand-d);
+  }
 
   h2.sect {
     font-family: var(--sans); font-size: 11.5px; font-weight: 500;
     letter-spacing: .26em; text-transform: uppercase; color: var(--sand-d);
     margin: 52px 0 20px; display: flex; align-items: center; gap: 14px;
-    scroll-margin-top: 64px;
+    scroll-margin-top: 72px;
   }
   h2.sect span {
     font-size: 11px; letter-spacing: .1em; color: var(--ink2);
@@ -290,7 +373,7 @@ const PIN = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke=
   h2.sect::after { content: ""; flex: 1; height: 1px; background: var(--line); }
   /* global.css の section{padding:96px 0} が効いてしまうので打ち消す。
      打ち消さないと、ナビとセクション見出しのあいだに96pxの空白が入る。 */
-  .sheet { padding: 0; scroll-margin-top: 56px; }
+  .sheet { padding: 0; scroll-margin-top: 72px; }
 
   .spots { display: grid; grid-template-columns: 1fr; gap: 14px; }
   @media (min-width: 820px) { .spots { grid-template-columns: 1fr 1fr; } }
