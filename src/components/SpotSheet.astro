@@ -217,6 +217,9 @@ const PIN = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke=
              : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)); })
         ({ key: mapsKey, v: 'weekly', language: document.documentElement.lang || 'ja', region: 'JP' });
 
+      // マウスやトラックパッドのある端末か。タッチだけの端末では false。
+      const HOVER = matchMedia('(hover: hover) and (pointer: fine)').matches;
+
       function badge(text, home) {
         const el = document.createElement('div');
         el.className = 'gpin' + (home ? ' gpin-home' : '');
@@ -257,16 +260,40 @@ const PIN = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke=
             new AdvancedMarkerElement({ map, position: { lat: d.home.lat, lng: d.home.lng },
               content: badge(d.homeTag, true), title: d.home.label, zIndex: 99 });
           }
+          // 吹き出しは1枚を使い回す。中身だけ入れ替える。
+          const pop = document.createElement('div');
+          pop.className = 'gpop';
+          let timer = null;
+          const hold = () => { if (timer) { clearTimeout(timer); timer = null; } };
+          // 離れてすぐ閉じると、吹き出しの中のリンクを押しに行けない。
+          // 350ms だけ待ち、その間に吹き出しへ入れば開いたままにする。
+          const closeSoon = () => { hold(); timer = setTimeout(() => info.close(), 350); };
+          pop.addEventListener('mouseenter', hold);
+          pop.addEventListener('mouseleave', closeSoon);
+
+          function show(s, mk) {
+            hold();
+            pop.innerHTML =
+              '<b>' + s.no + '. ' + s.name + '</b>'
+              + (s.travel ? '<span>' + s.travel + '</span>' : '')
+              + '<a href="' + s.map + '" target="_blank" rel="noopener">' + d.open + '</a>';
+            info.setContent(pop);
+            info.open({ map, anchor: mk });
+          }
+
           d.spots.forEach((s) => {
-            const mk = new AdvancedMarkerElement({ map, position: { lat: s.lat, lng: s.lng },
-              content: badge(String(s.no)), title: s.name });
-            mk.addListener('gmp-click', () => {
-              info.setContent(
-                '<div class="gpop"><b>' + s.no + '. ' + s.name + '</b>'
-                + (s.travel ? '<span>' + s.travel + '</span>' : '')
-                + '<a href="' + s.map + '" target="_blank" rel="noopener">' + d.open + '</a></div>');
-              info.open({ map, anchor: mk });
+            const el = badge(String(s.no));
+            const mk = new AdvancedMarkerElement({
+              map, position: { lat: s.lat, lng: s.lng },
+              content: el, title: s.name, gmpClickable: true,
             });
+            mk.addListener('gmp-click', () => show(s, mk));
+            // マウスがある端末だけ、重ねただけで出す。
+            // 指で触る端末には hover が無いので、そちらは従来どおり押して出す。
+            if (HOVER) {
+              el.addEventListener('mouseenter', () => show(s, mk));
+              el.addEventListener('mouseleave', closeSoon);
+            }
           });
         }
        } catch (err) {
@@ -285,7 +312,10 @@ const PIN = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke=
     font: 700 12px/1 system-ui, sans-serif;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .35);
   }
-  .gpin-home { background: #1d2a30; width: 30px; height: 30px; font-size: 11px; }
+  .gpin { cursor: pointer; transition: transform .12s ease, box-shadow .12s ease; }
+  .gpin:hover { transform: scale(1.25); box-shadow: 0 2px 8px rgba(0, 0, 0, .45); }
+  .gpin-home { background: #1d2a30; width: 30px; height: 30px; font-size: 11px; cursor: default; }
+  .gpin-home:hover { transform: none; box-shadow: 0 1px 4px rgba(0, 0, 0, .35); }
   .gpop { font-size: 13px; line-height: 1.6; max-width: 220px; }
   .gpop b { display: block; font-size: 14px; margin-bottom: 2px; }
   .gpop span { display: block; color: #34464e; }
